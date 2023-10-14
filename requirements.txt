@@ -1,0 +1,7 @@
+Pyrogram
+tgcrypto
+logging
+datetime
+requests
+requests
+bs4

@@ -1,0 +1,65 @@
+from plugins.admin.gc.gc_func import *
+from pyrogram import Client, filters
+
+
+@Client.on_message(filters.command('gc'))
+async def cmd_gc(client, message):
+    user_id = str(message.from_user.id)
+    CEO = "1418571871"
+    if user_id != CEO:
+        resp = "Require Owner Privilages ⚠️"
+        msg1 = await message.reply_text(resp, message.id)
+    else:
+        resp = "𝗚𝗲𝗻𝗮𝗿𝗮𝘁𝗶𝗻𝗴.."
+        send = await message.reply_text(resp, message.id)
+        GC1 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC1)
+        GC2 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC2)
+        GC3 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC3)
+        GC4 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC4)
+        GC5 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC5)
+        GC6 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC6)
+        GC7 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC7)
+        GC8 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC8)
+        GC9 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC9)
+        GC10 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        insert_pm(GC10)
+        resp = "𝗗𝗼𝗻𝗲"
+        send = await Client.edit_message_text(message.chat.id, send.id, resp)
+        final_resp = f"""
+GiftCode Genarated ✅
+Amount : 10
+Value : 100 Credits + Premium
+
+➔ <code>{GC1}</code>
+
+➔ <code>{GC2}</code>
+
+➔ <code>{GC3}</code>
+
+➔ <code>{GC4}</code>
+
+➔ <code>{GC5}</code>
+
+➔ <code>{GC6}</code>
+
+➔ <code>{GC7}</code>
+
+➔ <code>{GC8}</code>
+
+➔ <code>{GC9}</code>
+
+➔ <code>{GC10}</code>
+
+For Redeem
+Type /redeem
+    """
+        send = await Client.edit_message_text(message.chat.id, send.id, final_resp)
