@@ -17,7 +17,8 @@ async def cmd_register(Client,message):
     results = str(regdata)
     if results=='None':
       registration = insert_reg_data(user_id,username,antispam_time,reg_at)
-      resp = "User Registered Successfully ✅ . Type /cmds To Know My Work Ability."
+      resp = """User Registered Successfully ✅ .
+               Type /cmds To Know My Work Ability."""
       await message.reply_text(resp,message.id)
   
     else:

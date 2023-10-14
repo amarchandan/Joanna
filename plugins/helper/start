@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 
 @Client.on_message(filters.command('start'))
@@ -10,7 +11,7 @@ async def cmd_start(Client, message):
         # PLAN CHECK
         PIC = ""
     PM_TEXT = f"""
-𝗛𝗲𝘆 <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a> 
+𝗛𝗲𝘆 <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}></a> 
 Welcome to Joanna CC Checker Bot 
     I Am CC Checker Bot With Many
     Gates And Tools.
@@ -35,8 +36,8 @@ buttons = [
 @app.on_callback_query()
 async def button_click(client, query):
     data = query.data
-    chat_id = query.message.chat.id 
-       if data == "gates":
+    chat_id = query.message.chat.id
+    if data == "gates":
         await query.message.reply_text(
             caption="Choose Gates",
             reply_markup=InlineKeyboardMarkup(
@@ -74,11 +75,10 @@ async def button_click(client, query):
             """
             reply_markup=InlineKeyboardMarkup(
                 [
-                [
                 InlineKeyboardButton("Back", callback_data="_back")
-                ]
+                ], 
             ),
-        )
+        ),
             
     elif data == "cvv":
         await query.message.reply_text("You selected CVV.")
@@ -91,10 +91,3 @@ async def button_click(client, query):
 
 
 
-edit = await message.reply_text(texta, message.id)
-
-
-        edit = await Client.edit_message_text(message.chat.id, edit.id, textd)
-        await plan_expirychk(user_id)
-    except Exception as e:
-        print(e)

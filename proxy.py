@@ -79,8 +79,8 @@ class Random_Proxy(object):
                 
 proxy = Random_Proxy()
 
-url = 'https://stripe.com'
+url = 'https://google.com'
 request_type = "get"
 
 r = proxy.Proxy_Request(url=url, request_type=request_type, proxies=proxy,)
-print(r)
+print(r.text)

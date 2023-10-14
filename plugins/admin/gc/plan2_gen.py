@@ -12,19 +12,16 @@ async def cmd_getplan2(Client, message):
     else:
         resp = "𝗚𝗲𝗻𝗮𝗿𝗮𝘁𝗶𝗻𝗴.."
         send = await message.reply_text(resp, message.id)
-        GC1 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        GC1 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan2(GC1)
-        GC2 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        GC2 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan2(GC2)
-        GC3 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        GC3 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan2(GC3)
-        GC4 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        GC4 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan2(GC4)
-        GC5 = f"Joanna -{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
+        GC5 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan2(GC5)
-
-        resp = "𝗗𝗼𝗻𝗲"
-        send = await Client.edit_message_text(message.chat.id, send.id, resp)
         final_resp = f"""
 GiftCode Genarated ✅
 Amount :- 𝟱
@@ -40,8 +37,7 @@ Value : Silver PLan 15 Days
 
 ➔ <code>{GC5}</code>
 
-
 For Redeem
 Type /redeem
     """
-        send = await Client.edit_message_text(message.chat.id, send.id, final_resp)
+        send = await message.reply_text(final_resp, message.id)
