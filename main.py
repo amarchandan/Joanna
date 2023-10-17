@@ -11,7 +11,7 @@ plugins = dict(root="plugins")
 bot = Client("Joanna",
              api_id="24578407",
              api_hash="5f711fbe013fd0d20147f62728118510",
-             bot_token="6364102907:AAGCpOshrIoy4eMXUaFwpoaWtYR9ifaqj90",
+             bot_token="6480746114:AAFALJ01rg09ZDh78DB4mO_MWZmoeTekpJM",
              plugins=plugins)
 
 try:
