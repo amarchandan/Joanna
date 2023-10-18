@@ -31,7 +31,7 @@ async def cmd_bin(Client, message):
             role = status
             GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @TheOfficialChat "
+                resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @MorPhoChat "
                 await message.reply_text(resp, message.id)
 
             elif chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:

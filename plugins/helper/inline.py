@@ -40,7 +40,6 @@ gatebutton = [
                 [
                 InlineKeyboardButton("Auth", callback_data="_auth"),
                 InlineKeyboardButton("Charge", callback_data="_charge"),
-                InlineKeyboardButton("CVV/CCN", callback_data="cvv_ccn"),
                 ],
                 [
                 InlineKeyboardButton("Back",callback_data="__back"),
@@ -51,16 +50,29 @@ Welcome to Joanna / Joanna Gateways Online
 ━━━━━━━━━━━━━━━━━━━━━
 Gates CMDS:  None Api Gates! ✅
 ━━━━━━━━━━━━━━━
-Gates auth: 0     |    Gates charge: 0
+Gates auth: 1 ✅  |   Gates charge: 9 ✅
 ━━━━━━━━━━━━━━━━
 Select the type of gate you want for your use!."""
 
 buttonscharge = [
                 [
-                InlineKeyboardButton("Back", callback_data="___back"),
+                InlineKeyboardButton("Back", callback_data="__gback"),
                 InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
                 ],
                 ]
+buttonscharge2 = [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_charge"),
+                InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
+                ],
+                [
+                    InlineKeyboardButton("Back", callback_data="__gback"),
+                ],
+                ]
+
+mainback = """
+Welcome back to Joanna Bot, it is a beta bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here
+"""
 
 @Client.on_callback_query()
 async def button_click(client, query):
@@ -73,33 +85,54 @@ async def button_click(client, query):
         )
     elif data == "__back":
         await query.edit_message_text(
-            text=backtext,
+            text=mainback,
             reply_markup=InlineKeyboardMarkup(backbutton)
+        )
+    elif data == "__gback":
+        await query.edit_message_text(
+            text=backtext,
+            reply_markup=InlineKeyboardMarkup(gatebutton)
+        )
+    elif data == "premium_data":
+        await query.edit_message_text(
+            "COMING SOON",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                [
+                InlineKeyboardButton("Back", callback_data="__back"),
+                ],
+                ]
+            ),
         )
     elif data == "_auth":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Auth Gateways  [P: 1 | 6] ┒
-┠ Name :-
-┠ Format :- 
+┏ Joanna Gateways Online | Auth Gateways  [P: 1 | 1] ┒
+┠ Name :- Paypal Auth
+┠ Format :- /pa card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Name :- Stripe Auth
+┠ Format :- /au card|month|year|cvv
+┠ Condition :- OFF! | Comment: Offline API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Name :-   Adyen
+┠ Format :- /ad card|month|year|cvv
+┠ Condition :- OFF! | Comment: Offline API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :-BrainTree
+┠ Format :- /ba card|month|year|cvv
+┠ Condition :- OFF! | Comment: Offline API Gate!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(
                 [
                 [
-                InlineKeyboardButton("Back", callback_data="__back"),
+                InlineKeyboardButton("Back", callback_data="__gback"),
                 ],
                 ]
             ),
@@ -107,45 +140,70 @@ async def button_click(client, query):
     elif data == "_charge":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 1] ┒
-┠ Name :-
-┠ Format :- 
+┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 2] ┒
+┠ Name :- Stripe
+┠ Amount :- $76
+┠ Format :- /sb card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
+┠ Name :- Stripe
+┠ Amount :- $30
+┠ Format :- /sc card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
+┠ Name :- Stripe
+┠ Amount :- $45
+┠ Format :- /sd card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
+┠ Name :- Stripe
+┠ Amount :- $100
+┠ Format :- /sf card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :-
-┠ Format :- 
+┠ Name :- Stripe
+┠ Amount :- $20
+┠ Format :- /sg card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(buttonscharge),
         )
-    elif data == "cvv_ccn":
+    elif data == "_chargepg2":
         await query.edit_message_text(
-            "Cvv Ccn Gate",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                [
-                InlineKeyboardButton("Back", callback_data="__back"),
-                ],
-                ]
-            ),
+            """
+┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 2] ┒
+┠ Name :- Stripe
+┠ Amount :- $25
+┠ Format :- /sh card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Stripe
+┠ Amount :- $35
+┠ Format :- /si card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Shopify Gate
+┠ Amount :- $75
+┠ Format :- /spa card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Shopify Gate
+┠ Amount :- $89.99
+┠ Format :- /spb card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+            reply_markup=InlineKeyboardMarkup(buttonscharge2),
         )
     elif data == "_tool":
         await query.edit_message_text(
