@@ -19,10 +19,9 @@ async def cmd_start(Client,message):
 Welcome to version 0.1 of Joanna! >_
 
 𝗛𝗲𝘆 <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}></a>
-    I Am CC Checker Bot With Many Gates And Tools.
+    This Is CC Checker Bot With Many Gates And Tools.
     This Is The Most Optimized Version And Adapted To Multiple Tasks.
 """
-          reply_markup = InlineKeyboardMarkup(buttons)
           edit = await message.reply(
               text=text,
               reply_markup=InlineKeyboardMarkup(buttons)
