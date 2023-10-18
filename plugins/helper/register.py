@@ -18,12 +18,12 @@ async def cmd_register(Client,message):
     if results=='None':
       registration = insert_reg_data(user_id,username,antispam_time,reg_at)
       resp = """User Registered Successfully ✅ .
-               Type /cmds To Know My Work Ability."""
+               Type /start To Know My Work Ability."""
       await message.reply_text(resp,message.id)
   
     else:
       resp = '''Already Rigistered ⚠️ .
-      Type /cmds To Know My Work Ability .'''
+      Type /start To Know My Work Ability .'''
       await message.reply_text(resp,message.id)
       await plan_expirychk(user_id)
     
