@@ -9,8 +9,8 @@ buttons = [
         InlineKeyboardButton(text="Tools", callback_data="_tool"),
     ],
     [
-        InlineKeyboardButton(text="Group", url="https://t.me/Illegal_Carder"),
-        InlineKeyboardButton(text="Channel", url="https://t.me/Illegal_Carder"),
+        InlineKeyboardButton(text="Group", url="https://t.me/TeamMorpho"),
+        InlineKeyboardButton(text="Channel", url="https://t.me/MorPhoChat"),
         ],
     [
         InlineKeyboardButton(text="Premium", callback_data="premium_data"),
@@ -209,26 +209,11 @@ async def button_click(client, query):
         await query.edit_message_text(
             """
 ┏ Joanna Tools / [P: 1 | 1] ┒
-━━━━━━━━━━━━
-┠ Bin Generator:
-┠ Format: $gen 601120  
-┠ Condition: Online! ✅
- ━━━━━━━━━━━━
-┠ Sk Ckeck:
-┠ Format: $sk sk_live 
-┠ Condition: Online! ✅
- ━━━━━━━━━━━━
 ┠ BIN Lookup:
 ┠ Format: $bin 601120 
 ┠ Condition: Online! ✅
  ━━━━━━━━━━━━
-┠ Gen Address:
-┠ Format: $dir Country_code 
-┠ Condition: Online! ✅
- ━━━━━━━━━━━━
-┠ IP Fraud Check:
-┠ Format: $ip 1.1.1.1 
-┠ Condition: Online! ✅
+SOON
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(

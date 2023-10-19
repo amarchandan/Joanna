@@ -89,7 +89,7 @@ async def cmd_bin(Client, message):
                 except:
                     currency = "N/A"
                 resp = f"""
-𝗩𝗮𝗹𝗶𝗱 𝗕𝗜𝗡 ✅
+VALID BIN ✅
 
 BIN:  <code>{fbin}</code>
 BRAND: {brand}
