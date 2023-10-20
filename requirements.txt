@@ -4,3 +4,5 @@ datetime
 requests
 requests
 bs4
+fastapi
+uvicorn
