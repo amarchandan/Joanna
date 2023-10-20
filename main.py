@@ -1,9 +1,9 @@
 from pyrogram import Client
-import logging
+# import logging
 from plugins.func.users_sql import *
 
 
-logging.basicConfig(level=logging.INFO)
+# logging.basicConfig(level=logging.INFO)
 
 plugins = dict(root="plugins")
 
