@@ -1,6 +1,5 @@
 Pyrogram
 tgcrypto
-logging
 datetime
 requests
 requests
