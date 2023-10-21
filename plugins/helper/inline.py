@@ -3,14 +3,22 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 from datetime import date
 from datetime import datetime
 
+menu = [
+    [
+        InlineKeyboardButton(text="Menu", callback_data="__main")
+    ],
+    [
+        InlineKeyboardButton(text="Add Me", url="https://t.me/JoannaChkBot?startgroup"),
+    ],
+]
+
 buttons = [
     [
         InlineKeyboardButton(text="Gate", callback_data="gates"),
         InlineKeyboardButton(text="Tools", callback_data="_tool"),
     ],
     [
-        InlineKeyboardButton(text="Group", url="https://t.me/TeamMorpho"),
-        InlineKeyboardButton(text="Channel", url="https://t.me/MorPhoChat"),
+        InlineKeyboardButton(text="Join Channel", url="https://t.me/MorPhoChat"),
         ],
     [
         InlineKeyboardButton(text="Premium", callback_data="premium_data"),
@@ -82,6 +90,17 @@ async def button_click(client, query):
         await query.edit_message_text(
             text=gatetext,
             reply_markup=InlineKeyboardMarkup(gatebutton),
+        )
+    elif data == "__main":
+        await query.edit_message_text(
+            f"""
+Welcome To Joanna Api Bot  |  {dt_string} 
+━━━━━━━━━━━━━━━                                                                  
+Hello This Is Beta Version telegram bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here.
+━━━━━━━━━━━━━━━
+Api Bot Status Is: Online ✅ | Joanna Api Is Online!
+            """,
+            reply_markup=InlineKeyboardMarkup(buttons),
         )
     elif data == "__back":
         await query.edit_message_text(

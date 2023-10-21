@@ -32,16 +32,15 @@ def fetchinfo(user_id):
 # fetch all info from table
 
 
-def getalldata(table_name):
+def getalldata():
     import sqlite3
     conn = sqlite3.connect('plugins/Joanna_db/users.db')
     db = conn.cursor()
-    db.execute(f"SELECT * FROM {table_name}")
+    db.execute(f"SELECT * FROM users")
     info = db.fetchall()
     conn.commit()
     conn.close()
     return info
-
 # UPDATE DATA FROM TABLE
 
 
