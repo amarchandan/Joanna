@@ -119,7 +119,7 @@ No CCS Found. ⚠️
                                 cards.append([cc, mes, ano, cvv])
                             fullcc = f"{cc}|{mes}|{ano}|{cvv}"
                             firstresp = f"""
-<b> STRIPE AUTH 
+<b> PAYPAL AUTH 
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -129,7 +129,7 @@ No CCS Found. ⚠️
 
                             firstchk = await message.reply_text(firstresp, message.id)
                             secondresp = f"""
-<b> STRIPE AUTH 
+<b> PAYPAL AUTH 
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -139,7 +139,7 @@ No CCS Found. ⚠️
                             time.sleep(1)
                             secondchk = await Client.edit_message_text(message.chat.id, firstchk.id, secondresp)
                             thirdresp = f"""
-<b> STRIPE AUTH  
+<b> PAYPAL AUTH  
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -149,11 +149,11 @@ No CCS Found. ⚠️
                             thirdchk = await Client.edit_message_text(message.chat.id, secondchk.id, thirdresp)
                         # STARTED CHECKING CC#
                             tic = time.perf_counter()
-                            authurl = f"https://rembelapi.omx.pw/api/api1.php?lista={fullcc}"
+                            authurl = f"https://rembelapi.omx.pw/api/paypal.php?lista={fullcc}"
                             reqone = session.get(authurl)
                             result = reqone.text
                             fourthresp = f"""
-<b> STRIPE AUTH  
+<b> PAYPAL AUTH  
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -205,7 +205,7 @@ No CCS Found. ⚠️
                             toc = time.perf_counter()
                         # RESPONSE SECTION
                             fifthresp = f"""
-<b> STRIPE AUTH 
+<b> PAYPAL AUTH 
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -214,7 +214,7 @@ No CCS Found. ⚠️
               """
                             fifthchk = await Client.edit_message_text(message.chat.id, fourthchk.id, fifthresp)
                             sixresp = f"""
-<b> STRIPE AUTH  
+<b> PAYPAL AUTH  
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -225,7 +225,7 @@ No CCS Found. ⚠️
                     # --------------FINAL RESPONSE ------------#
 
                             finalresp = f"""
-<b>STRIPE AUTH 
+<b>PAYPAL AUTH 
 ┏－－－－－－－－－－－－－－－－－－┒</b>
 ┠ Card - <code>{fullcc}</code> 
 {result}
