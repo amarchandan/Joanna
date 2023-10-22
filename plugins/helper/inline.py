@@ -161,7 +161,7 @@ async def button_click(client, query):
 
 ┠ Name :- Stripe
 ┠ Amount :- $100
-┠ Format :- /sf card|month|year|cvv
+┠ Format :- /se card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -180,7 +180,7 @@ async def button_click(client, query):
 ┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 2] ┒
 ┠ Name :- Stripe
 ┠ Amount :- $25
-┠ Format :- /sh card|month|year|cvv
+┠ Format :- /sf card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
