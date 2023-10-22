@@ -11,7 +11,7 @@ import json
 session = requests.session()
 
 
-@Client.on_message(filters.command('sB'))
+@Client.on_message(filters.command('sb'))
 async def cmd_au(Client, message):
     try:
         # NES TOOLS
