@@ -32,29 +32,15 @@ class Random_Proxy(object):
 
         r = requests.get(url=self.__url, headers=self.__headers)
         soup = BeautifulSoup(r.text, 'html.parser')
-
-        # Get the Random IP Address
         for x in soup.findAll('td')[::8]:
             self.random_ip.append(x.get_text())
-
-        # Get Their Port
         for y in soup.findAll('td')[1::8]:
             self.random_port.append(y.get_text())
-
-        # Zip together
         z = list(zip(self.random_ip, self.random_port))
-
-        # This will Fetch Random IP Address and corresponding PORT Number
         number = random.randint(0, len(z)-50)
         ip_random = z[number]
-
-        # convert Tuple into String and formart IP and PORT Address
         ip_random_string = "{}:{}".format(ip_random[0],ip_random[1])
-
-        # Create a Proxy
         proxy = {'https':ip_random_string}
-
-        # return Proxy
         return proxy
 
     def Proxy_Request(self,request_type='get',url='',**kwargs):
