@@ -3,7 +3,7 @@ from plugins.func.users_sql import *
 
 
 @Client.on_message(filters.command('ststs'))
-async def cmd_buy(Client, message):
+async def cmd_stats(Client, message):
     try:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
