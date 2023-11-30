@@ -6,3 +6,4 @@ requests
 bs4
 fastapi
 uvicorn
+psycopg2
