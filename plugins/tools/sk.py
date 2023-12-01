@@ -1,12 +1,11 @@
 from pyrogram import Client, filters
 import requests
 from plugins.func.users_sql import *
-from plugins.tools.sk_f import *
 
 session = requests.session()
 
 @Client.on_message(filters.command('sk'))
-async def cmd_add(Client, message):
+async def cmd_sk(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
@@ -25,13 +24,8 @@ async def cmd_add(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @MorPhoChat "
-                await message.reply_text(resp, message.id)
-
-            elif chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
-                resp = "⚠️ #PREMIUM_ONLY ⚠️ ❌\n Contact @K3VIN_X To Buy Premium Access!"
+                resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
                 await message.reply_text(resp, message.id)
             else:
                 if message.reply_to_message:
@@ -46,8 +40,8 @@ async def cmd_add(Client, message):
                 else:
                     chkst = "𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗞 𝗪𝗮𝗶𝘁...."
                     done = await message.reply_text(chkst, message.id)
-             #       skchk = f"http://rebelapi.rf.gd/sk.php?sk={sk}"
-                    skinfo = requests.get(sk1)
+                    skchk = f"https://rembleampi.site/api/sk.php?sk={sk}"
+                    skinfo = requests.get(skchk)
                     result = skinfo.text
 
           

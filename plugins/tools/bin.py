@@ -30,12 +30,8 @@ async def cmd_bin(Client, message):
             status = pm[2]
             role = status
             GROUP = open("plugins/group.txt").read().splitlines()
-            if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @MorPhoChat "
-                await message.reply_text(resp, message.id)
-
-            elif chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
-                resp = "⚠️ #PREMIUM_ONLY ⚠️ ❌\n Contact @K3VIN_X To Buy Premium Access!"
+            if chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
                 # CMD SENT NOW CHECKING VALID IF OR NOT CC#
