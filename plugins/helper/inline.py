@@ -227,12 +227,26 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
     elif data == "_tool":
         await query.edit_message_text(
             """
-┏ Joanna Tools / [P: 1 | 1] ┒
+┏ Joanna Tools / [P: 1 | 3] ┒
 ┠ BIN Lookup:
 ┠ Format: $bin 601120 
 ┠ Condition: Online! ✅
- ━━━━━━━━━━━━
-SOON
+
+┠ SK Lookup:
+┠ Format: $sk SK_LIVE..... 
+┠ Condition: Online! ✅
+
+┠ CC GENERATE:
+┠ Format: $gen [BIN] [QUANTITY](OPTIONAL)
+┠ Condition: Online! ✅
+
+┠ RANDOM US ADDRESS:
+┠ Format: $rnd 
+┠ Condition: Online! ✅
+
+┠ GEN ADDRESS BY ZIP::
+┠ Format: $zip [ZIP CODE]
+┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(
@@ -240,6 +254,81 @@ SOON
                 [
                 InlineKeyboardButton("Back", callback_data="__back"),
                 InlineKeyboardButton("Next Page", callback_data="_tool2"),
+                ],
+                ]
+            ),
+        )
+    elif data == "_tool2":
+       await query.edit_message_text(
+            """
+┏ Joanna SK Cracking Tool / [P: 2 | 3] ┒
+┠ MASS SK CHK:
+┠ Format: $masssk Reply To TxT File 
+┠ Condition: Online! ✅
+
+┠ GENERATE SK :
+┠ Format: $gensk [QUANTITY] [SK LEN]
+┠ Sk Len :- 1 - LONG SK ; 2 - MEDIUM SK ; 3 - SHORT SK
+┠ Condition: Online! ✅
+
+┠ IPV4 IPV6 GEN:
+┠ Format: $ips [QUANTITY] ipv4|ipv6
+┠ Condition: Online! ✅
+
+┠ ASN IP SCR :
+┠ Format: $asnip [QUANTITY] 
+┠ Condition: Online! ✅
+
+┠ GEN RANDOM IP :
+┠ Format: $genip [QUANTITY]
+┠ Condition: Online! ✅
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+           reply_markup=InlineKeyboardMarkup(
+                [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_tool"),
+                InlineKeyboardButton("Next Page", callback_data="_tool3"),
+                ],
+                [
+                InlineKeyboardButton("Back", callback_data="__back"),
+                ],
+                ]
+            ),
+        )
+    elif data == "_tool3":
+        await query.edit_message_text(
+            """
+┏ Joanna SK Cracking Tool / [P: 3 | 3] ┒
+┠ DEBUG SCAN :
+┠ Format: $debug Reply To TxT File 
+┠ Condition: Online! ✅
+
+┠ ENV SCAN :
+┠ Format: $env Reply To TxT File
+┠ Condition: Online! ✅
+
+┠ DOMAIN TO IP CON :
+┠ Format: $dip Reply To TxT File
+┠ Condition: Online! ✅
+
+┠ IP RANGE :
+┠ Format: $range Start_Ip - End_Ip
+┠ Condition: Online! ✅
+
+┠ IP TO DOMAIN :
+┠ Format: $rev Reply To TxT File
+┠ Condition: Online! ✅
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+        reply_markup=InlineKeyboardMarkup(
+                [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_tool2"),
+                InlineKeyboardButton("Back Page", callback_data="_tool2"),
+                ],
+                [
+                InlineKeyboardButton("Back", callback_data="__back"),
                 ],
                 ]
             ),

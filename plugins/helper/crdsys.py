@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from plugins.func.users_sql import *
 
 
-@Client.on_message(filters.command('crdsystem'))
+@Client.on_message(filters.command(''))
 async def cmd_crdsystem(Client, message):
     try:
         user_id = str(message.from_user.id)
