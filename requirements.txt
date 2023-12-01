@@ -1,4 +1,4 @@
-Pyrogram
+pyrogram
 tgcrypto
 datetime
 requests
@@ -6,3 +6,10 @@ requests
 bs4
 fastapi
 uvicorn
+ipaddress
+luhn
+concurrently
+futures
+sockets
+urllib3
+colored
