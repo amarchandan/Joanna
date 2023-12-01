@@ -15,11 +15,11 @@ async def main():
   user = Client("Joanna_Scr",
                 api_id="20126690",
                 api_hash="3ea37bd78cb3a8ca92caac7a23b542d9",
-                session_string="BQCgnVjVl-Q9P7U5Xuq5gifu0sbLCSw8_BelYayVHnDLRQ8SKYJwhp30sKRRiv-plFqvVUIc_7vepIocDhCqflprJVT5v8Vx5MfFbU88lzgdxGRXizdOHqRsYWWKTal6XsOFUalcfAeDgUuTpHPOZpm67uo-MENLjFAceYC-BRxSLIbDZJkKGX5tYD82I36JVfxCLNUa4Mms6CbVLozR8JPCm1syT6ECEF7SQqgZIdwBW8l_L8SjFVm5bogimfYAN-iWlu1PG54Kn1wH-PytU4rCwmUnlLLBB18DXgKBsCjPPjY7VPkf8Js3b_2rOws6i_FoaiLUaRQWmnohUgqkTztJAAAAAYmZ2a0A")
+                session_string="BQF3CWcASxs8-I2bLRPxm4KEpOqjo3ExLLDjXp6yL1025vQgDtzeMYEucK9OSbIzup0GrPrJApcbJdas8lpqZo77wWaqmmiikJAg1fCmRt89uyrBdrQ0lTEJHB8iJfop_b2SGXZ6RkW9Etk3Qvm7s4Yk1e0a4Ih3VhmG4mQC1M-DUwPeFMesRhjVv5DwEfu3pWmQr6Er3S_oF2pW7TVCE7QNJhfAXUma-XVqs39e1SyH5VVlNm3oygKu8-wEEPPtS27IlBxPWNtPynROPbnZmEqhf3YSmoZ_TxX5bIWdRYYgoIXiaJ6L8ZffwD-SHEItespWtuLnjZNnvZfcHPz2927fynybEgAAAAF33G0MAA")
   bot = Client("Joanna_Bot",
                api_id="20126690",
                api_hash="3ea37bd78cb3a8ca92caac7a23b542d9",
-               bot_token="6482788844:AAFfVi0BQNVY-uKUfsjOYqPlO2FyQdB1pqY",
+               bot_token="6669312789:AAG_d464Q2TU48Wbb_uMkMbUSPldGHIzbvM",
                plugins=plugins)
   clients = [user, bot]
   bot.set_parse_mode(enums.ParseMode.HTML)
