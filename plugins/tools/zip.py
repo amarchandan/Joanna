@@ -28,14 +28,12 @@ async def cmd_bin(Client, message):
             # PM AND AUTH CHECK
             pm = fetchinfo(user_id)
             status = pm[2]
-            role = status:
-                # CMD SENT NOW CHECKING VALID IF OR NOT CC#
-                if message.reply_to_message:
-                    bin = message.reply_to_message.text
-
-                else:
-                    tic = time.perf_counter()
-                    zipp = message.text[len('/zip '):]
+            role = status
+            if message.reply_to_message:
+                bin = message.reply_to_message.text
+            else:
+                tic = time.perf_counter()
+                zipp = message.text[len('/zip '):]
                 if len(zipp) == 0:
                     nocc = """
 Give Valid Zip Code
