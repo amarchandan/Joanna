@@ -228,6 +228,10 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Tools / [P: 1 | 3] ┒
+┠ CC Scr:
+┠ Format: $scr Username Quantity 
+┠ Condition: Online! ✅
+
 ┠ BIN Lookup:
 ┠ Format: $bin 601120 
 ┠ Condition: Online! ✅
