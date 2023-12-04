@@ -1,18 +1,17 @@
 # RANDOM GEN FUNCTION
-def randgen(len=10):
-    import string
-    import random
-    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    return ''.join(random.choice(chars) for _ in range(len))
+def gcgenfunc(len=10):
+  import string
+  import random
+  chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  return ''.join(random.choice(chars) for _ in range(len))
+
 # insert registration data
-
-
-def insert_reg_data(user_id, username, antispam_time, reg_at):
+def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
     import psycopg2
     conn = psycopg2.connect('postgres://joanna_user:q6wKFWvDa5KPvBcpx3epbSd1ZwR3kzBC@dpg-clk3j1l8td7s73daqvcg-a.singapore-postgres.render.com/joanna')
     db = conn.cursor()
     db.execute(
-        f"INSERT INTO users VALUES (''{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','Joanna-{randgen}')")
+        f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')")
     conn.commit()
     conn.close()
 
