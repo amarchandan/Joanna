@@ -1,2 +1,3 @@
 https://github.com/ogunjobiFX/MT4-MT5-Forex-Signal-Copier-Telegram-Bot
 
+uvicorn src.main:app --port=${PORT:-8080}
