@@ -1,8 +1,19 @@
+
 from pyrogram import Client, filters
 import requests
+import json
 from plugins.func.users_sql import *
 
 session = requests.session()
+
+def Getstr(string, start, end):
+    string = ' ' + string
+    ini = string.find(start)
+    if ini == -1:
+        return ''
+    ini += len(start)
+    length = string.find(end, ini) - ini
+    return string[ini:ini + length].strip()
 
 @Client.on_message(filters.command('sk'))
 async def cmd_sk(Client, message):
@@ -40,11 +51,74 @@ async def cmd_sk(Client, message):
                 else:
                     chkst = "𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗞 𝗪𝗮𝗶𝘁...."
                     done = await message.reply_text(chkst, message.id)
-                    skchk = f"https://rembleampi.site/api/sk.php?sk={sk}"
-                    skinfo = requests.get(skchk)
-                    result = skinfo.text
+                    tic = time.perf_counter()
+                    url = 'https://api.stripe.com/v1/tokens'
+                    data = {
+                                'card[number]': '4580420266153881',
+                                'card[exp_month]': '09',
+                                'card[exp_year]': '2025',
+                                'card[cvc]': '704',
+                    }
+                    headers = {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                    auth = (sk, '')
 
-          
+                    resp = requests.post(url, data=data, headers=headers, auth=auth)
+                    msg = Getstr(resp.text, '"message": "', '"')
+                    #BALANCE CHK
+
+                    url = 'https://api.stripe.com/v1/balance'
+                    headers = {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                    auth = (sk, '')
+
+                    response = requests.get(url, headers=headers, auth=auth)
+                    r2 = response.text
+                    parsed_data = json.loads(r2)
+
+                    if 'Expired API Key provided' in r2:
+                        available_amount = 'NA'
+                    elif 'api_key_expired' in r2:
+                        available_amount = 'NA'
+                    else:
+                        available_amount = parsed_data['available'][0]['amount']
+
+                    curr = Getstr(r2, '"currency": "', '"')
+                    if 'usd' in curr:
+                        currn, currf, currs = '$', '🇺🇸', 'USD'
+                    elif 'inr' in curr:
+                        currn, currf, currs = '₹', '🇮🇳', 'INR'
+                    elif 'cad' in curr:
+                        currn, currf, currs = '$', '🇨🇦', 'CAD'
+                    elif 'aud' in curr:
+                        currn, currf, currs = '$', '🇦🇺', 'AUD'
+                    elif 'aed' in curr:
+                        currn, currf, currs = 'د.إ', '🇦🇪', 'AED'
+                    elif 'sgd' in curr:
+                        currn, currf, currs = 'S$', '🇸🇬', 'SGD'
+                    elif 'nzd' in curr:
+                        currn, currf, currs = '$', '🇳🇿', 'NZD'
+                    elif 'eur' in curr:
+                        currn, currf, currs = '$', '🇪🇺', 'EUR'
+                    elif 'gbp' in curr:
+                        currn, currf, currs = '£', '🇬🇧', 'GBP'
+                    else:
+                        currn, currf, currs = 'N/A', 'N/A', curr
+                        toc = time.perf_counter()
+                    xxx = f'''
+  CHECK  SUCCESSFULLY 
+┏－－－－－－－－－－－－┒
+┠ SK - <code>{sk}</code>
+┠ Resp - <code>{msg}</code>
+┠ Balance - <code>{available_amount}</code>
+┠ Currency - <code>{currn} {currf} {currs}</code>
+┠ Time To Chk - {toc - tic:0.4f}sec
+┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┗－－－－－－－－－－－－┛
+    '''
                     await Client.edit_message_text(message.chat.id, done.id, result)
     except Exception as e:
         print(e)
