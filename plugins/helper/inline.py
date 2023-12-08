@@ -233,6 +233,11 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Format: $scr Username Quantity 
 ┠ Condition: Online! ✅
 
+┠ IP Lookup:
+┠ Format: $ip Your IP
+┠ Condition: Online! ✅
+
+
 ┠ BIN Lookup:
 ┠ Format: $bin 601120 
 ┠ Condition: Online! ✅
