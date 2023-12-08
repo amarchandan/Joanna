@@ -15,7 +15,7 @@ API2='https://www.1secmail.com/api/v1/?action=getMessages&login='
 API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 
 @Client.on_message(filters.command('mail'))
-async def cmd_bin(_, message: Message):
+async def cmd_bin(_, message, Message):
     user_id = str(message.from_user.id)
     chat_type = str(message.chat.type)
     chat_id = str(message.chat.id)
@@ -26,13 +26,13 @@ async def cmd_bin(_, message: Message):
         await message.reply_text(resp, message.id)
     else:
         name = message.from_user.id
-        m =  await Client.send_message(name,text=f"📧 Creating  temp email....")
+        m =  await message.reply_text(name,text=f"📧 Creating  temp email....")
         rp = RandomWord(max_word_size=8, include_digits=True)
         email = rp.generate()
         xx = requests.get(API1).json()
         domain = random.choice(xx)
         #print(email)
-        mes = await Client.send_message(
+        mes = await message.reply_text(
         name, 
         text = f"""
 **📬Done,Your Email Address Created!**
