@@ -26,13 +26,13 @@ async def cmd_bin(_, message: Message):
         await message.reply_text(resp, message.id)
     else:
         name = message.from_user.id
-        m =  await message.send_message(name,text=f"📧 Creating  temp email....")
+        m =  await Client.send_message(name,text=f"📧 Creating  temp email....")
         rp = RandomWord(max_word_size=8, include_digits=True)
         email = rp.generate()
         xx = requests.get(API1).json()
         domain = random.choice(xx)
         #print(email)
-        mes = await message.send_message(
+        mes = await Client.send_message(
         name, 
         text = f"""
 **📬Done,Your Email Address Created!**
