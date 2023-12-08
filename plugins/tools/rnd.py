@@ -29,22 +29,26 @@ async def cmd_bin(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            session = requests.session()
-            tic = time.perf_counter()
-            api = requests.get("https://randomuser.me/api/?nat=us&inc=name,location").json()
-            mr = api["results"][0]["name"]["title"]
-            nombre = api["results"][0]["name"]["first"]
-            last = api["results"][0]["name"]["last"]
-            loca = api["results"][0]["location"]["street"]["name"]
-            nm = api["results"][0]["location"]["street"]["number"]
-            city = api["results"][0]["location"]["city"]
-            state = api["results"][0]["location"]["state"]
-            country = api["results"][0]["location"]["country"]
-            postcode = api["results"][0]["location"]["postcode"]
-            latitude = api["results"][0]["location"]["coordinates"]["latitude"]
-            longitude = api["results"][0]["location"]["coordinates"]["longitude"]
-            toc = time.perf_counter() 
-            resp = f"""
+            if chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
+                await message.reply_text(resp, message.id)
+            else:
+                session = requests.session()
+                tic = time.perf_counter()
+                api = requests.get("https://randomuser.me/api/?nat=us&inc=name,location").json()
+                mr = api["results"][0]["name"]["title"]
+                nombre = api["results"][0]["name"]["first"]
+                last = api["results"][0]["name"]["last"]
+                loca = api["results"][0]["location"]["street"]["name"]
+                nm = api["results"][0]["location"]["street"]["number"]
+                city = api["results"][0]["location"]["city"]
+                state = api["results"][0]["location"]["state"]
+                country = api["results"][0]["location"]["country"]
+                postcode = api["results"][0]["location"]["postcode"]
+                latitude = api["results"][0]["location"]["coordinates"]["latitude"]
+                longitude = api["results"][0]["location"]["coordinates"]["longitude"]
+                toc = time.perf_counter() 
+                resp = f"""
   GEN  SUCCESSFULLY 
 ┏－－－－－－－－－－－－┒
 ┠ Name - <code>{mr} {nombre} {last}</code>
@@ -58,6 +62,6 @@ async def cmd_bin(Client, message):
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛
         """
-            await message.reply_text(resp, message.id)
+                await message.reply_text(resp, message.id)
     except Exception as e:
         print(e)

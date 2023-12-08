@@ -11,15 +11,6 @@ session = requests.session()
 s = requests.session()
 
 
-def Getstr(string, start, end):
-    string = ' ' + string
-    ini = string.find(start)
-    if ini == -1:
-        return ''
-    ini += len(start)
-    length = string.find(end, ini) - ini
-    return string[ini:ini + length].strip()
-
 @Client.on_message(filters.command('masssk'))
 async def cmd_massskchk(Client, message):
     try:

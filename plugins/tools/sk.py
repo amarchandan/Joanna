@@ -1,4 +1,4 @@
-
+import time
 from pyrogram import Client, filters
 import requests
 import json
@@ -107,7 +107,7 @@ async def cmd_sk(Client, message):
                     else:
                         currn, currf, currs = 'N/A', 'N/A', curr
                         toc = time.perf_counter()
-                    xxx = f'''
+                    result = f'''
   CHECK  SUCCESSFULLY 
 ┏－－－－－－－－－－－－┒
 ┠ SK - <code>{sk}</code>
