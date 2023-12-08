@@ -1,5 +1,4 @@
-import re, os, time, ipaddress, random, base64, json, urllib.parse, requests
-import string
+import time, base64, json, urllib.parse, requests
 from pyrogram import Client, filters
 from plugins.func.users_sql import *
 session = requests.session()
@@ -7,8 +6,7 @@ session = requests.session()
 
 @Client.on_message(filters.command('cs'))
 async def cmd_css(Client, message):
-  #  try:
-        # NES TOOLS
+    try:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
         chat_id = str(message.chat.id)
@@ -24,7 +22,7 @@ async def cmd_css(Client, message):
                 link = message.text[len('/cs '):]
             if len(link) == 0:
                 nocc = """
-GIVE VALID LINK ❌
+ɪɴᴠᴀʟɪᴅ ғᴏʀᴍᴀᴛ.⚠️\nᴜsᴀɢᴇ ⇾ /cp ᴄʜᴇᴄᴋᴏᴜᴛʟɪɴᴋ ❌
           """
                 return await message.reply_text(nocc, message.id)
             else:
@@ -75,11 +73,11 @@ GIVE VALID LINK ❌
                         site = site.split('https://')[1].split('/')[0]
                     except BaseException:
                         site = "N/A"
-                    except BaseException:
-                        A = NA
-                    caption = f"""
+                except BaseException:
+                    A = "N/A"
+                caption = f"""
 𝗣𝗔𝗥𝗦𝗘𝗗 ✅
-━━━━ ɢʀᴀʙʙᴇᴅ ᴅᴇᴛᴀɪʟs ━━
+┏━━━━ ɢʀᴀʙʙᴇᴅ ᴅᴇᴛᴀɪʟs ━━━━┒
 
 ヤ Cs ⇾ {cslive}
 
@@ -95,8 +93,10 @@ GIVE VALID LINK ❌
 
 ━━━━ ᴏᴛʜᴇʀ ᴅᴇᴛᴀɪʟs ━━
 ヤ『Time Taken ⇾  {str(round((time.time() - start), 1))}'s`
-ヤ『Grabbed By ⇾  {m.from_user.mention}
-ヤ『Dev ⇾ @K3vin_x"""
-                    await message.reply_text(caption, message.id)
-   # except Exception as e:
-      #  print(e)
+ヤ『Grabbed By ⇾  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a>
+ヤ『Dev ⇾ @K3vin_x
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+"""
+                await message.reply_text(caption, message.id)
+    except Exception as e:
+        print(e)
