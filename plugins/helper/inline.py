@@ -38,11 +38,11 @@ backbutton = [
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 backtext = f"""
-Welcome To Joanna Api Bot  |  {dt_string} 
+Welcome To Joanna Bot  |  {dt_string} 
 ━━━━━━━━━━━━━━━                                                                  
 Hello This Is Beta Version telegram bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here.
 ━━━━━━━━━━━━━━━
-Api Bot Status Is: Online ✅ | Joanna Api Is Online!
+Api Bot Status Is: OFFLINE | Joanna Api Is OFFLINE!
 """
 gatebutton = [
                 [
@@ -53,14 +53,15 @@ gatebutton = [
                 InlineKeyboardButton("Back",callback_data="__back"),
                 ],
                 ]
-gatetext = """
-Welcome to Joanna / Joanna Gateways Online
-━━━━━━━━━━━━━━━━━━━━━
-Gates CMDS:  None Api Gates! ✅
-━━━━━━━━━━━━━━━
-Gates auth: 1 ✅  |   Gates charge: 9 ✅
-━━━━━━━━━━━━━━━━
-Select the type of gate you want for your use!."""
+gatetext = """ALL GATES ARE DEAD SOON START"""
+
+#Welcome to Joanna / Joanna Gateways Online
+#━━━━━━━━━━━━━━━━━━━━━
+#Gates CMDS:  None Api Gates! ✅
+#━━━━━━━━━━━━━━━
+#Gates auth: 1 ✅  |   Gates charge: 9 ✅
+#━━━━━━━━━━━━━━━━
+#Select the type of gate you want for your use!.
 
 buttonscharge = [
                 [
@@ -329,7 +330,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
                 [
                 [
                 InlineKeyboardButton("Prev Page", callback_data="_tool2"),
-                InlineKeyboardButton("Back Page", callback_data="_tool2"),
                 ],
                 [
                 InlineKeyboardButton("Back", callback_data="__back"),
