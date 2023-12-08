@@ -15,7 +15,6 @@ sockets
 urllib3
 colored
 ipranges
-RandomWordGenerator
 motor==3.0.0
 asyncio
 wget
