@@ -4,7 +4,7 @@ from plugins.func.users_sql import *
 session = requests.session()
 
 
-@Client.on_message(filters.command('cs'))
+@Client.on_message(filters.command('c'))
 async def cmd_css(Client, message):
     try:
         user_id = str(message.from_user.id)
