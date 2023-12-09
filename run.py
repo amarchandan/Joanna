@@ -68,7 +68,7 @@ Usage :-
           resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
           await message.reply_text(resp, message.id)
 
-        elif chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+        elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
           resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
           await message.reply_text(resp, message.id)
         else:
