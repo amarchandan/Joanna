@@ -15,10 +15,4 @@ sockets
 urllib3
 colored
 ipranges
-motor==3.0.0
 asyncio
-wget
-lxml
-pykeyboard
-beautifulsoup4
-Random-Word-Generator
