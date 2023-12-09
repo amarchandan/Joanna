@@ -238,7 +238,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Condition: Online! ✅
 
 ┠ Checkout Parse:
-┠ Format: $/cs Checkout_Link
+┠ Format: $/c Checkout_Link
 ┠ Condition: Online! ✅
 
 ┠ BIN Lookup:
