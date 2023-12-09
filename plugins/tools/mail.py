@@ -15,7 +15,7 @@ API2='https://www.1secmail.com/api/v1/?action=getMessages&login='
 API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 
 @Client.on_message(filters.command('mail'))
-async def cmd_bin(_, message, Message):
+async def cmd_bin(Client, message, Message):
     user_id = str(message.from_user.id)
     chat_type = str(message.chat.type)
     chat_id = str(message.chat.id)
