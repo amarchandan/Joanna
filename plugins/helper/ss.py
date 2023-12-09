@@ -15,7 +15,7 @@ async def cmd_start(Client,message):
           user_id = str(message.from_user.id)
           chat_type = str(message.chat.type)
           chat_id = str(message.chat.id)
-          text = f"""
+          text = """
 Welcome to Beta version 0.2 of Joanna! >_
 
 Stay Updated! Subscribe To Our Announcement Channel [Click Here](https://t.me/TeamMorpho) For The Latest News!
