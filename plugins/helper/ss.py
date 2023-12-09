@@ -18,7 +18,7 @@ async def cmd_start(Client,message):
           text = """
 Welcome to Beta version 0.2 of Joanna! >_
 
-Stay Updated! Subscribe To Our Announcement Channel [Click Here](https://t.me/TeamMorpho) For The Latest News!
+Stay Updated! Subscribe To Our Announcement Channel @TeamMorpho For The Latest News!
 
 This Is The CC Checker Bot With Many Gates And Tools.\n
 This Is The Most Optimized Version And Adapted To Multiple Tasks.\n
