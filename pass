@@ -6,3 +6,6 @@ rembela1
 https://admirehost.com/dashboard/index.php?rp=/login
 d6650033@gmail.com
 AmaRAmaR@6082
+
+
+gunicorn app:app & python3 run.py
