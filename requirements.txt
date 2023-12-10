@@ -5,10 +5,7 @@ datetime
 requests
 requests
 bs4
-fastapi
-uvicorn
 ipaddress
-luhn
 concurrently
 futures
 sockets
@@ -16,3 +13,5 @@ urllib3
 colored
 ipranges
 asyncio
+gunicorn==20.1.0
+Flask==2.2.2
