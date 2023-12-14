@@ -69,18 +69,18 @@ async def cmd_debugscanner(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 500:
+                if status == 'FREE' and x > 1000:
                     resp = f"""
 #ALERT_ ⚠️
 Your Account Is FREE
-You Can Use 500 IP At a Time
+You Can Use 1000 IP At a Time
 Upgrade Your Plan Or Wait For Next Update!
                 """
                     await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 5000:
+                elif status == 'PREMIUM' and x > 10000:
                     resp = f"""
 #ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Use Only 5000 IPS At a Time!
+Your Account Is PREMIUM But You Have Use Only 10000 IPS At a Time!
                 """
                     await message.reply_text(resp, message.id)
                 else:
