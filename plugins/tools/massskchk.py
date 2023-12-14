@@ -60,25 +60,19 @@ async def cmd_massskchk(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 10:
+                if status == 'FREE' and x > 1000:
                     resp = f"""
 #ALERT_ ⚠️
 Your Account Is FREE
-You Can't Check More Than 10 SK!
+You Can't Check More Than 1K SK!
 Upgrade Your Plan Or Wait For Next Update!
                 """
                     await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 200:
+                elif status == 'PREMIUM' and x > 10000:
                     resp = f"""
 #ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Check More Than 200 SK!
+Your Account Is PREMIUM But You Have Check More Than 10K SK!
                 """
-                    await message.reply_text(resp, message.id)
-                elif status == 'GOLD' and x > 1000:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is GOLD But You Have Check More Than 1K SK!
-                    """
                     await message.reply_text(resp, message.id)
                 else:
                     await message.reply_text(ms_)
