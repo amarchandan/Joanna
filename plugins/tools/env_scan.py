@@ -69,25 +69,19 @@ async def cmd_envscanner(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 1:
+                if status == 'FREE' and x > 1000:
                     resp = f"""
 #ALERT_ ⚠️
 Your Account Is FREE
-You Can't Use This Gate!
+You Can't Use More Then 1000 IPS!
 Upgrade Your Plan Or Wait For Next Update!
                 """
                     await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 1:
+                elif status == 'PREMIUM' and x > 10000:
                     resp = f"""
 #ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Use Only GOLD User CAn USE!
+Your Account Is PREMIUM But You CAn USE 10000 Only!
                 """
-                    await message.reply_text(resp, message.id)
-                elif status == 'GOLD' and x > 1000000:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is GOLD But You Have Use More Than 1000000 IP !
-                    """
                     await message.reply_text(resp, message.id)
                 else:
                     await message.reply_text(ms_)
