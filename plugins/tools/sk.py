@@ -81,14 +81,6 @@ async def cmd_sk(Client, message):
                     response = requests.get(url, headers=headers, auth=auth)
                     r2 = response.text
                     parsed_data = json.loads(r2)
-
-                    if 'Expired API Key provided' in r2:
-                        available_amount = 'NA'
-                    elif 'api_key_expired' in r2:
-                        available_amount = 'NA'
-                    else:
-                        available_amount = parsed_data['available'][0]['amount']
-
                     curr = Getstr(r2, '"currency": "', '"')
                     if 'usd' in curr:
                         currn, currf, currs = '$', '🇺🇸', 'USD'
@@ -116,7 +108,6 @@ async def cmd_sk(Client, message):
 ┏－－－－－－－－－－－－┒
 ┠ SK - <code>{sk}</code>
 ┠ Resp - <code>{msg}</code>
-┠ Balance - <code>{available_amount}</code>
 ┠ Currency - <code>{currn} {currf} {currs}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
