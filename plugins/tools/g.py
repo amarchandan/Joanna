@@ -209,14 +209,6 @@ async def GeneatedCC(extra):
 	else: cant = 16
 	return Generar_tarjeta(extra, cant, True)
 
-
-# Replace 'YOUR_API_ID' and 'YOUR_API_HASH' with your actual Telegram API ID and hash
-
-#app = Client("Joanna",
-#             api_id="24578407",
-#             api_hash="5f711fbe013fd0d20147f62728118510",
-#             bot_token="6669312789:AAG_d464Q2TU48Wbb_uMkMbUSPldGHIzbvM")
-
 @Client.on_message(filters.command(["gen", "generate"]) & filters.private)
 async def generate_cc(_, message: Message):
     try:
@@ -233,8 +225,8 @@ async def generate_cc(_, message: Message):
 
             quantity = int(quantity[0]) if quantity else 20
             tic = time.perf_counter()
-	    chkst = "Generating ...."
-            done = await message.reply_text(chkst, message.id)
+			chkst = "Generating ...."
+			done = await message.reply_text(chkst, message.id)
             session = requests.session()
             bin = session.get(f"https://lookup.binlist.net/{bin_input}").json()
             try:
