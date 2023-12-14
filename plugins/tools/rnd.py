@@ -29,7 +29,11 @@ async def cmd_bin(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            if chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+            GROUP = open("plugins/group.txt").read().splitlines()
+            if chat_type == "ChatType.PRIVATE" and status == "FREE":
+                resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
+                await message.reply_text(resp, message.id)
+            elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
                 resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
@@ -59,7 +63,7 @@ async def cmd_bin(Client, message):
 ┠ Country - <code>{country}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
 ┗－－－－－－－－－－－－┛
         """
                 await message.reply_text(resp, message.id)

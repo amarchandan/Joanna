@@ -70,7 +70,7 @@ GENERATED COMPLETED ✅
 ┠ Amount - <code>{num}</code>
 ┠ Time in Gen - {toc - tic:0.4f}sec
 ┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [  ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
             await message.reply_document(
             document=f"{num}x_IP_BY_@JoannaChkBot.txt",

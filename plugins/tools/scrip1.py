@@ -31,8 +31,12 @@ async def cmd_scrip1(Client, message):
             status = pm[2]
             role = status
             GROUP = open("plugins/group.txt").read().splitlines()
+            GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
+                await message.reply_text(resp, message.id)
+            elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
+                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
                 ress = "SCRAPING ..."
@@ -63,7 +67,7 @@ SCRAPPING COMPLETED ✅
 ┠ Amount - <code></code>
 ┠ Time in Scr - {toc - tic:0.4f}sec
 ┠ Scr By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
                 await message.reply_document(
                 document="{num}x_IP_BY_@JoannaChkBot.txt",
