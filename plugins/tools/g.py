@@ -233,6 +233,8 @@ async def generate_cc(_, message: Message):
 
             quantity = int(quantity[0]) if quantity else 20
             tic = time.perf_counter()
+	    chkst = "Generating ...."
+            done = await message.reply_text(chkst, message.id)
             session = requests.session()
             bin = session.get(f"https://lookup.binlist.net/{bin_input}").json()
             try:
