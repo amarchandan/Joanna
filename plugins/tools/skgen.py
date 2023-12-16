@@ -33,13 +33,10 @@ async def cmd_skgen(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
                 await message.reply_text(resp, message.id)
-            elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
-                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
-                await message.reply_text(resp, message.id)
+                ipn = message.text[len('/gensk '):]
             else:
                 if message.reply_to_message:
                     sknumxx = message.reply_to_message.text
@@ -105,8 +102,8 @@ GENERATED COMPLETED ✅
 ┏－－－－－－－－－－－－┒
 ┠ Amount - <code>{num}</code>
 ┠ Time in Gen - {toc - tic:0.4f}sec
-┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [  ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
                     await message.reply_document(
                     document=f"{num}x_SK_GEN_BY_@JoannaChkBot.txt",

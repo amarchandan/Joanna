@@ -35,12 +35,8 @@ async def cmd_sk(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
-                await message.reply_text(resp, message.id)
-            elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
-                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
                 if message.reply_to_message:
@@ -69,6 +65,7 @@ async def cmd_sk(Client, message):
                     auth = (sk, '')
 
                     resp = requests.post(url, data=data, headers=headers, auth=auth)
+                    await message.reply_text(resp, message.id)
                     msg = Getstr(resp.text, '"message": "', '"')
                     #BALANCE CHK
 
@@ -81,6 +78,14 @@ async def cmd_sk(Client, message):
                     response = requests.get(url, headers=headers, auth=auth)
                     r2 = response.text
                     parsed_data = json.loads(r2)
+                    await message.reply_text(r2, message.id)
+                    if 'Expired API Key provided' in r2:
+                        available_amount = 'NA'
+                    elif 'api_key_expired' in r2:
+                        available_amount = 'NA'
+                    else:
+                        available_amount = parsed_data['available'][0]['amount']
+
                     curr = Getstr(r2, '"currency": "', '"')
                     if 'usd' in curr:
                         currn, currf, currs = '$', '🇺🇸', 'USD'
@@ -102,16 +107,17 @@ async def cmd_sk(Client, message):
                         currn, currf, currs = '£', '🇬🇧', 'GBP'
                     else:
                         currn, currf, currs = 'N/A', 'N/A', curr
-                        toc = time.perf_counter()
+                    toc = time.perf_counter()
                     result = f'''
   CHECK  SUCCESSFULLY 
 ┏－－－－－－－－－－－－┒
 ┠ SK - <code>{sk}</code>
 ┠ Resp - <code>{msg}</code>
+┠ Balance - <code>{available_amount}</code>
 ┠ Currency - <code>{currn} {currf} {currs}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛
     '''
                     await Client.edit_message_text(message.chat.id, done.id, result)

@@ -209,6 +209,14 @@ async def GeneatedCC(extra):
 	else: cant = 16
 	return Generar_tarjeta(extra, cant, True)
 
+
+# Replace 'YOUR_API_ID' and 'YOUR_API_HASH' with your actual Telegram API ID and hash
+
+#app = Client("Joanna",
+#             api_id="24578407",
+#             api_hash="5f711fbe013fd0d20147f62728118510",
+#             bot_token="6669312789:AAG_d464Q2TU48Wbb_uMkMbUSPldGHIzbvM")
+
 @Client.on_message(filters.command(["gen", "generate"]) & filters.private)
 async def generate_cc(_, message: Message):
     try:
@@ -221,8 +229,10 @@ async def generate_cc(_, message: Message):
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
+            pm = fetchinfo(user_id)
+            status = pm[2]
+            role = status
             _, bin_input, *quantity = message.text.split(" ")
-
             quantity = int(quantity[0]) if quantity else 20
             tic = time.perf_counter()
             session = requests.session()
@@ -280,8 +290,8 @@ async def generate_cc(_, message: Message):
 ┠  {brand} - {level} - {type}
 ┠ Bank - {bank}
 ┠ Country - {country} - {flag} - {currency}
-┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [  ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
 
             resp1 =f"""
@@ -294,8 +304,8 @@ async def generate_cc(_, message: Message):
 ┠  {brand} - {level} - {type}
 ┠ Bank - {bank}
 ┠ Country - {country} - {flag} - {currency}
-┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [  ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－┛"""
             if quantity > 20:
                 with open(f"{quantity}x_CC_GEN_BY_@JoannaChkBot.txt", "w") as file:

@@ -36,6 +36,9 @@ Give Valid Zip Code
           """
                 return await message.reply_text(nocc, message.id)
             else:
+                pm = fetchinfo(user_id)
+                status = pm[2]
+                role = status
                 session = requests.session()
                 zip_api = requests.get(f'https://zip.getziptastic.com/v2/US/{zipp}').json()
                 toc = time.perf_counter()
@@ -48,7 +51,7 @@ Give Valid Zip Code
 ┠ State - <code>{zip_api['state_short']}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛
 """
                 await message.reply_text(resp, message.id)

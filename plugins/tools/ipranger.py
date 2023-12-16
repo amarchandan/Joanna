@@ -78,8 +78,8 @@ GENERATED COMPLETED ✅
 ┠ Amount - <code>{num}</code>
 ┠ Range - <code>{start_ip_str} - {end_ip_str}</code>
 ┠ Time in Range - {toc - tic:0.4f}sec
-┠ Range By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [  ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ Range By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
             await message.reply_document(
             document=f"{num}x_IP_RANGER_BY_@JoannaChkBot.txt",

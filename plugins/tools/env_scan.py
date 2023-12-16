@@ -50,12 +50,8 @@ async def cmd_envscanner(Client, message):
             status = pm[2]
             role = status
             GROUP = open("plugins/group.txt").read().splitlines()
-            GROUP = open("plugins/group.txt").read().splitlines()
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
-                await message.reply_text(resp, message.id)
-            elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
-                resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
                 
@@ -69,19 +65,25 @@ async def cmd_envscanner(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 1000:
+                if status == 'FREE' and x > 1:
                     resp = f"""
 #ALERT_ ⚠️
 Your Account Is FREE
-You Can't Use More Then 1000 IPS!
+You Can't Use This Gate!
 Upgrade Your Plan Or Wait For Next Update!
                 """
                     await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 10000:
+                elif status == 'PREMIUM' and x > 1:
                     resp = f"""
 #ALERT_ ⚠️
-Your Account Is PREMIUM But You CAn USE 10000 Only!
+Your Account Is PREMIUM But You Have Use Only GOLD User CAn USE!
                 """
+                    await message.reply_text(resp, message.id)
+                elif status == 'GOLD' and x > 1000000:
+                    resp = f"""
+#ALERT_ ⚠️
+Your Account Is GOLD But You Have Use More Than 1000000 IP !
+                    """
                     await message.reply_text(resp, message.id)
                 else:
                     await message.reply_text(ms_)
@@ -108,7 +110,7 @@ SK ENV SCAN COMPLETED ✅
 ┠ SK - <code>{x}</code>
 ┠ Time To Scan - {toc - tic:0.4f}sec
 ┠ Scan By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871"> @KevinCoder ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
                             await message.reply_document(
                             document=f"{x}x_SK_BY_@JoannaChkBot.txt",
