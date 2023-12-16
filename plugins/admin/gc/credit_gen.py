@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 @Client.on_message(filters.command ('gc'))
 async def cmd_gc(client,message):
   user_id = str(message.from_user.id)
-  CEO = "1418571871"
+  CEO = "6305901836"
   if user_id != CEO :
     resp = "𝗥𝗲𝗾𝘂𝗶𝗿𝗲 𝗢𝘄𝗻𝗲𝗿 𝗣𝗿𝗶𝘃𝗶𝗹𝗮𝗴𝗲𝘀 ⚠️"
     msg1 = await message.reply_text(resp,message.id)
@@ -34,7 +34,7 @@ async def cmd_gc(client,message):
     final_resp = f"""
 GiftCode Genarated ✅
 Amount : 10
-Value : 100 Credits + Premium
+Value : 100 Credits + 5 Day PREMIUM
 
 ➔ <code>{GC1}</code>
 
