@@ -5,6 +5,8 @@ from datetime import date
 from datetime import timedelta
 
 
+grp = "-1002122350640"
+
 @Client.on_message(filters.command('redeem'))
 async def cmd_gc(Client, message):
     try:
@@ -49,6 +51,7 @@ async def cmd_gc(Client, message):
                         updategc(gc)
                         resp = "Redeem Successfully GiftCard To Your Account ✅. Type /credits To Know Credits"
                         await message.reply_text(resp, message.id)
+                        await Client.send_message(grp,f"REDEM    {user_id}" )
                     elif plan == 'PLAN1':
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
@@ -72,7 +75,7 @@ async def cmd_gc(Client, message):
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Starter Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-
+                        await Client.send_message(grp,"redem" )
                     elif plan == 'PLAN2':
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
@@ -96,7 +99,7 @@ async def cmd_gc(Client, message):
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Silver Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-
+                        await Client.send_message(grp,"redem" )
                     elif plan == 'PLAN3':
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
@@ -120,7 +123,7 @@ async def cmd_gc(Client, message):
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Gold Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-
+                        await Client.send_message(grp,"redem" )
                     else:
                         ok = "NONE HAPPENNED"
                         print(ok)
