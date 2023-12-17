@@ -51,7 +51,7 @@ async def cmd_gc(Client, message):
                         updategc(gc)
                         resp = "Redeem Successfully GiftCard To Your Account ✅. Type /credits To Know Credits"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,f"REDEM    {user_id}" )
+                        await Client.send_message(grp,"REDEM")
                     elif plan == 'PLAN1':
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
