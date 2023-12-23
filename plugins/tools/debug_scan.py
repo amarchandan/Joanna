@@ -65,38 +65,23 @@ async def cmd_debugscanner(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 500:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is FREE
-You Can Use 500 IP At a Time
-Upgrade Your Plan Or Wait For Next Update!
-                """
-                    await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 5000:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Use Only 5000 IPS At a Time!
-                """
-                    await message.reply_text(resp, message.id)
-                else:
-                    await message.reply_text(ms_)
-                    results = []
-                    x = len(results)
-                    try:
-                        debug_scanner = DebugScanner()
-                        with ThreadPoolExecutor(max_workers=5) as executor:
-                            for i, result in enumerate(executor.map(debug_scanner.scan_debug, domains)):
-                                if result:
-                                    results.append(result)
-                        if results:
-                            result_text = "\n".join(results)
-                            with open('debug_results.txt', 'w') as result_file:
-                                result_file.write(result_text)
-                            toc = time.perf_counter()
-                            chat_id = str(message.chat.id)
-                            x = len(results)   
-                            resp=f"""
+                await message.reply_text(ms_)
+                results = []
+                x = len(results)
+                try:
+                    debug_scanner = DebugScanner()
+                    with ThreadPoolExecutor(max_workers=5) as executor:
+                        for i, result in enumerate(executor.map(debug_scanner.scan_debug, domains)):
+                            if result:
+                                results.append(result)
+                    if results:
+                        result_text = "\n".join(results)
+                        with open('debug_results.txt', 'w') as result_file:
+                            result_file.write(result_text)
+                        toc = time.perf_counter()
+                        chat_id = str(message.chat.id)
+                        x = len(results)   
+                        resp=f"""
 SK ENV SCAN COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
@@ -105,14 +90,14 @@ SK ENV SCAN COMPLETED ✅
 ┠ Scan By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
-                            await message.reply_document(
-                            document=f"{x}x_DEBUG_BY_@JoannaChkBot.txt",
-                            caption=resp,
-                            reply_to_message_id=message.id)
-                            os.remove(f"{x}x_DEBUG_BY_@JoannaChkBot.txt")
-                        else:
-                            await message.reply_text('NO result', message.id)
-                    except Exception as e:
-                        await message.reply_text(e, message.id)
+                        await message.reply_document(
+                        document=f"{x}x_DEBUG_BY_@JoannaChkBot.txt",
+                        caption=resp,
+                        reply_to_message_id=message.id)
+                        os.remove(f"{x}x_DEBUG_BY_@JoannaChkBot.txt")
+                    else:
+                        await message.reply_text('NO result', message.id)
+                except Exception as e:
+                    await message.reply_text(e, message.id)
     except Exception as e:
         print(e)
