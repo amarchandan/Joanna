@@ -30,33 +30,28 @@ async def cmd_scrip1(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            GROUP = open("plugins/group.txt").read().splitlines()
-            if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
-                await message.reply_text(resp, message.id)
-            else:
-                ress = "SCRAPING ..."
-                firstchk = await message.reply_text(ress, message.id)
-                tic = time.perf_counter()
-                urls =  requests.get('https://usings.ru/bots.php?bot=&page=1').json()
-                DRZXQGET = requests.get(urls,headers={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}, timeout=10).text
-                if 'IP' in DRZXQGET:
-                    REGEX = re.findall("[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}",DRZXQGET)
-                    for DRZXQ in REGEX:
-                        open('GrabbedIPs.txt','a').write(DRZXQ+'\n')
-                    with open('GrabbedIPs.txt', 'r') as FIRSTPX:
-                        FIRSTPXX = list(dict.fromkeys(FIRSTPX.read().splitlines()))
-                        with open('GrabbedIPs.txt.tmp','a') as new:
-                            new.write('\n'.join(FIRSTPXX))
-                            print(FIRSTPXX)
-                            new.close()
-                    FIRSTPX.close()
-                    #num = len(FIRSTPXX)
-                os.remove('GrabbedIPs.txt')
-                x = os.rename('GrabbedIPs.txt.tmp',"{num}x_IP_BY_@JoannaChkBot.txt")
-                toc = time.perf_counter()
-                chat_id = str(message.chat.id)
-                resp=f"""
+            ress = "SCRAPING ..."
+            firstchk = await message.reply_text(ress, message.id)
+            tic = time.perf_counter()
+            urls =  requests.get('https://usings.ru/bots.php?bot=&page=1').json()
+            DRZXQGET = requests.get(urls,headers={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}, timeout=10).text
+            if 'IP' in DRZXQGET:
+                REGEX = re.findall("[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}",DRZXQGET)
+                for DRZXQ in REGEX:
+                    open('GrabbedIPs.txt','a').write(DRZXQ+'\n')
+                with open('GrabbedIPs.txt', 'r') as FIRSTPX:
+                    FIRSTPXX = list(dict.fromkeys(FIRSTPX.read().splitlines()))
+                    with open('GrabbedIPs.txt.tmp','a') as new:
+                        new.write('\n'.join(FIRSTPXX))
+                        print(FIRSTPXX)
+                        new.close()
+                FIRSTPX.close()
+                #num = len(FIRSTPXX)
+            os.remove('GrabbedIPs.txt')
+            x = os.rename('GrabbedIPs.txt.tmp',"{num}x_IP_BY_@JoannaChkBot.txt")
+            toc = time.perf_counter()
+            chat_id = str(message.chat.id)
+            resp=f"""
 SCRAPPING COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
@@ -65,10 +60,10 @@ SCRAPPING COMPLETED ✅
 ┠ Scr By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
-                await message.reply_document(
-                document="{num}x_IP_BY_@JoannaChkBot.txt",
-                caption=resp,
-                reply_to_message_id=message.id)
-                os.remove("{num}x_IP_BY_@JoannaChkBot.txt")
+            await message.reply_document(
+            document="{num}x_IP_BY_@JoannaChkBot.txt",
+            caption=resp,
+            reply_to_message_id=message.id)
+            os.remove("{num}x_IP_BY_@JoannaChkBot.txt")
     except Exception as e:
         print(e)
