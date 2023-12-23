@@ -2,6 +2,9 @@ from pyrogram import Client, filters
 from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
+
+grp = "-1002122350640"
+
 @Client.on_message(filters.command ('start'))
 async def cmd_start(Client,message):
   try:
@@ -16,15 +19,18 @@ async def cmd_start(Client,message):
           chat_type = str(message.chat.type)
           chat_id = str(message.chat.id)
           text = f"""
-Welcome to version 0.2 of Joanna! >_
+Welcome to Beta version 0.2 of Joanna! >_
 
-𝗛𝗲𝘆 <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}></a>
-    I Am CC Checker Bot With Many Gates And Tools.
-    And Is The Most Optimized Version And Adapted To Multiple Tasks.
+{len(getalldata())} Users Were Active In The Last 24 Hours.
+
+This Is The CC Checker Bot With Many Gates And Tools.
+This Is The Most Optimized Version And Adapted To Multiple Tasks.
+Maybe you already know this bot, Click On Menu to know all my gates.
 """
           edit = await message.reply(
               text=text,
-              reply_markup=InlineKeyboardMarkup(buttons)
+              reply_markup=InlineKeyboardMarkup(menu)
               )
+          await Client.send_message(grp,f"NEW USERS {user_id}")
   except Exception as e:
       print(e)

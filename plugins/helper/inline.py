@@ -3,14 +3,22 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 from datetime import date
 from datetime import datetime
 
+menu = [
+    [
+        InlineKeyboardButton(text="Menu", callback_data="__main")
+    ],
+    [
+        InlineKeyboardButton(text="Add Me", url="https://t.me/JoannaChkBot?startgroup"),
+    ],
+]
+
 buttons = [
     [
         InlineKeyboardButton(text="Gate", callback_data="gates"),
         InlineKeyboardButton(text="Tools", callback_data="_tool"),
     ],
     [
-        InlineKeyboardButton(text="Group", url="https://t.me/TeamMorpho"),
-        InlineKeyboardButton(text="Channel", url="https://t.me/MorPhoChat"),
+        InlineKeyboardButton(text="Join Channel", url="https://t.me/MorPhoChat"),
         ],
     [
         InlineKeyboardButton(text="Premium", callback_data="premium_data"),
@@ -30,11 +38,11 @@ backbutton = [
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 backtext = f"""
-Welcome To Joanna Api Bot  |  {dt_string} 
+Welcome To Joanna Bot  |  {dt_string} 
 ━━━━━━━━━━━━━━━                                                                  
 Hello This Is Beta Version telegram bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here.
 ━━━━━━━━━━━━━━━
-Api Bot Status Is: Online ✅ | Joanna Api Is Online!
+Api Bot Status Is: OFFLINE | Joanna Api Is OFFLINE!
 """
 gatebutton = [
                 [
@@ -45,14 +53,15 @@ gatebutton = [
                 InlineKeyboardButton("Back",callback_data="__back"),
                 ],
                 ]
-gatetext = """
-Welcome to Joanna / Joanna Gateways Online
-━━━━━━━━━━━━━━━━━━━━━
-Gates CMDS:  None Api Gates! ✅
-━━━━━━━━━━━━━━━
-Gates auth: 1 ✅  |   Gates charge: 9 ✅
-━━━━━━━━━━━━━━━━
-Select the type of gate you want for your use!."""
+gatetext = """ALL GATES ARE DEAD SOON START"""
+
+#Welcome to Joanna / Joanna Gateways Online
+#━━━━━━━━━━━━━━━━━━━━━
+#Gates CMDS:  None Api Gates! ✅
+#━━━━━━━━━━━━━━━
+#Gates auth: 1 ✅  |   Gates charge: 9 ✅
+#━━━━━━━━━━━━━━━━
+#Select the type of gate you want for your use!.
 
 buttonscharge = [
                 [
@@ -82,6 +91,17 @@ async def button_click(client, query):
         await query.edit_message_text(
             text=gatetext,
             reply_markup=InlineKeyboardMarkup(gatebutton),
+        )
+    elif data == "__main":
+        await query.edit_message_text(
+            f"""
+Welcome To Joanna Api Bot  |  {dt_string} 
+━━━━━━━━━━━━━━━                                                                  
+Hello This Is Beta Version telegram bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here.
+━━━━━━━━━━━━━━━
+Api Bot Status Is: Online ✅ | Joanna Api Is Online!
+            """,
+            reply_markup=InlineKeyboardMarkup(buttons),
         )
     elif data == "__back":
         await query.edit_message_text(
@@ -161,7 +181,7 @@ async def button_click(client, query):
 
 ┠ Name :- Stripe
 ┠ Amount :- $100
-┠ Format :- /se card|month|year|cvv
+┠ Format :- /sf card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -180,7 +200,7 @@ async def button_click(client, query):
 ┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 2] ┒
 ┠ Name :- Stripe
 ┠ Amount :- $25
-┠ Format :- /sf card|month|year|cvv
+┠ Format :- /sh card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -208,12 +228,38 @@ async def button_click(client, query):
     elif data == "_tool":
         await query.edit_message_text(
             """
-┏ Joanna Tools / [P: 1 | 1] ┒
+┏ Joanna Tools / [P: 1 | 3] ┒
+┠ CC Scr:
+┠ Format: $scr Username Quantity 
+┠ Condition: Online! ✅
+
+┠ IP Lookup:
+┠ Format: $ip Your IP
+┠ Condition: Online! ✅
+
+┠ Checkout Parse:
+┠ Format: $/c Checkout_Link
+┠ Condition: Online! ✅
+
 ┠ BIN Lookup:
 ┠ Format: $bin 601120 
 ┠ Condition: Online! ✅
- ━━━━━━━━━━━━
-SOON
+
+┠ SK Lookup:
+┠ Format: $sk SK_LIVE..... 
+┠ Condition: Online! ✅
+
+┠ CC GENERATE:
+┠ Format: $gen [BIN] [QUANTITY](OPTIONAL)
+┠ Condition: Online! ✅
+
+┠ RANDOM US ADDRESS:
+┠ Format: $rnd 
+┠ Condition: Online! ✅
+
+┠ GEN ADDRESS BY ZIP::
+┠ Format: $zip [ZIP CODE]
+┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(
@@ -221,6 +267,80 @@ SOON
                 [
                 InlineKeyboardButton("Back", callback_data="__back"),
                 InlineKeyboardButton("Next Page", callback_data="_tool2"),
+                ],
+                ]
+            ),
+        )
+    elif data == "_tool2":
+       await query.edit_message_text(
+            """
+┏ Joanna SK Cracking Tool / [P: 2 | 3] ┒
+┠ MASS SK CHK:
+┠ Format: $masssk Reply To TxT File 
+┠ Condition: Online! ✅
+
+┠ GENERATE SK :
+┠ Format: $gensk [QUANTITY] [SK LEN]
+┠ Sk Len :- 1 - LONG SK ; 2 - MEDIUM SK ; 3 - SHORT SK
+┠ Condition: Online! ✅
+
+┠ IPV4 IPV6 GEN:
+┠ Format: $ips [QUANTITY] ipv4|ipv6
+┠ Condition: Online! ✅
+
+┠ ASN IP SCR :
+┠ Format: $asnip [QUANTITY] 
+┠ Condition: Online! ✅
+
+┠ GEN RANDOM IP :
+┠ Format: $genip [QUANTITY]
+┠ Condition: Online! ✅
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+           reply_markup=InlineKeyboardMarkup(
+                [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_tool"),
+                InlineKeyboardButton("Next Page", callback_data="_tool3"),
+                ],
+                [
+                InlineKeyboardButton("Back", callback_data="__back"),
+                ],
+                ]
+            ),
+        )
+    elif data == "_tool3":
+        await query.edit_message_text(
+            """
+┏ Joanna SK Cracking Tool / [P: 3 | 3] ┒
+┠ DEBUG SCAN :
+┠ Format: $debug Reply To TxT File 
+┠ Condition: Online! ✅
+
+┠ ENV SCAN :
+┠ Format: $env Reply To TxT File
+┠ Condition: Online! ✅
+
+┠ DOMAIN TO IP CON :
+┠ Format: $dip Reply To TxT File
+┠ Condition: Online! ✅
+
+┠ IP RANGE :
+┠ Format: $range Start_Ip - End_Ip
+┠ Condition: Online! ✅
+
+┠ IP TO DOMAIN :
+┠ Format: $rev Reply To TxT File
+┠ Condition: Online! ✅
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+        reply_markup=InlineKeyboardMarkup(
+                [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_tool2"),
+                ],
+                [
+                InlineKeyboardButton("Back", callback_data="__back"),
                 ],
                 ]
             ),

@@ -1,18 +1,17 @@
 # RANDOM GEN FUNCTION
-def randgen(len=6):
-    import string
-    import random
-    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    return ''.join(random.choice(chars) for _ in range(len))
+def gcgenfunc(len=10):
+  import string
+  import random
+  chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  return ''.join(random.choice(chars) for _ in range(len))
+
 # insert registration data
-
-
-def insert_reg_data(user_id, username, antispam_time, reg_at):
-    import sqlite3
-    conn = sqlite3.connect('plugins/Joanna_db/users.db')
+def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_user:q6wKFWvDa5KPvBcpx3epbSd1ZwR3kzBC@dpg-clk3j1l8td7s73daqvcg-a.singapore-postgres.render.com/joanna')
     db = conn.cursor()
     db.execute(
-        f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}')")
+        f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')")
     conn.commit()
     conn.close()
 
@@ -20,8 +19,8 @@ def insert_reg_data(user_id, username, antispam_time, reg_at):
 
 
 def fetchinfo(user_id):
-    import sqlite3
-    conn = sqlite3.connect('plugins/Joanna_db/users.db')
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_user:q6wKFWvDa5KPvBcpx3epbSd1ZwR3kzBC@dpg-clk3j1l8td7s73daqvcg-a.singapore-postgres.render.com/joanna')
     db = conn.cursor()
     db.execute(f"SELECT * FROM users WHERE id='{user_id}'")
     info = db.fetchone()
@@ -32,22 +31,21 @@ def fetchinfo(user_id):
 # fetch all info from table
 
 
-def getalldata(table_name):
-    import sqlite3
-    conn = sqlite3.connect('plugins/Joanna_db/users.db')
+def getalldata():
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_user:q6wKFWvDa5KPvBcpx3epbSd1ZwR3kzBC@dpg-clk3j1l8td7s73daqvcg-a.singapore-postgres.render.com/joanna')
     db = conn.cursor()
-    db.execute(f"SELECT * FROM {table_name}")
+    db.execute(f"SELECT * FROM users")
     info = db.fetchall()
     conn.commit()
     conn.close()
     return info
-
 # UPDATE DATA FROM TABLE
 
 
 def updatedata(user_id, module_name, value):
-    import sqlite3
-    conn = sqlite3.connect('plugins/Joanna_db/users.db')
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_user:q6wKFWvDa5KPvBcpx3epbSd1ZwR3kzBC@dpg-clk3j1l8td7s73daqvcg-a.singapore-postgres.render.com/joanna')
     c = conn.cursor()
     c.execute(f"UPDATE users SET {module_name}='{value}' WHERE id='{user_id}'")
     conn.commit()
@@ -60,7 +58,7 @@ async def plan_expirychk(user_id):
     try:
         from pyrogram import Client, filters
         from datetime import date
-        import sqlite3
+        import psycopg2
         today = str(date.today())
         plan_resp = fetchinfo(user_id)
         expiry = str(plan_resp[4])
@@ -76,43 +74,5 @@ async def plan_expirychk(user_id):
    Your current plan has expired. regain access purchase again using /buy
       """
             await Client.send_message(user_id, resp)
-    except Exception as e:
-        print(e)
-
-
-async def send_mtc(resp):
-    try:
-        from pyrogram import Client, filters
-        hits_id = "-1001582458495"
-        await Client.send_message(hits_id, resp)
-    except Exception as e:
-        print(e)
-
-
-async def hits_au(cc, result):
-    try:
-        from pyrogram import Client, filters
-        hits_id = "-1001582458495"
-        resp = f"""<b>
-  ⊗ Card - <code>{cc}</code>
-  ⊗ Response - {result}
-  ⊗ GATEWAY - Stripe Auth
-    </b>"""
-        await Client.send_message(hits_id, resp)
-    except Exception as e:
-        print(e)
-
-
-async def hits_chk(cc, result, pi):
-    try:
-        from pyrogram import Client, filters
-        hits_id = "-1001582458495"
-        resp = f"""<b>
-  ⊗ Card - <code>{cc}</code>
-  ⊗ Response - {result}
-  ⊗ GATEWAY - Stripe Charge 1$
-  ⊗ SRC - <code>{pi}</code>
-    </b>"""
-        await Client.send_message(hits_id, resp)
     except Exception as e:
         print(e)
