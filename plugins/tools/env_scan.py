@@ -65,61 +65,41 @@ async def cmd_envscanner(Client, message):
                 with open(domain_file, 'r') as file:
                     domains = file.read().splitlines()
                 x = len(domains)
-                if status == 'FREE' and x > 1:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is FREE
-You Can't Use This Gate!
-Upgrade Your Plan Or Wait For Next Update!
-                """
-                    await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and x > 1:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Use Only GOLD User CAn USE!
-                """
-                    await message.reply_text(resp, message.id)
-                elif status == 'GOLD' and x > 1000000:
-                    resp = f"""
-#ALERT_ ⚠️
-Your Account Is GOLD But You Have Use More Than 1000000 IP !
-                    """
-                    await message.reply_text(resp, message.id)
-                else:
-                    await message.reply_text(ms_)
-                    results = []
-                    x = len(results)
-                    env_scanner = ENV()
-                    try:
-                        with ThreadPoolExecutor(max_workers=5) as executor:
-                            for i, result in enumerate(executor.map(env_scanner.scan_sk_credentials, domains)):
-                                if result:
-                                    results.append(result)
-                    
-                        if results:
-                            result_text = "\n".join(results)
-                            with open(f"{x}x_SK_BY_@JoannaChkBot.txt", 'w') as result_file:
-                                result_file.write(result_text)
-                            toc = time.perf_counter()
-                            chat_id = str(message.chat.id)
-                            x = len(results)   
-                            resp=f"""
+                await message.reply_text(ms_)
+                results = []
+                y = len(results)
+                env_scanner = ENV()
+                try:
+                    with ThreadPoolExecutor(max_workers=5) as executor:
+                        for i, result in enumerate(executor.map(env_scanner.scan_sk_credentials, domains)):
+                            if result:
+                                results.append(result)
+
+                    if results:
+                        result_text = "\n".join(results)
+                        with open(f"{x}x_SK_BY_@JoannaChkBot.txt", 'w') as result_file:
+                            result_file.write(result_text)
+                        toc = time.perf_counter()
+                        chat_id = str(message.chat.id)
+                        x = len(results)   
+                        resp=f"""
 SK ENV SCAN COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
 ┠ SK - <code>{x}</code>
+┠ Result SK - {y}
 ┠ Time To Scan - {toc - tic:0.4f}sec
 ┠ Scan By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
-                            await message.reply_document(
-                            document=f"{x}x_SK_BY_@JoannaChkBot.txt",
-                            caption=resp,
-                            reply_to_message_id=message.id)
-                            os.remove(f"{x}x_SK_BY_@JoannaChkBot.txt")
-                        else:
-                            await message.reply_text("Try Next No SK Found Sad", message.id)
-                    except Exception as e:
-                        print(e)
+                        await message.reply_document(
+                        document=f"{x}x_SK_BY_@JoannaChkBot.txt",
+                        caption=resp,
+                        reply_to_message_id=message.id)
+                        os.remove(f"{x}x_SK_BY_@JoannaChkBot.txt")
+                    else:
+                        await message.reply_text("Try Next No SK Found Sad", message.id)
+                except Exception as e:
+                    print(e)
     except Exception as e:
         print(e)
