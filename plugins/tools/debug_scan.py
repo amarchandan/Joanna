@@ -49,39 +49,34 @@ async def cmd_debugscanner(Client, message):
             # PM AND AUTH CHECK
             pm = fetchinfo(user_id)
             status = pm[2]
-            role = status
-            if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
-                await message.reply_text(resp, message.id)
-            else:
-                
-                if not message.reply_to_message:
-                    return await message.reply_text("Please Reply To File")
-                if not message.reply_to_message.document:
-                    return await message.reply_text("Please Reply To File")
-                tic = time.perf_counter()
-                ms_ = 'ENV Scanning....'
-                domain_file = await message.reply_to_message.download(progress_args=(ms_, f"`Downloading This File!`"))
-                with open(domain_file, 'r') as file:
-                    domains = file.read().splitlines()
-                x = len(domains)
-                await message.reply_text(ms_)
-                results = []
-                x = len(results)
-                try:
-                    debug_scanner = DebugScanner()
-                    with ThreadPoolExecutor(max_workers=5) as executor:
-                        for i, result in enumerate(executor.map(debug_scanner.scan_debug, domains)):
-                            if result:
-                                results.append(result)
-                    if results:
-                        result_text = "\n".join(results)
-                        with open('debug_results.txt', 'w') as result_file:
-                            result_file.write(result_text)
-                        toc = time.perf_counter()
-                        chat_id = str(message.chat.id)
-                        x = len(results)   
-                        resp=f"""
+            role = status                
+            if not message.reply_to_message:
+                return await message.reply_text("Please Reply To File")
+            if not message.reply_to_message.document:
+                return await message.reply_text("Please Reply To File")
+            tic = time.perf_counter()
+            ms_ = 'ENV Scanning....'
+            domain_file = await message.reply_to_message.download(progress_args=(ms_, f"`Downloading This File!`"))
+            with open(domain_file, 'r') as file:
+                domains = file.read().splitlines()
+            x = len(domains)
+            await message.reply_text(ms_)
+            results = []
+            x = len(results)
+            try:
+                debug_scanner = DebugScanner()
+                with ThreadPoolExecutor(max_workers=5) as executor:
+                    for i, result in enumerate(executor.map(debug_scanner.scan_debug, domains)):
+                        if result:
+                            results.append(result)
+                if results:
+                    result_text = "\n".join(results)
+                    with open('debug_results.txt', 'w') as result_file:
+                        result_file.write(result_text)
+                    toc = time.perf_counter()
+                    chat_id = str(message.chat.id)
+                    x = len(results)   
+                    resp=f"""
 SK ENV SCAN COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
@@ -90,14 +85,14 @@ SK ENV SCAN COMPLETED ✅
 ┠ Scan By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
-                        await message.reply_document(
-                        document=f"{x}x_DEBUG_BY_@JoannaChkBot.txt",
-                        caption=resp,
-                        reply_to_message_id=message.id)
-                        os.remove(f"{x}x_DEBUG_BY_@JoannaChkBot.txt")
-                    else:
-                        await message.reply_text('NO result', message.id)
-                except Exception as e:
-                    await message.reply_text(e, message.id)
+                    await message.reply_document(
+                                document=f"{x}x_DEBUG_BY_@JoannaChkBot.txt",
+                                caption=resp,
+                                reply_to_message_id=message.id)
+                    os.remove(f"{x}x_DEBUG_BY_@JoannaChkBot.txt")
+                else:
+                    await message.reply_text('NO result', message.id)
+            except Exception as e:
+                await message.reply_text(e, message.id)
     except Exception as e:
         print(e)
