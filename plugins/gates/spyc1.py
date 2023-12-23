@@ -64,7 +64,7 @@ Retry After {after}s
                     if message.reply_to_message:
                         cc = message.reply_to_message.text
                     else:
-                        cc = message.text[len('/au '):]
+                        cc = message.text[len('/spy '):]
                     if len(cc) == 0:
                         nocc = """No CCS Found. ⚠️"""
                         return await message.reply_text(nocc, message.id)
