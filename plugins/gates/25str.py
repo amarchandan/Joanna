@@ -11,7 +11,7 @@ import json
 session = requests.session()
 
 
-@Client.on_message(filters.command('xx'))
+@Client.on_message(filters.command('sx'))
 async def cmd_au(Client, message):
     try:
         # NES TOOLS
@@ -64,7 +64,7 @@ Retry After {after}s
                     if message.reply_to_message:
                         cc = message.reply_to_message.text
                     else:
-                        cc = message.text[len('/xx '):]
+                        cc = message.text[len('/sx '):]
                     if len(cc) == 0:
                         nocc = """No CCS Found. ⚠️"""
                         return await message.reply_text(nocc, message.id)
