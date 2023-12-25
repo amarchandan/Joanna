@@ -46,22 +46,18 @@ Api Bot Status Is: OFFLINE | Joanna Api Is OFFLINE!
 """
 gatebutton = [
                 [
-                InlineKeyboardButton("Auth", callback_data="_auth"),
-                InlineKeyboardButton("Charge", callback_data="_charge"),
-                ],
-                [
+                InlineKeyboardButton("GateWays", callback_data="_auth"),
                 InlineKeyboardButton("Back",callback_data="__back"),
                 ],
                 ]
-gatetext = """ALL GATES ARE DEAD SOON START"""
-
-#Welcome to Joanna / Joanna Gateways Online
-#━━━━━━━━━━━━━━━━━━━━━
-#Gates CMDS:  None Api Gates! ✅
-#━━━━━━━━━━━━━━━
-#Gates auth: 1 ✅  |   Gates charge: 9 ✅
-#━━━━━━━━━━━━━━━━
-#Select the type of gate you want for your use!.
+gatetext = """
+Welcome to Joanna / Joanna Gateways Online
+━━━━━━━━━━━━━━━━━━━━━
+Gates CMDS :  None Api Gates! ✅
+━━━━━━━━━━━━━━━
+Gates : 9 ✅
+━━━━━━━━━━━━━━━━
+Select the type of gate you want for your use!."""
 
 buttonscharge = [
                 [
@@ -71,8 +67,16 @@ buttonscharge = [
                 ]
 buttonscharge2 = [
                 [
-                InlineKeyboardButton("Prev Page", callback_data="_charge"),
-                InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
+                InlineKeyboardButton("Prev Page", callback_data="_charge2"),
+                InlineKeyboardButton("Next Page", callback_data="_chargepg3"),
+                ],
+                [
+                    InlineKeyboardButton("Back", callback_data="__gback"),
+                ],
+                ]
+buttonscharge3 = [
+                [
+                InlineKeyboardButton("Prev Page", callback_data="_charge2"),
                 ],
                 [
                     InlineKeyboardButton("Back", callback_data="__gback"),
@@ -82,6 +86,8 @@ buttonscharge2 = [
 mainback = """
 Welcome back to Joanna Bot, it is a beta bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here
 """
+
+premm = ''
 
 @Client.on_callback_query()
 async def button_click(client, query):
@@ -115,7 +121,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         )
     elif data == "premium_data":
         await query.edit_message_text(
-            "COMING SOON",
+            text=premm,
             reply_markup=InlineKeyboardMarkup(
                 [
                 [
@@ -124,52 +130,56 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
                 ]
             ),
         )
-    elif data == "_auth":
-        await query.edit_message_text(
-            """
-┏ Joanna Gateways Online | Auth Gateways  [P: 1 | 1] ┒
-┠ Name :- Paypal Auth
-┠ Format :- /pa card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Stripe Auth
-┠ Format :- /au card|month|year|cvv
-┠ Condition :- OFF! | Comment: Offline API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :-   Adyen
-┠ Format :- /ad card|month|year|cvv
-┠ Condition :- OFF! | Comment: Offline API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :-BrainTree
-┠ Format :- /ba card|month|year|cvv
-┠ Condition :- OFF! | Comment: Offline API Gate!
-┠ Type :- Need-Credits
-┗━━━━━━━━━━━━━━━━━━━━━━━━┛
-            """,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                [
-                InlineKeyboardButton("Back", callback_data="__gback"),
-                ],
-                ]
-            ),
-        )
     elif data == "_charge":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 2] ┒
-┠ Name :- Stripe
-┠ Amount :- $76
-┠ Format :- /sb card|month|year|cvv
+┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 3] ┒
+┠ Name :- Braintree
+┠ Amount :- None
+┠ Format :- /b3 card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
 ┠ Name :- Stripe
+┠ Amount :- $2 + Auth
+┠ Format :- /as card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Stripe
+┠ Amount :- $5
+┠ Format :- /xx card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Stripe
+┠ Amount :- $20
+┠ Format :- /sg card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Stripe
+┠ Amount :- $25
+┠ Format :- /sx card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+            reply_markup=InlineKeyboardMarkup(buttonscharge),
+        )
+    elif data == "_chargepg2":
+        await query.edit_message_text(
+            """
+┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 3] ┒
+┠ Name :- Stripe
 ┠ Amount :- $30
 ┠ Format :- /sc card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- Stripe
+┠ Amount :- $35
+┠ Format :- /xy card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -180,39 +190,27 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Type :- Need-Credits
 
 ┠ Name :- Stripe
+┠ Amount :- $76
+┠ Format :- /sb card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+            reply_markup=InlineKeyboardMarkup(buttonscharge2),
+        )
+    elif data == "_chargepg3":
+        await query.edit_message_text(
+            """
+┏ Joanna Gateways Online | Charge Gateways  [P: 3 | 3] ┒
+┠ Name :- Stripe
 ┠ Amount :- $100
 ┠ Format :- /sf card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :- Stripe
-┠ Amount :- $20
-┠ Format :- /sg card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-┗━━━━━━━━━━━━━━━━━━━━━━━━┛
-            """,
-            reply_markup=InlineKeyboardMarkup(buttonscharge),
-        )
-    elif data == "_chargepg2":
-        await query.edit_message_text(
-            """
-┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 2] ┒
-┠ Name :- Stripe
-┠ Amount :- $25
-┠ Format :- /sh card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $35
-┠ Format :- /si card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
 ┠ Name :- Shopify Gate
 ┠ Amount :- $75
-┠ Format :- /spa card|month|year|cvv
+┠ Format :- /spy card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -223,7 +221,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
-            reply_markup=InlineKeyboardMarkup(buttonscharge2),
+            reply_markup=InlineKeyboardMarkup(buttonscharge3),
         )
     elif data == "_tool":
         await query.edit_message_text(
