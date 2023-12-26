@@ -46,7 +46,7 @@ Api Bot Status Is: OFFLINE | Joanna Api Is OFFLINE!
 """
 gatebutton = [
                 [
-                InlineKeyboardButton("GateWays", callback_data="_auth"),
+                InlineKeyboardButton("GateWays", callback_data="_charge"),
                 InlineKeyboardButton("Back",callback_data="__back"),
                 ],
                 ]
