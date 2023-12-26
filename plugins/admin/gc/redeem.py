@@ -38,7 +38,7 @@ async def cmd_gc(Client, message):
                         module_name = "totalkey"
                         updatedata(user_id, module_name, value)
                         credit = int(fetch[5])
-                        value = credit + 100
+                        value = credit + 50
                         module_name = "credit"
                         updatedata(user_id, module_name, value)
                         module_name = "status"
@@ -46,12 +46,12 @@ async def cmd_gc(Client, message):
                         updatedata(user_id, module_name, value)
                         module_name = "expiry"
                         today = str(date.today())
-                        value = str(date.today()+timedelta(days=5))
+                        value = str(date.today()+timedelta(days=2))
                         updatedata(user_id, module_name, value)
                         updategc(gc)
                         resp = "Redeem Successfully GiftCard To Your Account ✅. Type /credits To Know Credits"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,"REDEM")
+                        await Client.send_message(grp,f"REDEM {user_id} ")
                     elif plan == 'PLAN1':
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
