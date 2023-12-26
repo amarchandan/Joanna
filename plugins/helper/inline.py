@@ -42,7 +42,7 @@ Welcome To Joanna Bot  |  {dt_string}
 ━━━━━━━━━━━━━━━                                                                  
 Hello This Is Beta Version telegram bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here.
 ━━━━━━━━━━━━━━━
-Api Bot Status Is: OFFLINE | Joanna Api Is OFFLINE!
+Api Bot Status Is: ONLINE ✅ | Joanna Api Is ONLINE ✅ !
 """
 gatebutton = [
                 [
