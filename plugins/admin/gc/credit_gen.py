@@ -34,7 +34,7 @@ async def cmd_gc(client,message):
     final_resp = f"""
 GiftCode Genarated ✅
 Amount : 10
-Value : 100 Credits + 5 Day PREMIUM
+Value : 50 Credits + 2 Day PREMIUM
 
 ➔ <code>{GC1}</code>
 
