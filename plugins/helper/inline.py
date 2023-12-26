@@ -62,7 +62,7 @@ Select the type of gate you want for your use!."""
 buttonscharge = [
                 [
                 InlineKeyboardButton("Back", callback_data="__gback"),
-                InlineKeyboardButton("Next Page", callback_data="_charge"),
+                InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
                 ],
                 ]
 buttonscharge2 = [
@@ -137,12 +137,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Name :- Braintree
 ┠ Amount :- None
 ┠ Format :- /b3 card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Shopify
-┠ Amount :- 4.50€
-┠ Format :- /sp card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
