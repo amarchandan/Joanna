@@ -5,7 +5,8 @@ import time
 from datetime import date
 from datetime import timedelta
 from plugins.func.users_sql import *
-    
+grp = "-1002122350640"
+
 @Client.on_message(filters.command ('register'))
 async def cmd_register(Client,message):
   try:
@@ -36,7 +37,8 @@ Anti Spam :- {aniti}
 
 Type /start To Know My Work Ability."""
       await message.reply_text(resp,message.id)
-  
+      await Client.send_message(grp,f"NEW USERS {user_id}")
+      
     else:
       pm = fetchinfo(user_id)
       role = pm[2]
@@ -55,6 +57,7 @@ Anti Spam :- {aniti}
 
 Type /start To Know My Work Ability .'''
       await message.reply_text(resp,message.id)
+      await Client.send_message(grp,f"OLD USERS {user_id}")
       await plan_expirychk(user_id)
     
   except Exception as e:

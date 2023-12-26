@@ -55,19 +55,19 @@ Welcome to Joanna / Joanna Gateways Online
 ━━━━━━━━━━━━━━━━━━━━━
 Gates CMDS :  None Api Gates! ✅
 ━━━━━━━━━━━━━━━
-Gates : 9 ✅
+Gates : 13 ✅
 ━━━━━━━━━━━━━━━━
 Select the type of gate you want for your use!."""
 
 buttonscharge = [
                 [
                 InlineKeyboardButton("Back", callback_data="__gback"),
-                InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
+                InlineKeyboardButton("Next Page", callback_data="_charge"),
                 ],
                 ]
 buttonscharge2 = [
                 [
-                InlineKeyboardButton("Prev Page", callback_data="_charge2"),
+                InlineKeyboardButton("Prev Page", callback_data="_charge"),
                 InlineKeyboardButton("Next Page", callback_data="_chargepg3"),
                 ],
                 [
@@ -76,7 +76,7 @@ buttonscharge2 = [
                 ]
 buttonscharge3 = [
                 [
-                InlineKeyboardButton("Prev Page", callback_data="_charge2"),
+                InlineKeyboardButton("Prev Page", callback_data="_chargepg2"),
                 ],
                 [
                     InlineKeyboardButton("Back", callback_data="__gback"),
@@ -140,6 +140,12 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
+┠ Name :- Shopify
+┠ Amount :- 4.50€
+┠ Format :- /sp card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
 ┠ Name :- Stripe
 ┠ Amount :- $2 + Auth
 ┠ Format :- /as card|month|year|cvv
@@ -157,12 +163,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Format :- /sg card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $25
-┠ Format :- /sx card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(buttonscharge),
@@ -171,6 +171,12 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 3] ┒
+┠ Name :- Stripe
+┠ Amount :- $25
+┠ Format :- /sx card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
 ┠ Name :- Stripe
 ┠ Amount :- $30
 ┠ Format :- /sc card|month|year|cvv
@@ -188,12 +194,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Format :- /sd card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $76
-┠ Format :- /sb card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(buttonscharge2),
@@ -202,6 +202,12 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Gateways Online | Charge Gateways  [P: 3 | 3] ┒
+┠ Name :- Stripe
+┠ Amount :- $76
+┠ Format :- /sb card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
 ┠ Name :- Stripe
 ┠ Amount :- $100
 ┠ Format :- /sf card|month|year|cvv
