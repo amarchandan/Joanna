@@ -133,7 +133,7 @@ Retry After {after}s
                         thirdchk = await Client.edit_message_text(message.chat.id, secondchk.id, thirdresp)
                         # STARTED CHECKING CC#
                         tic = time.perf_counter()
-                        authurl = f"https://pussabazar.a1h.in/api/api1.php.php?lista={fullcc}"
+                        authurl = f"https://pussabazar.a1h.in/api/api1.php?lista={fullcc}"
                         reqone = session.get(authurl)
                         result = reqone.text
                         fourthresp = f"""
