@@ -21,7 +21,7 @@ async def cmd_start(Client,message):
           text = f"""
 Welcome to Beta version 0.2 of Joanna! >_
 
-{len(getalldata())} Users Were Active In The Last 24 Hours.
+Stay Updated! Subscribe To Our Announcement Channel @TeamMorpho For The Latest News!
 
 This Is The CC Checker Bot With Many Gates And Tools.
 This Is The Most Optimized Version And Adapted To Multiple Tasks.
