@@ -3,7 +3,7 @@ from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
 
-grp = "-1002122350640"
+grp = "-1001582458495"
 
 @Client.on_message(filters.command ('start'))
 async def cmd_start(Client,message):
