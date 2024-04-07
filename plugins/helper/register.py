@@ -5,7 +5,7 @@ import time
 from datetime import date
 from datetime import timedelta
 from plugins.func.users_sql import *
-grp = "-1002122350640"
+grp = "-1001582458495"
 
 @Client.on_message(filters.command ('register'))
 async def cmd_register(Client,message):
