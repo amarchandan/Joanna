@@ -3,7 +3,6 @@ from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
 
-grp = "-1001582458495"
 
 @Client.on_message(filters.command ('start'))
 async def cmd_start(Client,message):
@@ -31,6 +30,5 @@ Maybe you already know this bot, Click On Menu to know all my gates.
               text=text,
               reply_markup=InlineKeyboardMarkup(menu)
               )
-          await Client.send_message(grp,f"NEW USERS {user_id}")
   except Exception as e:
       print(e)
