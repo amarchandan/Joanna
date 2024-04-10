@@ -6,32 +6,48 @@ def gcgenfunc(len=4):
   return ''.join(random.choice(chars) for _ in range(len))
 #insert registration data
 def insert_pm(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"INSERT INTO gc VALUES ('{gc}','ACTIVE','PREMIUM')")
   conn.commit()
   conn.close()
 
 def insert_plan1(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"INSERT INTO gc VALUES ('{gc}','ACTIVE','PLAN1')")
   conn.commit()
   conn.close()
 
 def insert_plan2(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"INSERT INTO gc VALUES ('{gc}','ACTIVE','PLAN2')")
   conn.commit()
   conn.close()
 
 def insert_plan3(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"INSERT INTO gc VALUES ('{gc}','ACTIVE','PLAN3')")
   conn.commit()
@@ -39,8 +55,12 @@ def insert_plan3(gc):
 
 # fetch info from userid
 def getgc(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"SELECT * FROM gc WHERE id='{gc}'")
   info = db.fetchone()
@@ -50,8 +70,12 @@ def getgc(gc):
 
 # fetch all info from table
 def getallgc():
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   db = conn.cursor()
   db.execute(f"SELECT * FROM gc")
   info = db.fetchall()
@@ -61,8 +85,12 @@ def getallgc():
 
 #UPDATE DATA FROM TABLE
 def updategc(gc):
-  import psycopg2
-  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="smgsmwqn",
+    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
+    )
   c = conn.cursor()
   c.execute(f"UPDATE gc SET status='USED' WHERE id='{gc}'")
   conn.commit()
