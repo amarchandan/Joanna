@@ -7,7 +7,7 @@ import random
 @Client.on_message(filters.command ('plan1'))
 async def cmd_plan1(Client,message):
   user_id = str(message.from_user.id)
-  CEO = "1418571871"
+  CEO = "6603528621"
   if user_id != CEO :
     resp = "OWNER ONLY ⚠️"
     msg1 = await message.reply_text(resp,message.id)
