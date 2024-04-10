@@ -8,7 +8,7 @@ def gcgenfunc(len=10):
 # insert registration data
 def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
     import psycopg2
-    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a/joanna_xhp6')
+    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a.oregon-postgres.render.com/joanna_xhp6')
     db = conn.cursor()
     db.execute(
         f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')")
@@ -20,7 +20,7 @@ def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
 
 def fetchinfo(user_id):
     import psycopg2
-    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a/joanna_xhp6')
+    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a.oregon-postgres.render.com/joanna_xhp6')
     db = conn.cursor()
     db.execute(f"SELECT * FROM users WHERE id='{user_id}'")
     info = db.fetchone()
@@ -33,7 +33,7 @@ def fetchinfo(user_id):
 
 def getalldata():
     import psycopg2
-    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a/joanna_xhp6')
+    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a.oregon-postgres.render.com/joanna_xhp6')
     db = conn.cursor()
     db.execute(f"SELECT * FROM users")
     info = db.fetchall()
@@ -45,7 +45,7 @@ def getalldata():
 
 def updatedata(user_id, module_name, value):
     import psycopg2
-    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a/joanna_xhp6')
+    conn = psycopg2.connect('postgres://joanna_xhp6_user:5PXJoIhxjH4oPu1ynx0Hr2X0cmYE70Fu@dpg-co96umi0si5c7397c9j0-a.oregon-postgres.render.com/joanna_xhp6')
     c = conn.cursor()
     c.execute(f"UPDATE users SET {module_name}='{value}' WHERE id='{user_id}'")
     conn.commit()
