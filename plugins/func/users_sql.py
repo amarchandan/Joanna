@@ -7,8 +7,12 @@ def gcgenfunc(len=10):
 
 # insert registration data
 def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
-    import psycopg2
-    conn = psycopg2.connect('postgres://gqgnddmc:R0iUbd7217gb_woklgPhR6tYH8r-apxY@bubble.db.elephantsql.com/gqgnddmc')
+    import mysql.connector
+    conn = mysql.connector.connect(
+    host="bubble.db.elephantsql.com",
+    user="gqgnddmc",
+    password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
+    )
     db = conn.cursor()
     db.execute(
         f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')")
@@ -19,8 +23,13 @@ def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
 
 
 def fetchinfo(user_id):
-    import psycopg2
-    conn = psycopg2.connect('postgres://gqgnddmc:R0iUbd7217gb_woklgPhR6tYH8r-apxY@bubble.db.elephantsql.com/gqgnddmc')
+    import mysql.connector
+    conn = mysql.connector.connect(
+  host="bubble.db.elephantsql.com",
+  user="gqgnddmc",
+  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
+)
+
     db = conn.cursor()
     db.execute(f"SELECT * FROM users WHERE id='{user_id}'")
     info = db.fetchone()
@@ -32,8 +41,13 @@ def fetchinfo(user_id):
 
 
 def getalldata():
-    import psycopg2
-    conn = psycopg2.connect('postgres://gqgnddmc:R0iUbd7217gb_woklgPhR6tYH8r-apxY@bubble.db.elephantsql.com/gqgnddmc')
+    import mysql.connector
+    conn = mysql.connector.connect(
+  host="bubble.db.elephantsql.com",
+  user="gqgnddmc",
+  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
+)
+
     db = conn.cursor()
     db.execute(f"SELECT * FROM users")
     info = db.fetchall()
@@ -44,8 +58,13 @@ def getalldata():
 
 
 def updatedata(user_id, module_name, value):
-    import psycopg2
-    conn = psycopg2.connect('postgres://gqgnddmc:R0iUbd7217gb_woklgPhR6tYH8r-apxY@bubble.db.elephantsql.com/gqgnddmc')
+    import mysql.connector
+    conn = mysql.connector.connect(
+  host="bubble.db.elephantsql.com",
+  user="gqgnddmc",
+  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
+)
+
     c = conn.cursor()
     c.execute(f"UPDATE users SET {module_name}='{value}' WHERE id='{user_id}'")
     conn.commit()
@@ -58,7 +77,7 @@ async def plan_expirychk(user_id):
     try:
         from pyrogram import Client, filters
         from datetime import date
-        import psycopg2
+        import mysql.connector
         today = str(date.today())
         plan_resp = fetchinfo(user_id)
         expiry = str(plan_resp[4])
