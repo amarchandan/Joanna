@@ -7,12 +7,8 @@ def gcgenfunc(len=10):
 
 # insert registration data
 def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
-    import mysql.connector
-    conn = mysql.connector.connect(
-    host="bubble.db.elephantsql.com",
-    user="gqgnddmc",
-    password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
-    )
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_jfm9_user:yYgbx4a9rRyBXcOo1X2DjKr7dnjxECAU@dpg-cobdsl7109ks738hrd40-a.oregon-postgres.render.com/joanna_jfm9')
     db = conn.cursor()
     db.execute(
         f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')")
@@ -23,13 +19,8 @@ def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
 
 
 def fetchinfo(user_id):
-    import mysql.connector
-    conn = mysql.connector.connect(
-  host="bubble.db.elephantsql.com",
-  user="gqgnddmc",
-  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
-)
-
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_jfm9_user:yYgbx4a9rRyBXcOo1X2DjKr7dnjxECAU@dpg-cobdsl7109ks738hrd40-a.oregon-postgres.render.com/joanna_jfm9')
     db = conn.cursor()
     db.execute(f"SELECT * FROM users WHERE id='{user_id}'")
     info = db.fetchone()
@@ -41,13 +32,8 @@ def fetchinfo(user_id):
 
 
 def getalldata():
-    import mysql.connector
-    conn = mysql.connector.connect(
-  host="bubble.db.elephantsql.com",
-  user="gqgnddmc",
-  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
-)
-
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_jfm9_user:yYgbx4a9rRyBXcOo1X2DjKr7dnjxECAU@dpg-cobdsl7109ks738hrd40-a.oregon-postgres.render.com/joanna_jfm9')
     db = conn.cursor()
     db.execute(f"SELECT * FROM users")
     info = db.fetchall()
@@ -58,13 +44,8 @@ def getalldata():
 
 
 def updatedata(user_id, module_name, value):
-    import mysql.connector
-    conn = mysql.connector.connect(
-  host="bubble.db.elephantsql.com",
-  user="gqgnddmc",
-  password="R0iUbd7217gb_woklgPhR6tYH8r-apxY"
-)
-
+    import psycopg2
+    conn = psycopg2.connect('postgres://joanna_jfm9_user:yYgbx4a9rRyBXcOo1X2DjKr7dnjxECAU@dpg-cobdsl7109ks738hrd40-a.oregon-postgres.render.com/joanna_jfm9')
     c = conn.cursor()
     c.execute(f"UPDATE users SET {module_name}='{value}' WHERE id='{user_id}'")
     conn.commit()
