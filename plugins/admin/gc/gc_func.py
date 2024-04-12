@@ -22,12 +22,8 @@ def insert_plan1(gc):
   conn.close()
 
 def insert_plan2(gc):
-    import mysql.connector
-    conn = mysql.connector.connect(
-    host="bubble.db.elephantsql.com",
-    user="smgsmwqn",
-    password="jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN"
-    )
+  import psycopg2
+  conn = psycopg2.connect('postgres://smgsmwqn:jAAZiy-AQGQZnsSA6E5zP2pQSb8rQXyN@bubble.db.elephantsql.com/smgsmwqn')
   db = conn.cursor()
   db.execute(f"INSERT INTO gc VALUES ('{gc}','ACTIVE','PLAN2')")
   conn.commit()
