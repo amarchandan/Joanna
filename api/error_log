@@ -1,0 +1,522 @@
+[16-Oct-2023 12:21:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function capture() in /home/rembela1/public_html/api/strauth.php:71
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/strauth.php on line 71
+[16-Oct-2023 12:22:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function capture() in /home/rembela1/public_html/api/strauth.php:161
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/strauth.php on line 161
+[16-Oct-2023 12:23:15 UTC] PHP Notice:  Undefined variable: msg2 in /home/rembela1/public_html/api/strauth.php on line 255
+[16-Oct-2023 12:23:15 UTC] PHP Notice:  Undefined variable: res in /home/rembela1/public_html/api/strauth.php on line 256
+[16-Oct-2023 12:23:15 UTC] PHP Notice:  Undefined variable: x in /home/rembela1/public_html/api/strauth.php on line 257
+[16-Oct-2023 15:21:55 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/strauth.php on line 10
+[16-Oct-2023 15:21:55 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/strauth.php on line 10
+[16-Oct-2023 15:21:55 UTC] PHP Notice:  Undefined variable: bin in /home/rembela1/public_html/api/strauth.php on line 94
+[16-Oct-2023 15:21:56 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/strauth.php on line 10
+[16-Oct-2023 16:24:49 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/rembela1/public_html/api/braintree.php on line 208
+[16-Oct-2023 16:25:10 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/rembela1/public_html/api/braintree.php on line 208
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 180
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 188
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 196
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 204
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 208
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 212
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 216
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 220
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 224
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 228
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 236
+[16-Oct-2023 16:25:15 UTC] PHP Notice:  Undefined variable: res in /home/rembela1/public_html/api/br.php on line 246
+[16-Oct-2023 17:33:50 UTC] PHP Notice:  Undefined variable: datoscc in /home/rembela1/public_html/api/strauth.php on line 314
+[16-Oct-2023 17:37:03 UTC] PHP Parse error:  syntax error, unexpected '$r1' (T_VARIABLE), expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 116
+[16-Oct-2023 17:37:22 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 116
+[16-Oct-2023 18:04:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function edit_message() in /home/rembela1/public_html/api/strauth.php:298
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/strauth.php on line 298
+[16-Oct-2023 18:06:00 UTC] PHP Notice:  Undefined variable: datoscc in /home/rembela1/public_html/api/strauth.php on line 323
+[16-Oct-2023 18:06:44 UTC] PHP Parse error:  syntax error, unexpected '$r6' (T_VARIABLE), expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 296
+[16-Oct-2023 18:06:56 UTC] PHP Parse error:  syntax error, unexpected '$r6' (T_VARIABLE), expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 296
+[16-Oct-2023 18:21:21 UTC] PHP Parse error:  syntax error, unexpected '$r3' (T_VARIABLE), expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 114
+[16-Oct-2023 18:21:27 UTC] PHP Parse error:  syntax error, unexpected '$r3' (T_VARIABLE), expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 114
+[16-Oct-2023 18:21:45 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 152
+[16-Oct-2023 18:21:48 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 152
+[16-Oct-2023 18:21:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/rembela1/public_html/api/strauth.php on line 152
+[16-Oct-2023 18:22:06 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rembela1/public_html/api/strauth.php on line 164
+[16-Oct-2023 18:23:11 UTC] PHP Notice:  Undefined variable: proxypro in /home/rembela1/public_html/api/strauth.php on line 46
+[16-Oct-2023 18:23:11 UTC] PHP Notice:  Undefined variable: up3 in /home/rembela1/public_html/api/strauth.php on line 47
+[16-Oct-2023 18:23:11 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 53
+[16-Oct-2023 18:23:11 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 71
+[16-Oct-2023 18:23:11 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 72
+[16-Oct-2023 18:23:12 UTC] PHP Notice:  Undefined variable: proxypro in /home/rembela1/public_html/api/strauth.php on line 77
+[16-Oct-2023 18:23:12 UTC] PHP Notice:  Undefined variable: up3 in /home/rembela1/public_html/api/strauth.php on line 78
+[16-Oct-2023 18:23:12 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 84
+[16-Oct-2023 18:23:12 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 89
+[16-Oct-2023 18:23:12 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 90
+[16-Oct-2023 18:23:13 UTC] PHP Notice:  Undefined variable: proxypro in /home/rembela1/public_html/api/strauth.php on line 97
+[16-Oct-2023 18:23:13 UTC] PHP Notice:  Undefined variable: up3 in /home/rembela1/public_html/api/strauth.php on line 98
+[16-Oct-2023 18:23:13 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 104
+[16-Oct-2023 18:23:13 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 111
+[16-Oct-2023 18:23:13 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 112
+[16-Oct-2023 18:23:15 UTC] PHP Notice:  Undefined variable: proxypro in /home/rembela1/public_html/api/strauth.php on line 119
+[16-Oct-2023 18:23:15 UTC] PHP Notice:  Undefined variable: up3 in /home/rembela1/public_html/api/strauth.php on line 120
+[16-Oct-2023 18:23:15 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 128
+[16-Oct-2023 18:23:15 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 137
+[16-Oct-2023 18:23:15 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 138
+[16-Oct-2023 18:24:42 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 51
+[16-Oct-2023 18:24:42 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 69
+[16-Oct-2023 18:24:42 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 70
+[16-Oct-2023 18:24:43 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 80
+[16-Oct-2023 18:24:43 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 85
+[16-Oct-2023 18:24:43 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 86
+[16-Oct-2023 18:24:45 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 98
+[16-Oct-2023 18:24:45 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 105
+[16-Oct-2023 18:24:45 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 106
+[16-Oct-2023 18:24:46 UTC] PHP Notice:  Undefined variable: rnd_ua in /home/rembela1/public_html/api/strauth.php on line 120
+[16-Oct-2023 18:24:46 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 129
+[16-Oct-2023 18:24:46 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 130
+[16-Oct-2023 18:25:59 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 69
+[16-Oct-2023 18:25:59 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 70
+[16-Oct-2023 18:26:01 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 85
+[16-Oct-2023 18:26:01 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 86
+[16-Oct-2023 18:26:03 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 105
+[16-Oct-2023 18:26:03 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 106
+[16-Oct-2023 18:26:04 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 129
+[16-Oct-2023 18:26:04 UTC] PHP Notice:  Undefined variable: coki in /home/rembela1/public_html/api/strauth.php on line 130
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 180
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 188
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 196
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 204
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 208
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 212
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 216
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 220
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 224
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 228
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 236
+[16-Oct-2023 18:43:15 UTC] PHP Notice:  Undefined variable: res in /home/rembela1/public_html/api/br.php on line 246
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 180
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 188
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 196
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 204
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 208
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 212
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 216
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 220
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 224
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 228
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 232
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: result1 in /home/rembela1/public_html/api/br.php on line 236
+[16-Oct-2023 18:43:19 UTC] PHP Notice:  Undefined variable: res in /home/rembela1/public_html/api/br.php on line 246
+[16-Oct-2023 18:43:54 UTC] PHP Notice:  Undefined variable: msg2 in /home/rembela1/public_html/api/br.php on line 128
+[16-Oct-2023 18:43:54 UTC] PHP Notice:  Undefined variable: res in /home/rembela1/public_html/api/br.php on line 128
+[18-Oct-2023 17:42:53 UTC] PHP Fatal error:  'goto' to undefined label 'details' in /home/rembela1/public_html/api/tt.php on line 88
+[18-Oct-2023 17:43:11 UTC] PHP Fatal error:  'goto' to undefined label 'hits' in /home/rembela1/public_html/api/tt.php on line 465
+[18-Oct-2023 17:44:05 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 17:44:08 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 17:44:09 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 17:44:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 17:56:59 UTC] PHP Fatal error:  'goto' to undefined label 'details' in /home/rembela1/public_html/api/tt.php on line 89
+[18-Oct-2023 17:57:19 UTC] PHP Fatal error:  'goto' to undefined label 'hits' in /home/rembela1/public_html/api/tt.php on line 358
+[18-Oct-2023 17:57:20 UTC] PHP Fatal error:  'goto' to undefined label 'hits' in /home/rembela1/public_html/api/tt.php on line 358
+[18-Oct-2023 18:31:54 UTC] PHP Notice:  Undefined variable: id in /home/rembela1/public_html/api/api10.php on line 171
+[18-Oct-2023 18:44:41 UTC] PHP Notice:  Undefined variable: id in /home/rembela1/public_html/api/api10.php on line 150
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: curl in /home/rembela1/public_html/api/api10.php on line 73
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 73
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 76
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_exec() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:35:07 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:35:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: url in /home/rembela1/public_html/api/api10.php on line 71
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 76
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_exec() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:36:05 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:36:05 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 76
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_exec() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:37:52 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:37:52 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 72
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 76
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 91
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 92
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 93
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 94
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 95
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 96
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 100
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_exec() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 104
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 111
+[18-Oct-2023 19:39:16 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:39:16 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 112
+[18-Oct-2023 19:39:18 UTC] PHP Notice:  Undefined variable: ch in /home/rembela1/public_html/api/api10.php on line 144
+[18-Oct-2023 19:39:18 UTC] PHP Warning:  curl_close() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 144
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: webshareurl in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: webshareport in /home/rembela1/public_html/api/api10.php on line 74
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: webshareuser in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: websharepass in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: poxySocks4 in /home/rembela1/public_html/api/api10.php on line 76
+[18-Oct-2023 19:41:07 UTC] PHP Notice:  Undefined variable: curl in /home/rembela1/public_html/api/api10.php on line 78
+[18-Oct-2023 19:41:07 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 78
+[18-Oct-2023 19:41:37 UTC] PHP Notice:  Undefined variable: curl in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 19:41:37 UTC] PHP Warning:  curl_setopt() expects parameter 1 to be resource, null given in /home/rembela1/public_html/api/api10.php on line 75
+[18-Oct-2023 20:45:03 UTC] PHP Fatal error:  Cannot redeclare GetStr() (previously declared in /home/rembela1/public_html/api/tt.php:8) in /home/rembela1/public_html/api/tt.php on line 37
+[18-Oct-2023 20:45:26 UTC] PHP Fatal error:  Cannot redeclare GetStr() (previously declared in /home/rembela1/public_html/api/tt.php:8) in /home/rembela1/public_html/api/tt.php on line 37
+[18-Oct-2023 20:45:28 UTC] PHP Fatal error:  Cannot redeclare GetStr() (previously declared in /home/rembela1/public_html/api/tt.php:8) in /home/rembela1/public_html/api/tt.php on line 37
+[18-Oct-2023 20:46:05 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/tt.php on line 206
+[18-Oct-2023 20:46:05 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/tt.php on line 207
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/tt.php on line 254
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/tt.php on line 255
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: tokmess in /home/rembela1/public_html/api/tt.php on line 297
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/tt.php on line 10
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/tt.php on line 348
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/tt.php on line 349
+[18-Oct-2023 20:46:07 UTC] PHP Notice:  Undefined variable: msg in /home/rembela1/public_html/api/tt.php on line 508
+[18-Oct-2023 20:47:09 UTC] PHP Notice:  Undefined variable: tokmess in /home/rembela1/public_html/api/tt.php on line 292
+[18-Oct-2023 20:47:10 UTC] PHP Notice:  Undefined variable: msg in /home/rembela1/public_html/api/tt.php on line 501
+[18-Oct-2023 20:47:42 UTC] PHP Notice:  Undefined variable: msg in /home/rembela1/public_html/api/tt.php on line 494
+[18-Oct-2023 20:48:20 UTC] PHP Notice:  Undefined variable: respo in /home/rembela1/public_html/api/tt.php on line 498
+[20-Oct-2023 18:35:33 UTC] PHP Notice:  Undefined variable: lista in /home/rembela1/public_html/api/b.php on line 10
+[20-Oct-2023 18:35:33 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 12
+[20-Oct-2023 18:35:33 UTC] PHP Notice:  Undefined offset: 2 in /home/rembela1/public_html/api/b.php on line 13
+[20-Oct-2023 18:35:33 UTC] PHP Notice:  Undefined offset: 3 in /home/rembela1/public_html/api/b.php on line 14
+[20-Oct-2023 18:35:33 UTC] PHP Notice:  Undefined index:  in /home/rembela1/public_html/api/b.php on line 105
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 298
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 299
+[20-Oct-2023 18:35:50 UTC] PHP Notice:  Undefined variable: last4 in /home/rembela1/public_html/api/b.php on line 326
+[20-Oct-2023 18:35:57 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 342
+[20-Oct-2023 18:35:57 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 343
+[20-Oct-2023 18:36:06 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 446
+[20-Oct-2023 18:36:06 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 447
+[20-Oct-2023 18:36:07 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 483
+[20-Oct-2023 18:36:07 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 484
+[20-Oct-2023 18:36:18 UTC] PHP Notice:  Undefined variable: start_time in /home/rembela1/public_html/api/b.php on line 560
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 298
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 299
+[20-Oct-2023 18:38:44 UTC] PHP Notice:  Undefined variable: last4 in /home/rembela1/public_html/api/b.php on line 326
+[20-Oct-2023 18:38:47 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 342
+[20-Oct-2023 18:38:47 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 343
+[20-Oct-2023 18:38:57 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 446
+[20-Oct-2023 18:38:57 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 447
+[20-Oct-2023 18:38:58 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 483
+[20-Oct-2023 18:38:58 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 484
+[20-Oct-2023 18:39:12 UTC] PHP Notice:  Undefined variable: start_time in /home/rembela1/public_html/api/b.php on line 560
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 298
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 299
+[20-Oct-2023 18:39:25 UTC] PHP Notice:  Undefined variable: last4 in /home/rembela1/public_html/api/b.php on line 326
+[20-Oct-2023 18:39:28 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 342
+[20-Oct-2023 18:39:28 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 343
+[20-Oct-2023 18:39:42 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 446
+[20-Oct-2023 18:39:42 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 447
+[20-Oct-2023 18:39:43 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 483
+[20-Oct-2023 18:39:43 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 484
+[20-Oct-2023 18:39:57 UTC] PHP Notice:  Undefined variable: start_time in /home/rembela1/public_html/api/b.php on line 560
+[21-Oct-2023 10:38:46 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/bot.php on line 11
+[21-Oct-2023 10:38:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/bot.php on line 11
+[21-Oct-2023 10:39:40 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/bot.php on line 11
+[21-Oct-2023 10:39:42 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/bot.php on line 11
+[21-Oct-2023 16:07:47 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ')' in /home/rembela1/public_html/api/f.php on line 269
+[21-Oct-2023 16:09:36 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ')' in /home/rembela1/public_html/api/f.php on line 269
+[22-Oct-2023 20:15:03 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 21
+[22-Oct-2023 20:15:03 UTC] PHP Notice:  Undefined offset: 2 in /home/rembela1/public_html/api/h.php on line 22
+[22-Oct-2023 20:15:03 UTC] PHP Notice:  Undefined offset: 3 in /home/rembela1/public_html/api/h.php on line 23
+[22-Oct-2023 20:25:08 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:09 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:09 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:51 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:51 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:55 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:56 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:25:56 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:26:23 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 21
+[22-Oct-2023 20:26:23 UTC] PHP Notice:  Undefined offset: 2 in /home/rembela1/public_html/api/h.php on line 22
+[22-Oct-2023 20:26:23 UTC] PHP Notice:  Undefined offset: 3 in /home/rembela1/public_html/api/h.php on line 23
+[22-Oct-2023 20:26:24 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:26:26 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:26:26 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:37:46 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:37:48 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:37:48 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:39:30 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:39:32 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:39:32 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:40:22 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:40:23 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:40:23 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:29 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:30 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:30 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:33 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:34 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:43:34 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:15 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:16 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:16 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:58 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:59 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:46:59 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 20:51:05 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ')' in /home/rembela1/public_html/api/f.php on line 269
+[22-Oct-2023 20:51:23 UTC] PHP Parse error:  syntax error, unexpected '{', expecting ')' in /home/rembela1/public_html/api/f.php on line 269
+[22-Oct-2023 21:02:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function capture() in /home/rembela1/public_html/api/h.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/h.php on line 70
+[22-Oct-2023 21:02:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetStr() in /home/rembela1/public_html/api/h.php:116
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/h.php on line 116
+[22-Oct-2023 21:03:37 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 21:03:40 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/h.php on line 11
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/b.php on line 34
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 300
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 301
+[22-Oct-2023 21:18:41 UTC] PHP Notice:  Undefined variable: last4 in /home/rembela1/public_html/api/b.php on line 328
+[22-Oct-2023 21:18:46 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 344
+[22-Oct-2023 21:18:46 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 345
+[22-Oct-2023 21:18:52 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 448
+[22-Oct-2023 21:18:52 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 449
+[22-Oct-2023 21:18:53 UTC] PHP Notice:  Undefined variable: socks5 in /home/rembela1/public_html/api/b.php on line 485
+[22-Oct-2023 21:18:53 UTC] PHP Notice:  Undefined variable: rotate in /home/rembela1/public_html/api/b.php on line 486
+[22-Oct-2023 21:18:55 UTC] PHP Notice:  Undefined variable: start_time in /home/rembela1/public_html/api/b.php on line 562
+[22-Oct-2023 22:03:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetStr() in /home/rembela1/public_html/api/x.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/x.php on line 120
+[22-Oct-2023 22:04:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function capture() in /home/rembela1/public_html/api/x.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/x.php on line 70
+[22-Oct-2023 22:04:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function capture() in /home/rembela1/public_html/api/x.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/x.php on line 70
+[22-Oct-2023 22:04:50 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 10
+[22-Oct-2023 22:04:52 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 10
+[22-Oct-2023 22:08:22 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 10
+[22-Oct-2023 22:08:26 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 10
+[22-Oct-2023 22:26:51 UTC] PHP Notice:  Undefined variable: cc1 in /home/rembela1/public_html/api/v.php on line 94
+[22-Oct-2023 22:26:51 UTC] PHP Notice:  Undefined variable: cc2 in /home/rembela1/public_html/api/v.php on line 94
+[22-Oct-2023 22:26:51 UTC] PHP Notice:  Undefined variable: cc3 in /home/rembela1/public_html/api/v.php on line 94
+[22-Oct-2023 22:26:51 UTC] PHP Notice:  Undefined variable: cc4 in /home/rembela1/public_html/api/v.php on line 94
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 120
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 124
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 124
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 128
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 139
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 144
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 154
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 159
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 164
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 170
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 174
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 178
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 182
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 186
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 190
+[22-Oct-2023 22:26:52 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 194
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 120
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 124
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 124
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 128
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 139
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 144
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 149
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 154
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 159
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 164
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 170
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 174
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 178
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 182
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 186
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 190
+[22-Oct-2023 22:28:05 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 194
+[22-Oct-2023 22:48:19 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:48:48 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:49:34 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:51:21 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:51:56 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:52:24 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:53:05 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:53:32 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:54:01 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:54:23 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:55:04 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 134
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 141
+[22-Oct-2023 22:55:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 147
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 118
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 118
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 118
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 125
+[22-Oct-2023 23:01:20 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 131
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 117
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 117
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 117
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 124
+[22-Oct-2023 23:01:44 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 130
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 121
+[22-Oct-2023 23:02:18 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 127
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 121
+[22-Oct-2023 23:02:46 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 127
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 114
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 121
+[22-Oct-2023 23:03:15 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/v.php on line 127
+[22-Oct-2023 23:06:36 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:07:19 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:09:21 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:09:25 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:10:53 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:11:53 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:11:57 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:13:00 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:13:04 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[22-Oct-2023 23:14:45 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/v.php on line 10
+[23-Oct-2023 09:03:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 11
+[23-Oct-2023 09:03:10 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/x.php on line 121
+[23-Oct-2023 09:03:10 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 11
+[23-Oct-2023 09:03:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function balance() in /home/rembela1/public_html/api/x.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/x.php on line 129
+[23-Oct-2023 09:03:41 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 11
+[23-Oct-2023 09:03:41 UTC] PHP Notice:  Undefined variable: result2 in /home/rembela1/public_html/api/x.php on line 121
+[23-Oct-2023 09:03:41 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/x.php on line 11
+[23-Oct-2023 09:03:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function balance() in /home/rembela1/public_html/api/x.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/rembela1/public_html/api/x.php on line 129
+[23-Oct-2023 14:51:11 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/vbv.php on line 34
+[23-Oct-2023 14:51:11 UTC] PHP Notice:  Undefined variable: last4 in /home/rembela1/public_html/api/vbv.php on line 254
+[23-Oct-2023 14:51:19 UTC] PHP Notice:  Undefined offset: 1 in /home/rembela1/public_html/api/vbv.php on line 34
