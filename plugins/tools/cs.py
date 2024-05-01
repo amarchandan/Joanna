@@ -19,7 +19,7 @@ async def cmd_css(Client, message):
             if message.reply_to_message:
                 link = message.reply_to_message.text
             else:
-                link = message.text[len('/cs '):]
+                link = message.text[len('/c '):]
             if len(link) == 0:
                 nocc = """
 ɪɴᴠᴀʟɪᴅ ғᴏʀᴍᴀᴛ.⚠️\nᴜsᴀɢᴇ ⇾ /c ᴄʜᴇᴄᴋᴏᴜᴛʟɪɴᴋ ❌
