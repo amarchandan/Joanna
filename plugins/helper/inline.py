@@ -227,16 +227,24 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Tools / [P: 1 | 3] ┒
+┠ Url info chk like Captcha, Cloud, Payment:
+┠ Format: $/gtw link
+┠ Condition: Online! ✅
+
+┠ Mass Url info chk like Captcha, Cloud, Payment:
+┠ Format: $/mgtw link
+┠ Condition: Online! ✅
+
 ┠ CC Scr:
 ┠ Format: $scr Username Quantity 
 ┠ Condition: Online! ✅
 
-┠ IP Lookup:
-┠ Format: $ip Your IP
+┠ CC GENERATE:
+┠ Format: $gen [BIN] [QUANTITY](OPTIONAL)
 ┠ Condition: Online! ✅
 
-┠ Checkout Parse:
-┠ Format: $/c Checkout_Link
+┠ IP Lookup:
+┠ Format: $ip Your IP
 ┠ Condition: Online! ✅
 
 ┠ BIN Lookup:
@@ -245,18 +253,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 
 ┠ SK Lookup:
 ┠ Format: $sk SK_LIVE..... 
-┠ Condition: Online! ✅
-
-┠ CC GENERATE:
-┠ Format: $gen [BIN] [QUANTITY](OPTIONAL)
-┠ Condition: Online! ✅
-
-┠ RANDOM US ADDRESS:
-┠ Format: $rnd 
-┠ Condition: Online! ✅
-
-┠ GEN ADDRESS BY ZIP::
-┠ Format: $zip [ZIP CODE]
 ┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
@@ -273,6 +269,18 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
        await query.edit_message_text(
             """
 ┏ Joanna SK Cracking Tool / [P: 2 | 3] ┒
+┠ Checkout Parse:
+┠ Format: $/c Checkout_Link
+┠ Condition: Online! ✅
+
+┠ GEN ADDRESS BY ZIP::
+┠ Format: $zip [ZIP CODE]
+┠ Condition: Online! ✅
+
+┠ RANDOM US ADDRESS:
+┠ Format: $rnd 
+┠ Condition: Online! ✅
+
 ┠ MASS SK CHK:
 ┠ Format: $masssk Reply To TxT File 
 ┠ Condition: Online! ✅
@@ -288,10 +296,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 
 ┠ ASN IP SCR :
 ┠ Format: $asnip [QUANTITY] 
-┠ Condition: Online! ✅
-
-┠ GEN RANDOM IP :
-┠ Format: $genip [QUANTITY]
 ┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
@@ -311,6 +315,10 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna SK Cracking Tool / [P: 3 | 3] ┒
+┠ GEN RANDOM IP :
+┠ Format: $genip [QUANTITY]
+┠ Condition: Online! ✅
+
 ┠ DEBUG SCAN :
 ┠ Format: $debug Reply To TxT File 
 ┠ Condition: Online! ✅
