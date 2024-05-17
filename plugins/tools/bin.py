@@ -1,15 +1,12 @@
+import requests
 from pyrogram import Client, filters
-import requests
-import json
-import re
-import time
+
 from plugins.func.users_sql import *
-import requests
-import json
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('bin'))
+@Client.on_message(filters.command("bin"))
 async def cmd_bin(Client, message):
     try:
         # NES TOOLS
@@ -18,7 +15,7 @@ async def cmd_bin(Client, message):
         chat_id = str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
@@ -30,7 +27,11 @@ async def cmd_bin(Client, message):
             status = pm[2]
             role = status
             GROUP = open("plugins/group.txt").read().splitlines()
-            if chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+            if (
+                chat_type == "ChatType.GROUP"
+                or chat_type == "ChatType.SUPERGROUP"
+                and chat_id not in GROUP
+            ):
                 resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
                 await message.reply_text(resp, message.id)
             else:
@@ -39,7 +40,7 @@ async def cmd_bin(Client, message):
                     bin = message.reply_to_message.text
 
                 else:
-                    bin = message.text[len('/bin '):]
+                    bin = message.text[len("/bin ") :]
                 if len(bin) == 0:
                     nocc = """
 𝗚𝗜𝗩𝗘 𝗔 𝗩𝗔𝗟𝗜𝗗 𝗕𝗜𝗡 ❌

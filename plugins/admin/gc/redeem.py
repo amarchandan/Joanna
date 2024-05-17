@@ -1,28 +1,29 @@
-from plugins.admin.gc.gc_func import *
-from pyrogram import Client, filters
-from plugins.func.users_sql import *
-from datetime import date
-from datetime import timedelta
+from datetime import date, timedelta
 
+from pyrogram import Client, filters
+
+from plugins.admin.gc.gc_func import *
+from plugins.func.users_sql import *
 
 grp = "-1002122350640"
 
-@Client.on_message(filters.command('redeem'))
+
+@Client.on_message(filters.command("redeem"))
 async def cmd_gc(Client, message):
     try:
         user_id = str(message.from_user.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
             user_id = str(message.from_user.id)
-            gc = message.text[len('/redeem '):]
+            gc = message.text[len("/redeem ") :]
             resp = f"{gc}"
             get = getgc(gc)
             t = str(get)
-            if t == 'None':
+            if t == "None":
                 resp = "INVALID GIFTCODE ❌ "
                 await message.reply_text(resp, message.id)
             else:
@@ -30,8 +31,8 @@ async def cmd_gc(Client, message):
                 status = t[1]
                 plan = t[2]
 
-                if status == 'ACTIVE':
-                    if plan == 'PREMIUM':
+                if status == "ACTIVE":
+                    if plan == "PREMIUM":
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
                         value = tkey + 1
@@ -45,14 +46,14 @@ async def cmd_gc(Client, message):
                         value = "PREMIUM"
                         updatedata(user_id, module_name, value)
                         module_name = "expiry"
-                        today = str(date.today())
-                        value = str(date.today()+timedelta(days=2))
+                        str(date.today())
+                        value = str(date.today() + timedelta(days=2))
                         updatedata(user_id, module_name, value)
                         updategc(gc)
                         resp = "Redeem Successfully GiftCard To Your Account ✅. Type /credits To Know Credits"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,f"REDEM {user_id} ")
-                    elif plan == 'PLAN1':
+                        await Client.send_message(grp, f"REDEM {user_id} ")
+                    elif plan == "PLAN1":
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
                         value = tkey + 1
@@ -69,14 +70,14 @@ async def cmd_gc(Client, message):
                         value = "Starter Plan 0.99$"
                         updatedata(user_id, module_name, value)
                         module_name = "expiry"
-                        today = str(date.today())
-                        value = str(date.today()+timedelta(days=7))
+                        str(date.today())
+                        value = str(date.today() + timedelta(days=7))
                         updatedata(user_id, module_name, value)
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Starter Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,"redem" )
-                    elif plan == 'PLAN2':
+                        await Client.send_message(grp, "redem")
+                    elif plan == "PLAN2":
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
                         value = tkey + 1
@@ -93,14 +94,14 @@ async def cmd_gc(Client, message):
                         value = "Silver Plan 1.99$"
                         updatedata(user_id, module_name, value)
                         module_name = "expiry"
-                        today = str(date.today())
-                        value = str(date.today()+timedelta(days=15))
+                        str(date.today())
+                        value = str(date.today() + timedelta(days=15))
                         updatedata(user_id, module_name, value)
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Silver Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,"redem" )
-                    elif plan == 'PLAN3':
+                        await Client.send_message(grp, "redem")
+                    elif plan == "PLAN3":
                         fetch = fetchinfo(user_id)
                         tkey = int(fetch[8])
                         value = tkey + 1
@@ -117,21 +118,21 @@ async def cmd_gc(Client, message):
                         value = "Gold Plan 4.99$"
                         updatedata(user_id, module_name, value)
                         module_name = "expiry"
-                        today = str(date.today())
-                        value = str(date.today()+timedelta(days=30))
+                        str(date.today())
+                        value = str(date.today() + timedelta(days=30))
                         updatedata(user_id, module_name, value)
                         updategc(gc)
                         resp = "You Have Successfully Redeemed 'Gold Plan' Using GiftCode ✅.Type /info To Know More"
                         await message.reply_text(resp, message.id)
-                        await Client.send_message(grp,"redem" )
+                        await Client.send_message(grp, "redem")
                     else:
                         ok = "NONE HAPPENNED"
                         print(ok)
 
-                elif status == 'USED':
+                elif status == "USED":
                     resp = "GiftCode Already Redeemed ⚠️"
                     await message.reply_text(resp, message.id)
-                elif status == 'None':
+                elif status == "None":
                     resp = "Invalid GiftCode ❌"
                     await message.reply_text(resp, message.id)
                 else:

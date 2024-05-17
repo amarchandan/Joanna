@@ -1,24 +1,23 @@
-from pyrogram import Client, filters
-import requests
-import json
-import re
 import time
-from plugins.func.users_sql import *
+
 import requests
-import json
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('rnd'))
+@Client.on_message(filters.command("rnd"))
 async def cmd_bin(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
@@ -29,9 +28,11 @@ async def cmd_bin(Client, message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            session = requests.session()
+            requests.session()
             tic = time.perf_counter()
-            api = requests.get("https://randomuser.me/api/?nat=us&inc=name,location").json()
+            api = requests.get(
+                "https://randomuser.me/api/?nat=us&inc=name,location"
+            ).json()
             mr = api["results"][0]["name"]["title"]
             nombre = api["results"][0]["name"]["first"]
             last = api["results"][0]["name"]["last"]
@@ -41,9 +42,9 @@ async def cmd_bin(Client, message):
             state = api["results"][0]["location"]["state"]
             country = api["results"][0]["location"]["country"]
             postcode = api["results"][0]["location"]["postcode"]
-            latitude = api["results"][0]["location"]["coordinates"]["latitude"]
-            longitude = api["results"][0]["location"]["coordinates"]["longitude"]
-            toc = time.perf_counter() 
+            api["results"][0]["location"]["coordinates"]["latitude"]
+            api["results"][0]["location"]["coordinates"]["longitude"]
+            toc = time.perf_counter()
             resp = f"""
   GEN  SUCCESSFULLY 
 ┏－－－－－－－－－－－－┒

@@ -1,31 +1,28 @@
+import requests
 from pyrogram import Client, filters
-import requests
-import json
-import re
-import time
+
 from plugins.func.users_sql import *
-import requests
-import json
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('ip'))
+@Client.on_message(filters.command("ip"))
 async def cmd_ipp(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
             if message.reply_to_message:
                 bin = message.reply_to_message.text
             else:
-                bin = message.text[len('/ip '):]
+                bin = message.text[len("/ip ") :]
             if len(bin) == 0:
                 nocc = """
 GIVE VALID IP ❌
@@ -35,11 +32,13 @@ GIVE VALID IP ❌
                 pm = fetchinfo(user_id)
                 status = pm[2]
                 role = status
-                url = f"https://ipapi.com/ip_api.php?ip={bin}"    
+                url = f"https://ipapi.com/ip_api.php?ip={bin}"
                 resp = requests.get(url)
                 r = resp.json()
                 if not r.get("hostname"):
-                    await message.reply_text("<code>Invalid IP. Please Check Hostname.</code>")
+                    await message.reply_text(
+                        "<code>Invalid IP. Please Check Hostname.</code>"
+                    )
                 else:
                     ok = f"""
 CHECK  SUCCESSFULLY 

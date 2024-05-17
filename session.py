@@ -19,7 +19,6 @@
 # SOFTWARE.
 
 
-import pyrogram
 from pyrogram import Client
 
 heiman_ = """

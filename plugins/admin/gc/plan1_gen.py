@@ -1,14 +1,15 @@
-from plugins.admin.gc.gc_func import *
 from pyrogram import Client, filters
 
+from plugins.admin.gc.gc_func import *
 
-@Client.on_message(filters.command('getplan1'))
+
+@Client.on_message(filters.command("getplan1"))
 async def cmd_getplan1(bot, message):
     user_id = str(message.from_user.id)
     CEO = "6305901836"
     if user_id != CEO:
         resp = "Require Owner Privilages ⚠️"
-        msg1 = await message.reply_text(resp, message.id)
+        await message.reply_text(resp, message.id)
     else:
         GC1 = f"JOANNA-{gcgenfunc()}-{gcgenfunc()}-{gcgenfunc()}"
         insert_plan1(GC1)
@@ -58,4 +59,4 @@ Value : Start Plan 7 Days
 For Redeem
 Type /redeem
     """
-        send = await message.reply_text(final_resp, message.id)
+        await message.reply_text(final_resp, message.id)

@@ -1,25 +1,32 @@
-import time, base64, json, urllib.parse, requests
+import base64
+import json
+import time
+import urllib.parse
+
+import requests
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('c'))
+@Client.on_message(filters.command("c"))
 async def cmd_css(Client, message):
     try:
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
             if message.reply_to_message:
                 link = message.reply_to_message.text
             else:
-                link = message.text[len('/c '):]
+                link = message.text[len("/c ") :]
             if len(link) == 0:
                 nocc = """
 ɪɴᴠᴀʟɪᴅ ғᴏʀᴍᴀᴛ.⚠️\nᴜsᴀɢᴇ ⇾ /c ᴄʜᴇᴄᴋᴏᴜᴛʟɪɴᴋ ❌
@@ -27,54 +34,58 @@ async def cmd_css(Client, message):
                 return await message.reply_text(nocc, message.id)
             else:
                 start = time.time()
-                cslive= link.split('pay/')[1].split('#')[0]
-                pk = urllib.parse.unquote((str(link.split('#')[1])))
+                cslive = link.split("pay/")[1].split("#")[0]
+                pk = urllib.parse.unquote((str(link.split("#")[1])))
                 decoded = base64.b64decode(pk)
                 dec = ""
                 for c in decoded:
                     dec += chr(5 ^ c)
                 dd = json.loads(dec)
-                pklive = dd['apiKey']
+                pklive = dd["apiKey"]
                 headers = {
-                    'authority': 'api.stripe.com',
-                    'accept': 'application/json',
-                    'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-                    'content-type': 'application/x-www-form-urlencoded',
-                    'origin': 'https://checkout.stripe.com',
-                    'referer': 'https://checkout.stripe.com/',
-                    'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-                    'sec-ch-ua-mobile': '?1',
-                    'sec-ch-ua-platform': '"Android"',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-site': 'same-site',
-                    'user-agent': 'Mozilla/5.0 (Linux; Android 12; RMX2163) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
+                    "authority": "api.stripe.com",
+                    "accept": "application/json",
+                    "accept-language": "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "content-type": "application/x-www-form-urlencoded",
+                    "origin": "https://checkout.stripe.com",
+                    "referer": "https://checkout.stripe.com/",
+                    "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
+                    "sec-ch-ua-mobile": "?1",
+                    "sec-ch-ua-platform": '"Android"',
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-site": "same-site",
+                    "user-agent": "Mozilla/5.0 (Linux; Android 12; RMX2163) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
                 }
-                
+
                 data = {
-                    'key': pklive, 
-                    'eid': 'NA',
-                    'browser_locale': 'en-IQ',
-                    'redirect_type': 'stripe_js',
+                    "key": pklive,
+                    "eid": "NA",
+                    "browser_locale": "en-IQ",
+                    "redirect_type": "stripe_js",
                 }
                 try:
-                    response = requests.post('https://api.stripe.com/v1/payment_pages/'+cslive+'/init', headers=headers,data=data,).json()
-                    
-                    cslive = response['session_id']
-                    currency = response['currency']
-                    amount = response['line_item_group']['line_items'][0]['total']
-                    #images = response['line_item_group']['line_items'][0]['images']
+                    response = requests.post(
+                        "https://api.stripe.com/v1/payment_pages/" + cslive + "/init",
+                        headers=headers,
+                        data=data,
+                    ).json()
+
+                    cslive = response["session_id"]
+                    currency = response["currency"]
+                    amount = response["line_item_group"]["line_items"][0]["total"]
+                    # images = response['line_item_group']['line_items'][0]['images']
                     try:
-                       emaill = response['customer_email']
+                        emaill = response["customer_email"]
                     except:
                         emaill = "N/A"
-                        site = response['cancel_url']
+                        site = response["cancel_url"]
                     try:
-                        site = site.split('https://')[1].split('/')[0]
+                        site = site.split("https://")[1].split("/")[0]
                     except BaseException:
                         site = "N/A"
                 except BaseException:
-                    A = "N/A"
+                    pass
                 caption = f"""
 𝗣𝗔𝗥𝗦𝗘𝗗 ✅
 ┏━━━━ ɢʀᴀʙʙᴇᴅ ᴅᴇᴛᴀɪʟs ━━━━┒

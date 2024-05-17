@@ -1,16 +1,16 @@
-from pyrogram import Client, filters
-import requests
-from urllib.parse import quote_plus
 import json
 import re
 import time
-from plugins.func.users_sql import *
-from datetime import date
+
 import requests
-import json
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
 
-@Client.on_message(filters.command('ba'))
+
+@Client.on_message(filters.command("ba"))
 async def cmd_au(Client, message):
     try:
         user_id = str(message.from_user.id)
@@ -18,8 +18,10 @@ async def cmd_au(Client, message):
         chat_id = str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
-            resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me!"
+        if results == "None":
+            resp = (
+                "You Are Not Registered ⚠️. First Register By Using /register To Use Me!"
+            )
             await message.reply_text(resp, message.id)
         else:
             # PM AND AUTH CHECK
@@ -30,32 +32,36 @@ async def cmd_au(Client, message):
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @MorPhoChat !"
                 await message.reply_text(resp, message.id)
-            elif chat_type == "ChatType.GROUP" or chat_type == "ChatType.SUPERGROUP" and chat_id not in GROUP:
+            elif (
+                chat_type == "ChatType.GROUP"
+                or chat_type == "ChatType.SUPERGROUP"
+                and chat_id not in GROUP
+            ):
                 resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access!"
                 await message.reply_text(resp, message.id)
             else:
-            # CREDIT CHECK
+                # CREDIT CHECK
                 chk_credit = fetchinfo(user_id)
                 credit = int(chk_credit[5])
                 if credit < 1:
                     resp = "You Have Insufficient Credit To Use Me. Recharge Credit Using /buy Or Wait For Free Credit Using GiftCard .!"
                     await message.reply_text(resp, message.id)
                 else:
-                # ANTISPAM MODULE
+                    # ANTISPAM MODULE
                     user_id = str(message.from_user.id)
                     results = fetchinfo(user_id)
                     status = results[2]
                     antispam_time = int(results[7])
                     now = int(time.time())
                     count_antispam = now - antispam_time
-                    if status == 'FREE' and count_antispam < 40:
+                    if status == "FREE" and count_antispam < 40:
                         after = 40 - count_antispam
                         resp = f"""
 #ANTI_SPAM ⚠️
 Try After {after}s Or purchase /buy to reduce it!
             """
                         await message.reply_text(resp, message.id)
-                    elif status == 'PREMIUM' and count_antispam < 20:
+                    elif status == "PREMIUM" and count_antispam < 20:
                         after = 15 - count_antispam
                         resp = f"""
 #ANTI_SPAM ⚠️
@@ -66,7 +72,7 @@ Retry After {after}s
                         if message.reply_to_message:
                             cc = message.reply_to_message.text
                         else:
-                            cc = message.text[len('/ba '):]
+                            cc = message.text[len("/ba ") :]
                         if len(cc) == 0:
                             nocc = """No CCS Found. ⚠️"""
                             return await message.reply_text(nocc, message.id)
@@ -96,7 +102,7 @@ Retry After {after}s
                                 mes = input[1]
                                 ano = input[2]
                                 cvv = input[3]
-                            if len(mes) == 2 and (mes > '12' or mes < '01'):
+                            if len(mes) == 2 and (mes > "12" or mes < "01"):
                                 ano1 = mes
                                 mes = ano
                                 ano = ano1
@@ -123,7 +129,9 @@ Retry After {after}s
 </b>
               """
                             time.sleep(1)
-                            secondchk = await Client.edit_message_text(message.chat.id, firstchk.id, secondresp)
+                            secondchk = await Client.edit_message_text(
+                                message.chat.id, firstchk.id, secondresp
+                            )
                             thirdresp = f"""
 <b> BRAINTREE AUTH V2 
 ━━━━━━━━━
@@ -132,8 +140,10 @@ Retry After {after}s
  Response - ■■□□□
 </b>
               """
-                            thirdchk = await Client.edit_message_text(message.chat.id, secondchk.id, thirdresp)
-                        # STARTED CHECKING CC#
+                            thirdchk = await Client.edit_message_text(
+                                message.chat.id, secondchk.id, thirdresp
+                            )
+                            # STARTED CHECKING CC#
                             tic = time.perf_counter()
                             authurl = f"https://teammorpho.xyz/api/braintreeauthv2.php?lista={fullcc}"
                             reqone = session.get(authurl)
@@ -148,12 +158,15 @@ Retry After {after}s
  Response - ■■■□□
 </b>
               """
-                            fourthchk = await Client.edit_message_text(message.chat.id, thirdchk.id, fourthresp)
-                        # BIN RESPINSE
+                            fourthchk = await Client.edit_message_text(
+                                message.chat.id, thirdchk.id, fourthresp
+                            )
+                            # BIN RESPINSE
                             fbin = cc[:6]
 
                             bin = session.get(
-                                f"https://lookup.binlist.net/{fbin}").json()
+                                f"https://lookup.binlist.net/{fbin}"
+                            ).json()
                             try:
                                 brand = bin["scheme"].upper()
                             except:
@@ -191,7 +204,7 @@ Retry After {after}s
                             except:
                                 currency = "N/A"
                             toc = time.perf_counter()
-                        # RESPONSE SECTION
+                            # RESPONSE SECTION
                             fifthresp = f"""
 <b> BRAINTREE AUTH V2  
 ━━━━━━━━━
@@ -200,7 +213,9 @@ Retry After {after}s
  Response - ■■■■□
 </b>
               """
-                            fifthchk = await Client.edit_message_text(message.chat.id, fourthchk.id, fifthresp)
+                            fifthchk = await Client.edit_message_text(
+                                message.chat.id, fourthchk.id, fifthresp
+                            )
                             sixresp = f"""
 <b> BRAINTREE AUTH V2
 ━━━━━━━━━
@@ -209,8 +224,10 @@ Retry After {after}s
  Response - ■■■■■
 </b>
               """
-                            sixchk = await Client.edit_message_text(message.chat.id, fifthchk.id, sixresp)
-                    # --------------FINAL RESPONSE ------------#
+                            sixchk = await Client.edit_message_text(
+                                message.chat.id, fifthchk.id, sixresp
+                            )
+                            # --------------FINAL RESPONSE ------------#
 
                             finalresp = f"""
 <b>BRAINTREE AUTH V2 
@@ -232,8 +249,10 @@ Retry After {after}s
 ┗－－－－－－－－－－－－－－－－－┛</b>
             """
 
-                            finalchk = await Client.edit_message_text(message.chat.id, sixchk.id, finalresp)
-                        # ANTISPAM TIME SET
+                            await Client.edit_message_text(
+                                message.chat.id, sixchk.id, finalresp
+                            )
+                            # ANTISPAM TIME SET
                             module_name = "antispam_time"
                             value = int(time.time())
                             updatedata(user_id, module_name, value)

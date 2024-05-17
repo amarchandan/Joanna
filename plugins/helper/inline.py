@@ -1,12 +1,10 @@
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from datetime import date
 from datetime import datetime
 
+from pyrogram import Client
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 menu = [
-    [
-        InlineKeyboardButton(text="Menu", callback_data="__main")
-    ],
+    [InlineKeyboardButton(text="Menu", callback_data="__main")],
     [
         InlineKeyboardButton(text="Add Me", url="https://t.me/JoannaChkBot?startgroup"),
     ],
@@ -19,10 +17,10 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="Join Channel", url="https://t.me/MorPhoChat"),
-        ],
+    ],
     [
         InlineKeyboardButton(text="Premium", callback_data="premium_data"),
-        ],
+    ],
 ]
 
 backbutton = [
@@ -32,7 +30,7 @@ backbutton = [
     ],
     [
         InlineKeyboardButton(text="Premium", callback_data="premium_data"),
-        ],
+    ],
 ]
 
 now = datetime.now()
@@ -45,17 +43,17 @@ Hello This Is Beta Version telegram bot, gateways, tools and functions are const
 Api Bot Status Is: ONLINE ✅ | Joanna Api Is ONLINE ✅ !
 """
 gatebutton = [
-                [
-                InlineKeyboardButton("AUTH", callback_data="_authgate_"),
-                InlineKeyboardButton("CHARGE", callback_data="_charge"),
-                ],
-                [
-                InlineKeyboardButton("CC KILLER", callback_data="_cckiller_"),
-                ],
-                [
-                InlineKeyboardButton("Back",callback_data="__back"),
-                ],
-                ]
+    [
+        InlineKeyboardButton("AUTH", callback_data="_authgate_"),
+        InlineKeyboardButton("CHARGE", callback_data="_charge"),
+    ],
+    [
+        InlineKeyboardButton("CC KILLER", callback_data="_cckiller_"),
+    ],
+    [
+        InlineKeyboardButton("Back", callback_data="__back"),
+    ],
+]
 gatetext = """
 Welcome to Joanna / Joanna Gateways Online
 ━━━━━━━━━━━━━━━━━━━━━
@@ -69,12 +67,13 @@ mainback = """
 Welcome back to Joanna Bot, it is a beta bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here
 """
 
-premm = ''
+premm = ""
+
 
 @Client.on_callback_query()
 async def button_click(client, query):
     data = query.data
-    chat_id = query.message.chat.id
+    query.message.chat.id
     if data == "gates":
         await query.edit_message_text(
             text=gatetext,
@@ -93,22 +92,20 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         )
     elif data == "__back":
         await query.edit_message_text(
-            text=mainback,
-            reply_markup=InlineKeyboardMarkup(backbutton)
+            text=mainback, reply_markup=InlineKeyboardMarkup(backbutton)
         )
     elif data == "__gback":
         await query.edit_message_text(
-            text=backtext,
-            reply_markup=InlineKeyboardMarkup(gatebutton)
+            text=backtext, reply_markup=InlineKeyboardMarkup(gatebutton)
         )
     elif data == "premium_data":
         await query.edit_message_text(
             text=premm,
             reply_markup=InlineKeyboardMarkup(
                 [
-                [
-                InlineKeyboardButton("Back", callback_data="__back"),
-                ],
+                    [
+                        InlineKeyboardButton("Back", callback_data="__back"),
+                    ],
                 ]
             ),
         )
@@ -213,15 +210,15 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
             """,
             reply_markup=InlineKeyboardMarkup(
                 [
-                [
-                InlineKeyboardButton("Back", callback_data="__back"),
-                InlineKeyboardButton("Next Page", callback_data="_tool2"),
-                ],
+                    [
+                        InlineKeyboardButton("Back", callback_data="__back"),
+                        InlineKeyboardButton("Next Page", callback_data="_tool2"),
+                    ],
                 ]
             ),
         )
     elif data == "_tool2":
-       await query.edit_message_text(
+        await query.edit_message_text(
             """
 ┏ Joanna SK Cracking Tool / [P: 2 | 3] ┒
 ┠ Checkout Parse:
@@ -254,15 +251,15 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
-           reply_markup=InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup(
                 [
-                [
-                InlineKeyboardButton("Prev Page", callback_data="_tool"),
-                InlineKeyboardButton("Next Page", callback_data="_tool3"),
-                ],
-                [
-                InlineKeyboardButton("Back", callback_data="__back"),
-                ],
+                    [
+                        InlineKeyboardButton("Prev Page", callback_data="_tool"),
+                        InlineKeyboardButton("Next Page", callback_data="_tool3"),
+                    ],
+                    [
+                        InlineKeyboardButton("Back", callback_data="__back"),
+                    ],
                 ]
             ),
         )
@@ -295,14 +292,14 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Condition: Online! ✅
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
-        reply_markup=InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup(
                 [
-                [
-                InlineKeyboardButton("Prev Page", callback_data="_tool2"),
-                ],
-                [
-                InlineKeyboardButton("Back", callback_data="__back"),
-                ],
+                    [
+                        InlineKeyboardButton("Prev Page", callback_data="_tool2"),
+                    ],
+                    [
+                        InlineKeyboardButton("Back", callback_data="__back"),
+                    ],
                 ]
             ),
         )

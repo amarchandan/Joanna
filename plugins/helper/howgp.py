@@ -1,13 +1,14 @@
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
 
 
-@Client.on_message(filters.command('addbot'))
+@Client.on_message(filters.command("addbot"))
 async def cmd_howgp(Client, message):
     try:
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         # PLAN CHECK
 
         texta = f"""
@@ -19,7 +20,7 @@ async def cmd_howgp(Client, message):
 
 𝗧𝗛𝗔𝗧'𝗦 𝗜𝗧 . 𝗬𝗢𝗨 𝗚𝗢𝗧 𝗣𝗘𝗥𝗠𝗜𝗦𝗦𝗜𝗢𝗡 𝗧𝗢 𝗨𝗦𝗘 𝗧𝗛𝗜𝗦 𝗕𝗢𝗧 !
 """
-        msg1 = await message.reply_text(texta, message.id)
+        await message.reply_text(texta, message.id)
         await plan_expirychk(user_id)
     except Exception as e:
         print(e)

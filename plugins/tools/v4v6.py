@@ -1,24 +1,26 @@
-from pyrogram import Client, filters
-import requests
-import time
-from plugins.func.users_sql import *
-import requests
-import random
-import os
 import ipaddress
+import os
+import random
+import time
+
+import requests
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('ips'))
+@Client.on_message(filters.command("ips"))
 async def cmd_ipgen(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
@@ -33,8 +35,8 @@ async def cmd_ipgen(Client, message):
                 bin = message.reply_to_message.text
 
             else:
-                bin = message.text[len('/ips '):]
-                sknumxx1 = message.text[len('/ips  '):]
+                bin = message.text[len("/ips ") :]
+                sknumxx1 = message.text[len("/ips  ") :]
             if len(bin) == 0:
                 nocc = """
 OPPS! WRONG FORMAT
@@ -50,24 +52,27 @@ USE :- /ips 200 ipv4|ipv6
           """
                 return await message.reply_text(nocc, message.id)
             ress = "Generating..."
-            firstchk = await message.reply_text(ress, message.id)
+            await message.reply_text(ress, message.id)
             tic = time.perf_counter()
-            msg = message.text[len('/ips '):]
-            splitter = msg.split(' ')
+            msg = message.text[len("/ips ") :]
+            splitter = msg.split(" ")
             num = int(splitter[0])
             ip_type = splitter[1]
-            ips = []
             generated_ips = []
             for _ in range(num):
-                if ip_type == 'ipv4':
-                    generated_ips.append(str(ipaddress.IPv4Address(random.randint(0, 2**32-1))))
-                elif ip_type == 'ipv6':
-                    generated_ips.append(str(ipaddress.IPv6Address(random.randint(0, 2**128-1))))
-            with open(f"{num}x_IP_BY_@JoannaChkBot.txt", 'w') as file:
-                file.write('\n'.join(generated_ips))
+                if ip_type == "ipv4":
+                    generated_ips.append(
+                        str(ipaddress.IPv4Address(random.randint(0, 2**32 - 1)))
+                    )
+                elif ip_type == "ipv6":
+                    generated_ips.append(
+                        str(ipaddress.IPv6Address(random.randint(0, 2**128 - 1)))
+                    )
+            with open(f"{num}x_IP_BY_@JoannaChkBot.txt", "w") as file:
+                file.write("\n".join(generated_ips))
             toc = time.perf_counter()
-            chat_id = str(message.chat.id)
-            resp=f"""
+            str(message.chat.id)
+            resp = f"""
 GENERATED COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
@@ -78,9 +83,10 @@ GENERATED COMPLETED ✅
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
             await message.reply_document(
-            document=f"{num}x_IP_BY_@JoannaChkBot.txt",
-            caption=resp,
-            reply_to_message_id=message.id)
+                document=f"{num}x_IP_BY_@JoannaChkBot.txt",
+                caption=resp,
+                reply_to_message_id=message.id,
+            )
             os.remove(f"{num}x_IP_BY_@JoannaChkBot.txt")
     except Exception as e:
         print(e)

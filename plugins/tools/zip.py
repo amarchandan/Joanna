@@ -1,35 +1,34 @@
-from pyrogram import Client, filters
-import requests
-import json
-import re
 import time
-from plugins.func.users_sql import *
+
 import requests
-import json
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
 
 
-@Client.on_message(filters.command('zip'))
+@Client.on_message(filters.command("zip"))
 async def cmd_bin(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
-            
+
             # CMD SENT NOW CHECKING VALID IF OR NOT CC#
             if message.reply_to_message:
-                bin = message.reply_to_message.text
+                message.reply_to_message.text
 
             else:
                 tic = time.perf_counter()
-                zipp = message.text[len('/zip '):]
+                zipp = message.text[len("/zip ") :]
             if len(zipp) == 0:
                 nocc = """
 Give Valid Zip Code
@@ -39,8 +38,10 @@ Give Valid Zip Code
                 pm = fetchinfo(user_id)
                 status = pm[2]
                 role = status
-                session = requests.session()
-                zip_api = requests.get(f'https://zip.getziptastic.com/v2/US/{zipp}').json()
+                requests.session()
+                zip_api = requests.get(
+                    f"https://zip.getziptastic.com/v2/US/{zipp}"
+                ).json()
                 toc = time.perf_counter()
                 resp = f"""
    GRAB SUCCESSFULLY 

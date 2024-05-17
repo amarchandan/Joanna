@@ -1,28 +1,32 @@
-from pyrogram import Client, filters
-import requests
-import time
-from plugins.func.users_sql import *
-import requests
-import string
 import os
 import random
+import string
+import time
+
+import requests
+from pyrogram import Client, filters
+
+from plugins.func.users_sql import *
+
 session = requests.session()
+
 
 def generate_random_string(length):
     letters = string.ascii_letters
-    result_str = ''.join(random.choice(letters) for _ in range(length))
+    result_str = "".join(random.choice(letters) for _ in range(length))
     return result_str
 
-@Client.on_message(filters.command('gensk'))
+
+@Client.on_message(filters.command("gensk"))
 async def cmd_skgen(Client, message):
     try:
         # NES TOOLS
         user_id = str(message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
+        str(message.chat.type)
+        str(message.chat.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:
@@ -36,8 +40,8 @@ async def cmd_skgen(Client, message):
             if message.reply_to_message:
                 sknumxx = message.reply_to_message.text
             else:
-                sknumxx = message.text[len('/gensk '):]
-                sknumxx1 = message.text[len('/gensk  '):]
+                sknumxx = message.text[len("/gensk ") :]
+                sknumxx1 = message.text[len("/gensk  ") :]
             if len(sknumxx) == 0:
                 nocc = """
 OPPS! WRONG FORMAT
@@ -55,28 +59,28 @@ USE :- /gensk 200 1
 
             ress = "Generating..."
             tic = time.perf_counter()
-            msg = message.text[len('/gensk '):]
-            splitter = msg.split(' ')
+            msg = message.text[len("/gensk ") :]
+            splitter = msg.split(" ")
             num = int(splitter[0])
             options = splitter[1]
             sk_list = []
-            firstchk = await message.reply_text(ress, message.id)
+            await message.reply_text(ress, message.id)
             for _ in range(num):
                 option = random.choice(options)
-                if option == '1':
+                if option == "1":
                     length = 64
-                elif option == '2':
+                elif option == "2":
                     length = 34
-                elif option == '3':
+                elif option == "3":
                     length = 24
                 random_string = generate_random_string(length)
                 skk = "sk_live_" + random_string
                 sk_list.append(skk)
             with open(f"{num}x_SK_GEN_BY_@JoannaChkBot.txt", "w") as file:
-                file.write('\n'.join(sk_list))
+                file.write("\n".join(sk_list))
             toc = time.perf_counter()
-            chat_id = str(message.chat.id)
-            resp=f"""
+            str(message.chat.id)
+            resp = f"""
 GENERATED COMPLETED ✅
 
 ┏－－－－－－－－－－－－┒
@@ -86,11 +90,10 @@ GENERATED COMPLETED ✅
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
 ┗－－－－－－－－－－－－┛"""
             await message.reply_document(
-            document=f"{num}x_SK_GEN_BY_@JoannaChkBot.txt",
-            caption=resp,
-            reply_to_message_id=message.id)
+                document=f"{num}x_SK_GEN_BY_@JoannaChkBot.txt",
+                caption=resp,
+                reply_to_message_id=message.id,
+            )
             os.remove(f"{num}x_SK_GEN_BY_@JoannaChkBot.txt")
     except Exception as e:
         print(e)
-
-

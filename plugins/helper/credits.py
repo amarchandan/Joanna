@@ -1,10 +1,11 @@
 # IMPORT PYROGRAM MODULE
 from pyrogram import Client, filters
+
 # Reg Data Import
 from plugins.func.users_sql import *
 
 
-@Client.on_message(filters.command('credits'))
+@Client.on_message(filters.command("credits"))
 async def cmd_credit(Client, message):
     try:
         user_id = str(message.from_user.id)
@@ -14,7 +15,7 @@ async def cmd_credit(Client, message):
         plan = regdata[3]
         results = str(regdata)
         first_name = str(message.from_user.first_name)
-        if results == 'None':
+        if results == "None":
             resp = "You Are Not Registered ⚠️. First Register By Using /register To Use Me ."
             await message.reply_text(resp, message.id)
         else:

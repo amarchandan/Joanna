@@ -1,15 +1,16 @@
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
 
 
-@Client.on_message(filters.command('brod'))
+@Client.on_message(filters.command("brod"))
 async def cmd_brod(Client, message):
     user_id = str(message.from_user.id)
     CEO = "1418571871"
     owner = 1418571871
     if user_id != CEO:
         resp = "Require Owner Privilages ⚠️"
-        msg1 = await message.reply_text(resp, message.id)
+        await message.reply_text(resp, message.id)
     else:
         resp = "HI ALL"
         filter_user = "users"
