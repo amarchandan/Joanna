@@ -180,11 +180,11 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
             """
 ┏ Joanna Tools / [P: 1 | 3] ┒
 ┠ Url info chk like Captcha, Cloud, Payment:
-┠ Format: $/gtw link
+┠ Format: $/gate link
 ┠ Condition: Online! ✅
 
 ┠ Mass Url info chk like Captcha, Cloud, Payment:
-┠ Format: $/mgtw link
+┠ Format: $/mgate link
 ┠ Condition: Online! ✅
 
 ┠ CC Scr:
