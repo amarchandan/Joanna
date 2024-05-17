@@ -84,6 +84,7 @@ async def cmd_massskchk(Client, message):
             if not message.reply_to_message.document:
                 return await message.reply_text("Please Reply To File")
             url_lists = []
+            gate = []
             tic = time.perf_counter()
             ms_ = 'Checking....'
             domain_file = await message.reply_to_message.download(progress_args=(ms_, f"`Downloading This File!`"))
@@ -98,7 +99,8 @@ async def cmd_massskchk(Client, message):
                     c= 'False'
                 co=check_cloud_in_website(gtw)
                 py=check_credit_card_payment(gtw)
-                response = f'Url - {gtw} :- Captcha - {c} :- Cloud - {co} :- Payment - {py}'
+                py.append(gate)
+                response = f'Url - {gtw} :- Captcha - {c} :- Cloud - {co} :- Payment - {gate}'
                 url_lists.append(response)
             with open(f'{x}x_Url_CHK_BY_@JoannaChkBot.txt', 'a+') as f:
                         f.write('\n'.join(url_lists))

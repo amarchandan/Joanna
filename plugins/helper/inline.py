@@ -46,7 +46,13 @@ Api Bot Status Is: ONLINE ✅ | Joanna Api Is ONLINE ✅ !
 """
 gatebutton = [
                 [
-                InlineKeyboardButton("GateWays", callback_data="_charge"),
+                InlineKeyboardButton("AUTH", callback_data="_authgate_"),
+                InlineKeyboardButton("CHARGE", callback_data="_charge"),
+                ],
+                [
+                InlineKeyboardButton("CC KILLER", callback_data="_cckiller_"),
+                ],
+                [
                 InlineKeyboardButton("Back",callback_data="__back"),
                 ],
                 ]
@@ -58,30 +64,6 @@ Gates CMDS :  None Api Gates! ✅
 Gates : 13 ✅
 ━━━━━━━━━━━━━━━━
 Select the type of gate you want for your use!."""
-
-buttonscharge = [
-                [
-                InlineKeyboardButton("Back", callback_data="__gback"),
-                InlineKeyboardButton("Next Page", callback_data="_chargepg2"),
-                ],
-                ]
-buttonscharge2 = [
-                [
-                InlineKeyboardButton("Prev Page", callback_data="_charge"),
-                InlineKeyboardButton("Next Page", callback_data="_chargepg3"),
-                ],
-                [
-                    InlineKeyboardButton("Back", callback_data="__gback"),
-                ],
-                ]
-buttonscharge3 = [
-                [
-                InlineKeyboardButton("Prev Page", callback_data="_chargepg2"),
-                ],
-                [
-                    InlineKeyboardButton("Back", callback_data="__gback"),
-                ],
-                ]
 
 mainback = """
 Welcome back to Joanna Bot, it is a beta bot, gateways, tools and functions are constantly being added, to know my different commands use the buttons shown here
@@ -134,94 +116,67 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 3] ┒
-┠ Name :- Braintree
-┠ Amount :- None
-┠ Format :- /b3 card|month|year|cvv
+┠ Name :- SHOPIFY $10
+┠ Format :- /spt card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :- Stripe
-┠ Amount :- $2 + Auth
-┠ Format :- /as card|month|year|cvv
+┠ Name :- SHOPIFY+STRIPE $10 
+┠ Format :- /ssc card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :- Stripe
-┠ Amount :- $5
-┠ Format :- /xx card|month|year|cvv
+┠ Name :- SHOPIFY+STRIPE $54 
+┠ Format :- /ssc1 card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
-┠ Name :- Stripe
-┠ Amount :- $20
-┠ Format :- /sg card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-┗━━━━━━━━━━━━━━━━━━━━━━━━┛
-            """,
-            reply_markup=InlineKeyboardMarkup(buttonscharge),
-        )
-    elif data == "_chargepg2":
-        await query.edit_message_text(
-            """
-┏ Joanna Gateways Online | Charge Gateways  [P: 2 | 3] ┒
-┠ Name :- Stripe
-┠ Amount :- $25
-┠ Format :- /sx card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $30
+┠ Name :- STRIPE $76
 ┠ Format :- /sc card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $35
-┠ Format :- /xy card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $45
-┠ Format :- /sd card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
-            reply_markup=InlineKeyboardMarkup(buttonscharge2),
+            reply_markup=InlineKeyboardMarkup(gatebutton),
         )
-    elif data == "_chargepg3":
+    elif data == "_cckiller_":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Charge Gateways  [P: 3 | 3] ┒
-┠ Name :- Stripe
-┠ Amount :- $76
-┠ Format :- /sb card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Stripe
-┠ Amount :- $100
-┠ Format :- /sf card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Shopify Gate
-┠ Amount :- $75
-┠ Format :- /spy card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- Shopify Gate
-┠ Amount :- $89.99
-┠ Format :- /spb card|month|year|cvv
+┏ Joanna Gateways Online | CC Killer Gateways  [P: 3 | 3] ┒
+┠ Name :- CC KILLER
+┠ Format :- /kill card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
-            reply_markup=InlineKeyboardMarkup(buttonscharge3),
+            reply_markup=InlineKeyboardMarkup(gatebutton),
+        )
+    elif data == "_authgate_":
+        await query.edit_message_text(
+            """
+┏ Joanna Gateways Online | Auth Gateways  [P: 3 | 3] ┒
+┠ Name :- STRIPE AUTH
+┠ Format :- /sa card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- PAYPAL AUTH
+┠ Format :- /pa card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- ADYEN AUTH
+┠ Format :- /aa card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- BRAINTREE AUTH V2
+┠ Format :- /pa card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
+            """,
+            reply_markup=InlineKeyboardMarkup(gatebutton),
         )
     elif data == "_tool":
         await query.edit_message_text(

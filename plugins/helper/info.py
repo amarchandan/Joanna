@@ -13,27 +13,33 @@ async def cmd_info(Client,message):
     else:
       
       if message.reply_to_message:
-        user_id = str(message.reply_to_message.from_user.id)
-        chat_type = str(message.chat.type)
-        chat_id = str(message.chat.id)
-        #PLAN CHECK 
-        await plan_expirychk(user_id)
-        user_id = str(message.reply_to_message.from_user.id)
-        username = str(message.reply_to_message.from_user.username)
-        first_name = str(message.reply_to_message.from_user.first_name)
-        info = fetchinfo(user_id)
-        results = str(info)
-        if results=="None":
-          send_info = f"""
+        id = message.reply_to_message.text
+      else:
+        id = message.text[len('/pa '):]
+      if len(id) == 0:
+          noid = """No ID Found. ⚠️"""
+          return await message.reply_text(noid, message.id)
+      user_id = str(message.reply_to_message.from_user.id)
+      chat_type = str(message.chat.type)
+      chat_id = str(message.chat.id)
+      #PLAN CHECK 
+      await plan_expirychk(user_id)
+      user_id = str(message.id.from_user.id)
+      username = str(message.id.from_user.username)
+      first_name = str(message.id.from_user.first_name)
+      info = fetchinfo(user_id)
+      results = str(info)
+      if results=="None":
+        send_info = f"""
 User Info
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┠ FristName : {first_name}
 ┠ ID : <code>{user_id}</code>
 ┠ UserName : {username}
-┠ Profile : <a href="tg://user?id={message.reply_to_message.from_user.id}">Profile Link</a>
-┠ Tg Restrictions : {message.reply_to_message.from_user.is_restricted}
-┠ Tg ScamTag : {message.reply_to_message.from_user.is_scam}
-┠ Tg Premium : {message.reply_to_message.from_user.is_premium}
+┠ Profile : <a href="tg://user?id={message.id.from_user.id}">Profile Link</a>
+┠ Tg Restrictions : {message.id.from_user.is_restricted}
+┠ Tg ScamTag : {message.id.from_user.is_scam}
+┠ Tg Premium : {message.id.from_user.is_premium}
 ┠ Status : NOT REGISTERED
 ┠ Credit : N/A
 ┠ Plan: N/A
@@ -42,32 +48,32 @@ User Info
 ┠ Registered At : N/A
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
-          await message.reply_text(send_info,message.id)
-        else:
-          pid = str(message.reply_to_message.from_user.id)
-          await plan_expirychk(pid)
-          info = fetchinfo(user_id)
-          results = info
-          botid = results[10]
-          status = results[2]
-          plan = results[3]
-          expiry = results[4]
-          credit = results[5]
-          antispam = results[6]
-          antispam_time = results[7]
-          totalkey = results[8]
-          reg_at = results[9]
-          send_info = f"""
+        await message.reply_text(send_info,message.id)
+      else:
+        pid = str(message.id.from_user.id)
+        await plan_expirychk(pid)
+        info = fetchinfo(user_id)
+        results = info
+        botid = results[10]
+        status = results[2]
+        plan = results[3]
+        expiry = results[4]
+        credit = results[5]
+        antispam = results[6]
+        antispam_time = results[7]
+        totalkey = results[8]
+        reg_at = results[9]
+        send_info = f"""
 User Info
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┠ FristName : {first_name}
 ┠ BOT ID : {botid}
 ┠ ID : <code>{user_id}</code>
 ┠ UserName : {username}
-┠ Profile : <a href="tg://user?id={message.reply_to_message.from_user.id}">Profile Link</a>
-┠ Tg Restrictions : {message.reply_to_message.from_user.is_restricted}
-┠ Tg ScamTag : {message.reply_to_message.from_user.is_scam}
-┠ Tg Premium : {message.reply_to_message.from_user.is_premium}
+┠ Profile : <a href="tg://user?id={message.id.from_user.id}">Profile Link</a>
+┠ Tg Restrictions : {message.id.from_user.is_restricted}
+┠ Tg ScamTag : {message.id.from_user.is_scam}
+┠ Tg Premium : {message.id.from_user.is_premium}
 ┠ Status : {status}
 ┠ Credit : {credit}
 ┠ Plan: {plan}
@@ -76,12 +82,12 @@ User Info
 ┠ Registered At : {reg_at}
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
-          await message.reply_text(send_info,message.id)
+        await message.reply_text(send_info,message.id)
       else:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
         chat_id = str(message.chat.id)
-        #PLAN CHECK 
+      #PLAN CHECK 
         await plan_expirychk(user_id)
         user_id = str(message.from_user.id)
         username = str(message.from_user.username)
@@ -107,22 +113,22 @@ User Info
 ┠ Registered At : N/A
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
-          await message.reply_text(send_info,message.id)
-        else:
-          pid = str(message.from_user.id)
-          await plan_expirychk(pid)
-          info = fetchinfo(user_id)
-          results = info
-          botid = results[10]
-          status = results[2]
-          plan = results[3]
-          expiry = results[4]
-          credit = results[5]
-          antispam = results[6]
-          antispam_time = results[7]
-          totalkey = results[8]
-          reg_at = results[9]
-          send_info = f"""
+        await message.reply_text(send_info,message.id)
+      else:
+        pid = str(message.from_user.id)
+        await plan_expirychk(pid)
+        info = fetchinfo(user_id)
+        results = info
+        botid = results[10]
+        status = results[2]
+        plan = results[3]
+        expiry = results[4]
+        credit = results[5]
+        antispam = results[6]
+        antispam_time = results[7]
+        totalkey = results[8]
+        reg_at = results[9]
+        send_info = f"""
 User Info
 ┏━━━━━━━━━━━━━━━━━━━━━━━
 ┠ FristName : {first_name}
@@ -141,6 +147,6 @@ User Info
 ┠ Registered At : {reg_at}
 ┗━━━━━━━━━━━━━━━━━━━━━━━
   """
-        await message.reply_text(send_info,message.id)
+      await message.reply_text(send_info,message.id)
   except Exception as e:
       print(e)

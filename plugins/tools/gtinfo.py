@@ -84,28 +84,30 @@ async def cmd_gtw(Client, message):
           """
                 return await message.reply_text(nogt, message.id)
             else:
-                chkst = "check your site wait...."
-                done = await message.reply_text(chkst, message.id)
-                tic = time.perf_counter()
-                try:
-                    c=check_captcha(gtw)
-                except:
-                    c= 'False'
-                co=check_cloud_in_website(gtw)
-                py=check_credit_card_payment(gtw)
-                toc = time.perf_counter()
-                result = f'''
+              gate = []
+              chkst = "check your site wait...."
+              done = await message.reply_text(chkst, message.id)
+              tic = time.perf_counter()
+              try:
+                  c=check_captcha(gtw)
+              except:
+                  c= 'False'
+              co=check_cloud_in_website(gtw)
+              py=check_credit_card_payment(gtw)
+              py.append(gate)
+              toc = time.perf_counter()
+              result = f'''
   CHECK  SUCCESSFULLY 
 ┏－－－－－－－－－－－－┒
 ┠ Url - <code>{gtw}</code>
 ┠ Captcha - <code>{c}</code>
 ┠ Cloud - <code>{co}</code>
-┠ Payment - <code>{py}</code>
+┠ Payment - <code>{gate}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
 ┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠print('⏤͟͞𝙍����™ </> ⚠️') </a>
 ┗－－－－－－－－－－－－┛
     '''
-                await Client.edit_message_text(message.chat.id, done.id, result)
+              await Client.edit_message_text(message.chat.id, done.id, result)
     except Exception as e:
         print(e)
