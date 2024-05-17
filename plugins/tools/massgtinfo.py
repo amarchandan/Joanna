@@ -73,7 +73,7 @@ def check_credit_card_payment(gtw):
         return False
 
 
-@Client.on_message(filters.command("mgtw"))
+@Client.on_message(filters.command("mgate"))
 async def cmd_massskchk(Client, message):
     try:
         # NES TOOLS
@@ -114,7 +114,7 @@ async def cmd_massskchk(Client, message):
                     c = "False"
                 co = check_cloud_in_website(gtw)
                 py = check_credit_card_payment(gtw)
-                py.append(gate)
+                gate.append((py))
                 response = (
                     f"Url - {gtw} :- Captcha - {c} :- Cloud - {co} :- Payment - {gate}"
                 )
