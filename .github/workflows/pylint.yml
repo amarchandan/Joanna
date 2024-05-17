@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
     branches: 
-      - main
+      - v1.0
 permissions: write-all
 jobs:
   PEP8:
@@ -32,7 +32,7 @@ jobs:
           black .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          token: ${{ secrets.SOME_TOKEN }}
+         # token: ${{ secrets.SOME_TOKEN }}
           commit_message: 'Auto Fixes: Code formatted'
           commit_options: '--no-verify'
           repository: .
