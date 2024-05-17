@@ -117,7 +117,7 @@ async def cmd_sk(Client, message):
 ┠ Currency - <code>{currn} {currf} {currs}</code>
 ┠ Time To Chk - {toc - tic:0.4f}sec
 ┠ Chk By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠print('𝙍𝝣𝘽𝝣𝙇™ </> ⚠️')</a>
 ┗－－－－－－－－－－－－┛
     """
                 await Client.edit_message_text(message.chat.id, done.id, result)

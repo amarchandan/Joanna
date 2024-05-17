@@ -305,7 +305,7 @@ async def generate_cc(_, message: Message):
 ┠ Bank - {bank}
 ┠ Country - {country} - {flag} - {currency}
 ┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠print('𝙍𝝣𝘽𝝣𝙇™ </> ⚠️')</a>
 ┗－－－－－－－－－－－－┛"""
 
             resp1 = f"""
@@ -319,7 +319,7 @@ async def generate_cc(_, message: Message):
 ┠ Bank - {bank}
 ┠ Country - {country} - {flag} - {currency}
 ┠ Gen By -  <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> [ {role} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠ ⚠️</a>
+┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠print('𝙍𝝣𝘽𝝣𝙇™ </> ⚠️')</a>
 ┗－－－－－－－－－┛"""
             if quantity > 20:
                 with open(f"{quantity}x_CC_GEN_BY_@JoannaChkBot.txt", "w") as file:
