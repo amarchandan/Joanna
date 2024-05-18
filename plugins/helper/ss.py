@@ -4,7 +4,7 @@ from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.command(["start", "cmd", "cmds", "help"]))
 async def cmd_start(Client, message):
     try:
         user_id = str(message.from_user.id)
