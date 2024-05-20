@@ -149,8 +149,11 @@ Retry After {after}s
                             reqone = session.get(authurl)
                             data = json.loads(reqone)
                             stat = data["stuts"]
+                            print(stat)
                             ress = data["respp"]
+                            print(ress)
                             code = data["code"]
+                            print(code)
                             fourthresp = f"""
 <b> PAYPAL AUTH
 ━━━━━━━━━
