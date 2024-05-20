@@ -22,12 +22,6 @@ async def cmd_start(Client, message):
         bot_id = f"JOANNA-{gcgenfunc()}"
         if results == "None":
             insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
-            pm = fetchinfo(user_id)
-            pm[2]
-            pm[10]
-            pm[5]
-            pm[3]
-            pm[6]
             await message.reply_text(log, "new user")
         else:
             None
