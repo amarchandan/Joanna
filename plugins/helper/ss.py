@@ -22,6 +22,10 @@ async def cmd_start(Client, message):
         regdata = fetchinfo(user_id)
         results = str(regdata)
         if results == "None":
+            insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
+        else:
+            None
+        if results == "None":
             resp = "Hey Dude You Are Not Register ⚠️.\n\n First Register By Using /register To Use Me!"
             await message.reply_text(resp, message.id)
         else:
@@ -40,9 +44,5 @@ Maybe you already know this bot, Click On Menu to know all my gates.
             edit = await message.reply(
                 text=text, reply_markup=InlineKeyboardMarkup(menu)
             )
-        if results == "None":
-            insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
-        else:
-            None
     except Exception as e:
         print(e)
