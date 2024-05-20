@@ -38,7 +38,6 @@ Anti Spam :- {aniti}
 
 Type /start To Know My Work Ability."""
             await message.reply_text(resp, message.id)
-            await Client.send_message(grp, f"NEW USERS {user_id}")
 
         else:
             pm = fetchinfo(user_id)
