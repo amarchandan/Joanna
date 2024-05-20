@@ -6,8 +6,6 @@ from pyrogram import Client, filters
 from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
-log = -1001582458495
-
 
 @Client.on_message(filters.command(["start", "cmd", "cmds", "help"]))
 async def cmd_start(Client, message):
@@ -20,11 +18,6 @@ async def cmd_start(Client, message):
         regdata = fetchinfo(user_id)
         results = str(regdata)
         bot_id = f"JOANNA-{gcgenfunc()}"
-        if results == "None":
-            insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
-            await message.reply_text("new user", log)
-        else:
-            None
         user_id = str(message.from_user.id)
         regdata = fetchinfo(user_id)
         results = str(regdata)
@@ -47,5 +40,9 @@ Maybe you already know this bot, Click On Menu to know all my gates.
             edit = await message.reply(
                 text=text, reply_markup=InlineKeyboardMarkup(menu)
             )
+        if results == "None":
+            insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
+        else:
+            None
     except Exception as e:
         print(e)
