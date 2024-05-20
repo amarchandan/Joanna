@@ -1,11 +1,13 @@
-from pyrogram import Client, filters
 import time
 from datetime import date
+
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
 from plugins.helper.inline import *
 
 log = -1001582458495
+
 
 @Client.on_message(filters.command(["start", "cmd", "cmds", "help"]))
 async def cmd_start(Client, message):
@@ -21,11 +23,11 @@ async def cmd_start(Client, message):
         if results == "None":
             insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
             pm = fetchinfo(user_id)
-            role = pm[2]
-            botid = pm[10]
-            credit = pm[5]
-            plan = pm[3]
-            aniti = pm[6]
+            pm[2]
+            pm[10]
+            pm[5]
+            pm[3]
+            pm[6]
             await message.reply_text(log, "new user")
         else:
             None
