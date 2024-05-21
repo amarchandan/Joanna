@@ -220,6 +220,7 @@ async def GeneatedCC(extra):
         cant = 16
     return Generar_tarjeta(extra, cant, True)
 
+
 @Client.on_message(filters.command(["gen", "generate"]) & filters.private)
 async def generate_cc(_, message: Message):
     try:
