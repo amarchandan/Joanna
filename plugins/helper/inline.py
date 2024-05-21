@@ -168,7 +168,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Type :- Need-Credits
 
 ┠ Name :- BRAINTREE AUTH V2
-┠ Format :- /pa card|month|year|cvv
+┠ Format :- /ba card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
