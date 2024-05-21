@@ -1,8 +1,8 @@
+from datetime import date, timedelta
+
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
-from datetime import date
-from datetime import timedelta
-import random
 
 
 @Client.on_message(filters.command("acow"))

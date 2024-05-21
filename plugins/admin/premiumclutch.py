@@ -1,9 +1,11 @@
+from datetime import date, timedelta
+
 from pyrogram import Client, filters
+
 from plugins.func.users_sql import *
-from datetime import date
-from datetime import timedelta
-import random
+
 gc = -1001582458495
+
 
 @Client.on_message(filters.command("aces"))
 async def cmd_plan1(Client, message):
