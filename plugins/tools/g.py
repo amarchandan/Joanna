@@ -256,7 +256,7 @@ OPPS! WRONG FORMAT
 USE :- /ips 200 ipv4|ipv6
           """
                 return await message.reply_text(nocc, message.id)
-            quantity = int(quantity[0]) if quantity else 20
+            # quantity = int(quantity[0]) if quantity else 20
             time.perf_counter()
             session = requests.session()
             bin = session.get(f"https://lookup.binlist.net/{bin_input}").json()
