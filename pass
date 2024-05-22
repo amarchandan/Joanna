@@ -8,6 +8,7 @@ d6650033@gmail.com
 AmaRAmaR@6082
 
 
+
 gunicorn app:app & python3 run.py
 
 https://app.koyeb.com/apps/new/configure-service
