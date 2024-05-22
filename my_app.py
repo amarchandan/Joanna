@@ -11,7 +11,7 @@ bot = Client(
     "Joanna",
     api_id="24578407",
     api_hash="5f711fbe013fd0d20147f62728118510",
-    bot_token="6964061507:AAHV0kOLwu51D8HWVv_yRg47H7RXZv_H6KU",
+    bot_token="6327788045:AAFSvNAUlUCIMgPceFChvMLfo-edJqqJ7GM",
     plugins=plugins,
 )
 
