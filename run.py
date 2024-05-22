@@ -15,7 +15,7 @@ async def main():
   user = Client("Joanna_Scr",
                 api_id="20126690",
                 api_hash="3ea37bd78cb3a8ca92caac7a23b542d9",
-                session_string="BQF3CWcAB2_yaSoxgteSvk4uc_uqFOZc4iYMB48U0TMLNiEFDDR5CG31rzt77C43Z4LUYIMshmbEfYiuIX0oA85M9-rt5x3avvA4CbJupRIsjDEi83xHOeXq9l6QPRo-zYiJQkBhrMciUiJsSnHWVVN_bPflLVYtXulr_yYAJWh8SiiahKF5S43NbhHMtY_3MIiKYO6FJ7lLY8Mt5ItHF0R-GaX8_633LdRuATMbEs-s1Y5yZQFEIMfh2SW39WFgAleez8sjaV0-WAfLLq1XtIQkHkcEbLLQSUt5AN7GQyl2VbVt2LJ9wUkcYKVcoGTGgDy8ZvAQ_vrotzv5tV_TJkriyV75MQAAAAF33G0MAA")
+                session_string="BQEzG-IAv1N42peky5b9Uhc4tRhHLPFzgYLbsUlQqIjVlxrn_sVgD3qtx4Df3CBVVAAWGxmrR9j_4h8Ckyv9-0vdsXlxCfbzT6ON3UYkxCQSFKQKFYxcppWVlLOTv47H_B1GDL0luaXVMzLyYmamUlvQffno-fNU6Zg1YrV0HYIS-mI870xAS-UfLUUb-wZa-tdcDsxkynAPLZsZ3K_6Wsc-hf5SeYMxCzMXIIRJjiEO8oBc1OsS8h7MnaIggyAN7uKEAW69shvVMiieRslKLt2FbW_R0gWS5x8_Me0H85ffTt-D7RYIhm73LAWaU8dU10rEtmN85Dv6myPhI8imDlROv3-thwAAAAGPMGpzAA")
   bot = Client("Joanna_Bot",
                api_id="20126690",
                api_hash="3ea37bd78cb3a8ca92caac7a23b542d9",
