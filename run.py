@@ -69,11 +69,11 @@ Usage :-
                 status = pm[2]
                 GROUP = open("plugins/group.txt").read().splitlines()
                 if chat_type == "ChatType.PRIVATE" and status == "FREE":
-                    resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @K3VIN_X To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
+                    resp = "⚠️ #PREMIUM_ONLY ⚠️ \n Contact @clutchemiwayor To Buy Premium Access !.Else You Can Use Free Then Join @MorPhoChat !"
                     await message.reply_text(resp, message.id)
 
                 elif chat_type == "ChatType.GROUP" and chat_id not in GROUP:
-                    resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @K3VIN_X To Authorize!"
+                    resp = "⚠️ #UNAUTHORIZED_CHAT ⚠️ \n Contact @clutchemiwayor To Authorize!"
                     await message.reply_text(resp, message.id)
                 else:
                     # CREDIT CHECK
@@ -91,20 +91,20 @@ Usage :-
                             limit = int(splitter[1])
                         except BaseException:
                             limit = 100
-                        if status == "FREE" and limit > 3000:
+                        if status == "FREE" and limit > 5000:
 
                             resp = f"""
 #ALERT_ ⚠️
 Your Account Is FREE
-You Can't Used More Than 3000 CC!
+You Can't Used More Than 5000 CC!
 Upgrade Your Plan Or Wait For Next Update!
                 """
                             await message.reply_text(resp, message.id)
-                        elif status == "PREMIUM" and limit > 10000:
+                        elif status == "PREMIUM" and limit > 50000:
 
                             resp = f"""
 #ALERT_ ⚠️
-Your Account Is PREMIUM But You Have Used More Than 10000 CC!
+Your Account Is PREMIUM But You Have Used More Than 50000 CC!
                 """
                             await message.reply_text(resp, message.id)
 
@@ -171,8 +171,7 @@ SCRAPPING COMPLETED ✅
 ┠ Amount - {limit}
 ┠ Found - {cc_found}
 ┠ Removed - {dublicate}
-┠ Scraped By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> ♻️ [ {status} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠  ⚠️</a>
+┠ Req By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> | [ {status} ]
 ┗－－－－－－－－－－－－┛
 """
                                     document = file_name
@@ -256,8 +255,7 @@ SCRAPPING COMPLETED ✅
 ┠ Amount - {limit}
 ┠ Found - {cc_found}
 ┠ Removed - {dublicate}
-┠ Scraped By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> ♻️ [ {status} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠  ⚠️</a>
+┠ Req By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> | [ {status} ]
 ┗－－－－－－－－－－－－┛
 """
                                             document = file_name
@@ -351,8 +349,7 @@ SCRAPPING COMPLETED ✅
 ┠ Amount - {limit}
 ┠ Found - {cc_found}
 ┠ Removed - {dublicate}
-┠ Scraped By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.first_name}</a> ♻️ [ {status} ]
-┠ 𝘋𝘦𝘝 - <a href="tg://user?id=1418571871">̠K̠̠E̠̠V̠̠I̠̠N̠ ̠X̠  ⚠️</a>
+┠ Req By - <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> | [ {status} ]
 ┗－－－－－－－－－－－－┛
 """
                                     document = file_name
