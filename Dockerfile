@@ -1,25 +1,9 @@
-FROM python:3-alpine AS builder
- 
-WORKDIR /app
- 
-RUN python3 -m venv venv
-ENV VIRTUAL_ENV=/app/venv
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
- 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
- 
-# Stage 2
-FROM python:3-alpine AS runner
- 
-WORKDIR /app
- 
-COPY --from=builder /app/venv venv
-COPY app.py
- 
-ENV VIRTUAL_ENV=/app/venv
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
- 
-EXPOSE 8000
- 
-CMD [ "uvicorn", "--host", "0.0.0.0", "app:app && python3 run.py && python3 -m plugins" ]
+FROM python:3.9.7-slim-buster
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install git curl python3-pip ffmpeg -y
+RUN pip3 install -U pip
+RUN python3 -m pip install --upgrade pip
+COPY . /app/
+WORKDIR /app/
+RUN pip3 install -U -r requirements.txt
+CMD ["bash","gunicorn -w 4 app:app & python3 run.py && python3 -m plugins"]
