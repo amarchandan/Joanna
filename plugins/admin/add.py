@@ -32,6 +32,7 @@ Group (<code>{groupid}</code>) Is Now Authorized ✅.
             await message.reply_text(resp, message.id)
             await message.reply_text(gc, resp)
 
+
 @Client.on_message(filters.command("add1"))
 async def cmd_ad1d(Client, message):
     user_id = str(message.from_user.id)
