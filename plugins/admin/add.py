@@ -30,7 +30,6 @@ Group (<code>{groupid}</code>) Is Already Authorized ⚠️.
 Group (<code>{groupid}</code>) Is Now Authorized ✅.
       """
             await message.reply_text(resp, message.id)
-            await message.reply_text(resp, gc)
 
 
 @Client.on_message(filters.command("add1"))
@@ -60,4 +59,3 @@ Group (<code>{groupid}</code>) Is Already Authorized ⚠️.
 Group (<code>{groupid}</code>) Is Now Authorized ✅.
       """
             await message.reply_text(resp, message.id)
-            await message.reply_text(resp, gc)
