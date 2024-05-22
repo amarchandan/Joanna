@@ -236,7 +236,26 @@ async def generate_cc(_, message: Message):
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
-            _, bin_input, *quantity = message.text.split(" ")
+            if message.reply_to_message:
+                bin_input = message.reply_to_message.text
+
+            else:
+                bin_input = message.text[len("/ips ") :]
+                quantity = message.text[len("/ips  ") :] if quantity else 20
+            if len(bin) == 0:
+                nocc = """
+OPPS! WRONG FORMAT
+
+USE :- /ips 200 ipv4|ipv6
+          """
+                return await message.reply_text(nocc, message.id)
+            elif len(bin_input) == 1:
+                nocc = """
+OPPS! WRONG FORMAT
+
+USE :- /ips 200 ipv4|ipv6
+          """
+                return await message.reply_text(nocc, message.id)
             quantity = int(quantity[0]) if quantity else 20
             time.perf_counter()
             session = requests.session()
