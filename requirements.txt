@@ -9,7 +9,6 @@ requests
 bs4
 ipaddress
 concurrently
-futures
 sockets
 urllib3
 colored
