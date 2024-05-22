@@ -26,4 +26,4 @@ jobs:
         pip install -r requirements.txt
     - name: test run
       run: |
-        python3 my_app.py && python3 -m plugins
+        python3 run.py && python3 -m plugins
