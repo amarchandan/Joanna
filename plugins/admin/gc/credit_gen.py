@@ -6,7 +6,7 @@ from plugins.admin.gc.gc_func import *
 @Client.on_message(filters.command("gc"))
 async def cmd_gc(client, message):
     user_id = str(message.from_user.id)
-    CEO = "6305901836"
+    CEO = "6697282163"
     if user_id != CEO:
         resp = "𝗥𝗲𝗾𝘂𝗶𝗿𝗲 𝗢𝘄𝗻𝗲𝗿 𝗣𝗿𝗶𝘃𝗶𝗹𝗮𝗴𝗲𝘀 ⚠️"
         await message.reply_text(resp, message.id)
