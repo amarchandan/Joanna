@@ -1,4 +1,4 @@
-name: host flow
+name: host_flow
 
 on:
   push:
