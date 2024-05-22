@@ -1,4 +1,4 @@
-name: Python application
+name: host flow
 
 on:
   push:
