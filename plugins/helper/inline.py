@@ -112,9 +112,14 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
     elif data == "_charge":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 3] ┒
+┏ Joanna Gateways Online | Charge Gateways  [P: 1 | 1] ┒
 ┠ Name :- SHOPIFY $10
 ┠ Format :- /spt card|month|year|cvv
+┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Type :- Need-Credits
+
+┠ Name :- PAYPAL 1$
+┠ Format :- /pc card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
@@ -139,7 +144,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
     elif data == "_cckiller_":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | CC Killer Gateways  [P: 3 | 3] ┒
+┏ Joanna Gateways Online | CC Killer Gateways  [P: 1 | 1] ┒
 ┠ Name :- CC KILLER
 ┠ Format :- /kill card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
@@ -151,7 +156,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
     elif data == "_authgate_":
         await query.edit_message_text(
             """
-┏ Joanna Gateways Online | Auth Gateways  [P: 3 | 3] ┒
+┏ Joanna Gateways Online | Auth Gateways  [P: 1 | 1] ┒
 ┠ Name :- STRIPE AUTH
 ┠ Format :- /sa card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
