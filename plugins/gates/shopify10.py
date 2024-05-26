@@ -10,7 +10,7 @@ session = requests.session()
 
 
 @Client.on_message(filters.command("spt"))
-async def cmd_au(Client, message):
+async def cmd_shopify10(Client, message):
     try:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
