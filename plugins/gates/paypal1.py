@@ -10,7 +10,7 @@ session = requests.session()
 
 
 @Client.on_message(filters.command("pc"))
-async def cmd_pc(Client, message):
+async def cmd_paypal1(Client, message):
     try:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
