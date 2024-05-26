@@ -10,7 +10,7 @@ session = requests.session()
 
 
 @Client.on_message(filters.command("aa"))
-async def cmd_au(Client, message):
+async def cmd_adyenauth(Client, message):
     try:
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
