@@ -35,7 +35,6 @@ def check_cloud_in_website(gtw):
 # GATEWAY
 def check_credit_card_payment(gtw):
     response = requests.get(gtw)
-    gateways = []
     if "stripe" in response.text:
         gateways.append("Stripe")
     if "Cybersource" in response.text:
@@ -64,7 +63,7 @@ def check_credit_card_payment(gtw):
         gateways.append("Payment by Credit Card")
     return gateways
 
-
+gateways = []
 @Client.on_message(filters.command("gate"))
 async def cmd_gtw(Client, message):
     try:
