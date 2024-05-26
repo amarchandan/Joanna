@@ -66,6 +66,7 @@ def check_credit_card_payment(gtw):
 
 gate = []
 
+
 @Client.on_message(filters.command("gate"))
 async def cmd_gtw(Client, message):
     try:
