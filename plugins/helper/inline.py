@@ -156,7 +156,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 
 ┠ Name :- ADYEN AUTH
 ┠ Format :- /aa card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
+┠ Condition :- OFF! ❎ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 
 ┠ Name :- BRAINTREE AUTH V2
