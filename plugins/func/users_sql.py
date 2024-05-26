@@ -26,7 +26,8 @@ def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
 
 def fetchinfo(user_id):
     import sqlite3
-    conn = sqlite3.connect('plugins/func/users.db')
+
+    conn = sqlite3.connect("plugins/func/users.db")
     db = conn.cursor()
     db.execute(f"SELECT * FROM users WHERE id='{user_id}'")
     info = db.fetchone()
@@ -40,7 +41,8 @@ def fetchinfo(user_id):
 
 def getalldata():
     import sqlite3
-    conn = sqlite3.connect('plugins/func/users.db')
+
+    conn = sqlite3.connect("plugins/func/users.db")
     db = conn.cursor()
     db.execute(f"SELECT * FROM users")
     info = db.fetchall()
@@ -54,7 +56,8 @@ def getalldata():
 
 def updatedata(user_id, module_name, value):
     import sqlite3
-    conn = sqlite3.connect('plugins/func/users.db')
+
+    conn = sqlite3.connect("plugins/func/users.db")
     c = conn.cursor()
     c.execute(f"UPDATE users SET {module_name}='{value}' WHERE id='{user_id}'")
     conn.commit()
