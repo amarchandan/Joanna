@@ -3,8 +3,6 @@ tgcrypto
 datetime
 Flask==2.2.2
 gunicorn==20.1.0
-aiohttp
-requests
 requests
 bs4
 ipaddress
@@ -14,4 +12,3 @@ urllib3
 colored
 ipranges
 asyncio
-sqlite
