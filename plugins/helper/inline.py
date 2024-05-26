@@ -23,15 +23,6 @@ buttons = [
     ],
 ]
 
-backbutton = [
-    [
-        InlineKeyboardButton(text="Gate", callback_data="gates"),
-        InlineKeyboardButton(text="Tools", callback_data="_tool"),
-    ],
-    [
-        InlineKeyboardButton(text="Premium", callback_data="premium_data"),
-    ],
-]
 
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
@@ -92,11 +83,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         )
     elif data == "__back":
         await query.edit_message_text(
-            text=mainback, reply_markup=InlineKeyboardMarkup(backbutton)
-        )
-    elif data == "__gback":
-        await query.edit_message_text(
-            text=backtext, reply_markup=InlineKeyboardMarkup(gatebutton)
+            text=mainback, reply_markup=InlineKeyboardMarkup(buttons)
         )
     elif data == "premium_data":
         await query.edit_message_text(
