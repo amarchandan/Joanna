@@ -19,7 +19,7 @@ jobs:
  
       - name: Install Python lint libraries
         run: |
-          pip install autopep8 autoflake isort black && pip install -r requirements.txt
+          pip install autopep8 autoflake isort black && pip install --upgrade pip && pip install -r requirements.txt
       - name: Check for showstoppers
         run: |
           autopep8 --verbose --in-place --recursive --aggressive --aggressive --ignore=W605. *.py
