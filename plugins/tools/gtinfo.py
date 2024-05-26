@@ -63,7 +63,10 @@ def check_credit_card_payment(gtw):
         gateways.append("Payment by Credit Card")
     return gateways
 
+
 gateways = []
+
+
 @Client.on_message(filters.command("gate"))
 async def cmd_gtw(Client, message):
     try:
