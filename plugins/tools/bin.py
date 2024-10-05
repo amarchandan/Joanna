@@ -1,6 +1,7 @@
 import requests
 from pyrogram import Client, filters
 
+from plugins.bin.bins import *
 from plugins.func.users_sql import *
 
 session = requests.session()
@@ -47,53 +48,24 @@ async def cmd_bin(Client, message):
           """
                     return await message.reply_text(nocc, message.id)
                 fbin = bin[:6]
-                session = requests.session()
-                bin = session.get(f"https://lookup.binlist.net/{fbin}").json()
-                try:
-                    brand = bin["scheme"].upper()
-                except:
-                    brand = "N/A"
-                try:
-                    type = bin["type"].upper()
-                except:
-                    type = "N/A"
-                try:
-                    level = bin["brand"].upper()
-                except:
-                    level = "N/A"
-                try:
-                    bank_data = bin["bank"]
-                except:
-                    bank_data = "N/A"
-                try:
-                    bank = bank_data["name"].upper()
-                except:
-                    bank = "N/A"
-                try:
-                    country_data = bin["country"]
-                except:
-                    country_data = "N/A"
-                try:
-                    country = country_data["name"].upper()
-                except:
-                    country = "N/A"
-                try:
-                    flag = country_data["emoji"]
-                except:
-                    flag = "N/A"
-                try:
-                    currency = country_data["currency"].upper()
-                except:
-                    currency = "N/A"
+                bb = str(fbin)
+                x = mydict.get(bb, {})
+                brand = x.get("brand", "N/A")
+                category = x.get("category", "N/A")
+                country = x.get("country", "N/A")
+                flag = x.get("flag", "N/A")
+                issuer = x.get("issuer", "N/A")
+                Type = x.get("Type", "N/A")
+
                 resp = f"""
 VALID BIN ✅
 
-BIN:  <code>{fbin}</code>
-BRAND: {brand}
-LEVEL: {level}
-TYPE: {type}
-BANK: {bank}
-COUNTRY: {country} - {flag} - {currency}
+BIN - <code>{fbin}</code>
+Brand - {brand}
+Category - {category}
+Type - {Type}
+Issuer - {issuer}
+COUNTRY: {country} - {flag}
 Req BY <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> [ {role} ]
         """
                 await message.reply_text(resp, message.id)

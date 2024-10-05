@@ -7,6 +7,13 @@ from plugins.func.users_sql import *
 gc = -1001582458495
 
 
+def gcgenfunc(len=10):
+    import random
+
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return "".join(random.choice(chars) for _ in range(len))
+
+
 @Client.on_message(filters.command("aces"))
 async def cmd_plan1(Client, message):
     user_id = str(message.from_user.id)
@@ -50,7 +57,7 @@ async def cmd_plan1(Client, message):
                 updatedata(pmid, module_name, value)
                 ad_resp = f"""User <a href="tg://user?id={pmid}">{pmid}</a> Your Premium Plan Is Started """
                 await message.reply_text(ad_resp, message.id)
-                receipt_id = randgen(len=10)
+                receipt_id = gcgenfunc(len=10)
                 user_resp = f"""
 Thanks You For Purchasing Our Premium Plan ✅
 

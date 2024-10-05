@@ -1,6 +1,9 @@
 import logging
 
+import uvloop
 from pyrogram import Client
+
+uvloop.install()
 
 logging.basicConfig(level=logging.INFO)
 

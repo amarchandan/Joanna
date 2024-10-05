@@ -4,17 +4,21 @@ import time
 import requests
 from pyrogram import Client, filters
 
+from plugins.bin.bins import *
 from plugins.func.users_sql import *
 
 session = requests.session()
 
 
 @Client.on_message(filters.command("spt"))
-async def cmd_shopify10(Client, message):
+async def cmd_adyenpcth(Client, message):
     try:
+        # NES TOOLS
         user_id = str(message.from_user.id)
         chat_type = str(message.chat.type)
         chat_id = str(message.chat.id)
+        # PLAN CHECK
+
         regdata = fetchinfo(user_id)
         results = str(regdata)
         if results == "None":
@@ -23,7 +27,8 @@ async def cmd_shopify10(Client, message):
             )
             await message.reply_text(resp, message.id)
         else:
-            # PM AND AUTH CHECK
+            # HERE
+            # PM AND CHARGE CHECK
             pm = fetchinfo(user_id)
             status = pm[2]
             role = status
@@ -31,6 +36,7 @@ async def cmd_shopify10(Client, message):
             if chat_type == "ChatType.PRIVATE" and status == "FREE":
                 resp = "Only Premium Members Are Allowd To Use Bot In Pm ⚠️.You Can Use Free Then Join @MorPhoChat !"
                 await message.reply_text(resp, message.id)
+
             elif (
                 chat_type == "ChatType.GROUP"
                 or chat_type == "ChatType.SUPERGROUP"
@@ -42,8 +48,8 @@ async def cmd_shopify10(Client, message):
                 # CREDIT CHECK
                 chk_credit = fetchinfo(user_id)
                 credit = int(chk_credit[5])
-                if credit < 1:
-                    resp = "You Have Insufficient Credit To Use Me. Recharge Credit Using /buy Or Wait For Free Credit Using GiftCard .!"
+                if credit < 3:
+                    resp = "You Have Insufficient Credit To Use Me. ReCHARGE Credit Using /buy Or Wait For Free Credit Using GiftCard .!"
                     await message.reply_text(resp, message.id)
                 else:
                     # ANTISPAM MODULE
@@ -53,34 +59,42 @@ async def cmd_shopify10(Client, message):
                     antispam_time = int(results[7])
                     now = int(time.time())
                     count_antispam = now - antispam_time
-                    if status == "FREE" and count_antispam < 40:
-                        after = 40 - count_antispam
+                    if status == "FREE" and count_antispam < 30:
+                        after = 10 - count_antispam
                         resp = f"""
 #ANTI_SPAM ⚠️
 Try After {after}s Or purchase /buy to reduce it!
             """
                         await message.reply_text(resp, message.id)
-                    elif status == "PREMIUM" and count_antispam < 20:
-                        after = 20 - count_antispam
+                    elif status == "PREMIUM" and count_antispam < 5:
+                        after = 5 - count_antispam
                         resp = f"""
 #ANTI_SPAM ⚠️
 Retry After {after}s
             """
                         await message.reply_text(resp, message.id)
+
                     else:
                         if message.reply_to_message:
                             cc = message.reply_to_message.text
+
                         else:
                             cc = message.text[len("/spt ") :]
                         if len(cc) == 0:
-                            nocc = """No CCS Found. ⚠️"""
+                            nocc = """
+No CCS Found. ⚠️
+              """
                             return await message.reply_text(nocc, message.id)
+
                         cards = []
                         x = cc
                         input = re.findall(r"[0-9]+", x)
                         if not input or len(input) < 3:
-                            nocc = """No CCS Found. ⚠️"""
+                            nocc = """
+No CCS Found. ⚠️
+              """
                             return await message.reply_text(nocc, message.id)
+
                         if len(input) == 3:
                             cc = input[0]
                             if len(input[1]) == 3:
@@ -110,84 +124,51 @@ Retry After {after}s
                                 cards.append([cc, mes, ano, cvv])
                             fullcc = f"{cc}|{mes}|{ano}|{cvv}"
                             firstresp = f"""
-<b> SHOPIFY $10  
-━━━━━━━━━
- Card - <code>{fullcc}</code> 
- Status - Processing...
- Response - Wait....
+<b>↯ CHARGE
+
+Card - <code>{fullcc}</code> 
+Response - Processing your request...
+GATEWAY- SHOPIFY $10
 </b>
               """
+
                             firstchk = await message.reply_text(firstresp, message.id)
-                            # STARTED CHECKING CC#
-                            tic = time.perf_counter()
-                            authurl = f"https://teammorpho.xyz/api/shopify10.php?lista={fullcc}"
+                            authurl = f"https://rembelxxyzzzz.zapto.org/api/shopify10.php?lista={fullcc}"
                             reqone = session.get(authurl)
                             data = reqone.json()
                             stat = data["stuts"]
                             ress = data["respp"]
+                            # STARTED CHECKING CC#
+                            tic = time.perf_counter()
                             # BIN RESPINSE
                             fbin = cc[:6]
+                            bb = str(fbin)
+                            x = mydict.get(bb, {})
+                            brand = x.get("brand", "N/A")
+                            category = x.get("category", "N/A")
+                            country = x.get("country", "N/A")
+                            flag = x.get("flag", "N/A")
+                            issuer = x.get("issuer", "N/A")
+                            Type = x.get("Type", "N/A")
 
-                            bin = session.get(
-                                f"https://lookup.binlist.net/{fbin}"
-                            ).json()
-                            try:
-                                brand = bin["scheme"].upper()
-                            except:
-                                brand = "N/A"
-                            try:
-                                type = bin["type"].upper()
-                            except:
-                                type = "N/A"
-                            try:
-                                level = bin["brand"].upper()
-                            except:
-                                level = "N/A"
-                            try:
-                                bank_data = bin["bank"]
-                            except:
-                                bank_data = "N/A"
-                            try:
-                                bank = bank_data["name"].upper()
-                            except:
-                                bank = "N/A"
-                            try:
-                                country_data = bin["country"]
-                            except:
-                                country_data = "N/A"
-                            try:
-                                country = country_data["name"].upper()
-                            except:
-                                country = "N/A"
-                            try:
-                                flag = country_data["emoji"]
-                            except:
-                                flag = "N/A"
-                            try:
-                                currency = country_data["currency"].upper()
-                            except:
-                                currency = "N/A"
                             toc = time.perf_counter()
                             # RESPONSE SECTION
                             # --------------FINAL RESPONSE ------------#
 
                             finalresp = f"""
 <b>SHOPIFY $10 
-┏－－－－－－－－－－－－－－－－－－┒</b>
-┠ Card - <code>{fullcc}</code> 
-┠ Status - <code>{stat}</code> 
-┠ Resp - <code>{ress}</code>
-┠－－－－－－－－－－－－－－－－
-┠ BIN INFO
-┠ Bin - {fbin} - {brand} - {type} - {level}
-┠ Bank - {bank} 🏛  
-┠ Country - {country} - {flag} - {currency}
-┠－－－－－－－－－－－－－－－－
-┠ CHECK INFO
-┠ Time in Progress - {toc - tic:0.4f}sec
-┠ Credit Deducted - 1
-┠ Req by: <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> | [ {role} ]
-┗－－－－－－－－－－－－－－－－－┛</b>
+
+Card - <code>{fullcc}</code> 
+Status - <code>{stat}</code> 
+Resp - <code>{ress}</code> 
+
+Info - {brand} - {Type} - {category}
+Issuer - {issuer}
+Country - {country} - {flag}
+
+Time - {toc - tic:0.4f}sec
+Req by: <a href="tg://user?id={message.from_user.id}"> {message.from_user.username}</a> | [ {role} ]
+</b>
             """
 
                             await Client.edit_message_text(

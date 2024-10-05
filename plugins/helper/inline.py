@@ -109,21 +109,6 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
 ┠ Format :- /pc card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
-
-┠ Name :- SHOPIFY+STRIPE $10 
-┠ Format :- /ssc card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- SHOPIFY+STRIPE $54 
-┠ Format :- /ssc1 card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- STRIPE $76
-┠ Format :- /sc card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
             """,
             reply_markup=InlineKeyboardMarkup(gatebutton),
@@ -144,23 +129,8 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
         await query.edit_message_text(
             """
 ┏ Joanna Gateways Online | Auth Gateways  [P: 1 | 1] ┒
-┠ Name :- STRIPE AUTH
-┠ Format :- /sa card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
 ┠ Name :- PAYPAL AUTH
 ┠ Format :- /pa card|month|year|cvv
-┠ Condition :- ON! ✅ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- ADYEN AUTH
-┠ Format :- /aa card|month|year|cvv
-┠ Condition :- OFF! ❎ | Comment: Online API Gate!
-┠ Type :- Need-Credits
-
-┠ Name :- BRAINTREE AUTH V2
-┠ Format :- /ba card|month|year|cvv
 ┠ Condition :- ON! ✅ | Comment: Online API Gate!
 ┠ Type :- Need-Credits
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -172,7 +142,7 @@ Api Bot Status Is: Online ✅ | Joanna Api Is Online!
             """
 ┏ Joanna Tools / [P: 1 | 3] ┒
 ┠ Url info chk like Captcha, Cloud, Payment:
-┠ Format: $/gate link
+┠ Format: /gate link
 ┠ Condition: Online! ✅
 
 ┠ Mass Url info chk like Captcha, Cloud, Payment:

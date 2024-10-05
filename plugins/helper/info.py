@@ -50,7 +50,6 @@ User Info
                     await plan_expirychk(pid)
                     info = fetchinfo(user_id)
                     results = info
-                    botid = results[10]
                     status = results[2]
                     plan = results[3]
                     expiry = results[4]
@@ -63,7 +62,6 @@ User Info
 User Info
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┠ FristName : {first_name}
-┠ BOT ID : {botid}
 ┠ ID : <code>{user_id}</code>
 ┠ UserName : {username}
 ┠ Profile : <a href="tg://user?id={message.reply_to_message.from_user.id}">Profile Link</a>
@@ -115,7 +113,6 @@ User Info
                     await plan_expirychk(pid)
                     info = fetchinfo(user_id)
                     results = info
-                    botid = results[10]
                     status = results[2]
                     plan = results[3]
                     expiry = results[4]
@@ -128,7 +125,6 @@ User Info
 User Info
 ┏━━━━━━━━━━━━━━━━━━━━━━━
 ┠ FristName : {first_name}
-┠ BOT ID : {botid}
 ┠ ID : <code>{user_id}</code>
 ┠ UserName : {username}
 ┠ Profile : <a href="tg://user?id={message.from_user.id}">Profile Link</a>

@@ -1,14 +1,11 @@
 pyrogram
 tgcrypto
 datetime
-Flask==2.2.2
-gunicorn==20.1.0
 requests
 bs4
 ipaddress
 concurrently
 sockets
 urllib3
-colored
 ipranges
 asyncio

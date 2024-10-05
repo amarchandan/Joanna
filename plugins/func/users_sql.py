@@ -7,23 +7,19 @@ def gcgenfunc(len=10):
 
 
 # insert registration data
-def insert_reg_data(user_id, username, antispam_time, reg_at, bot_id):
-    import psycopg2
+def insert_reg_data(user_id, username, antispam_time, reg_at):
+    import sqlite3
 
-    conn = psycopg2.connect(
-        "postgres://joanna_jfm9_user:yYgbx4a9rRyBXcOo1X2DjKr7dnjxECAU@dpg-cobdsl7109ks738hrd40-a.oregon-postgres.render.com/joanna_jfm9"
-    )
+    conn = sqlite3.connect("plugins/func/users.db")
     db = conn.cursor()
     db.execute(
-        f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','30','{antispam_time}','0','{reg_at}','{bot_id}')"
+        f"INSERT INTO users VALUES ('{user_id}','{username}','FREE','N/A','N/A','50','10','{antispam_time}','0','{reg_at}')"
     )
     conn.commit()
     conn.close()
 
 
 # fetch info from userid
-
-
 def fetchinfo(user_id):
     import sqlite3
 
@@ -37,14 +33,12 @@ def fetchinfo(user_id):
 
 
 # fetch all info from table
-
-
-def getalldata():
+def getalldata(table_name):
     import sqlite3
 
     conn = sqlite3.connect("plugins/func/users.db")
     db = conn.cursor()
-    db.execute(f"SELECT * FROM users")
+    db.execute(f"SELECT * FROM {table_name}")
     info = db.fetchall()
     conn.commit()
     conn.close()
@@ -52,8 +46,6 @@ def getalldata():
 
 
 # UPDATE DATA FROM TABLE
-
-
 def updatedata(user_id, module_name, value):
     import sqlite3
 
@@ -65,8 +57,6 @@ def updatedata(user_id, module_name, value):
 
 
 # PLAN AND EXPIRY CHECK
-
-
 async def plan_expirychk(user_id):
     try:
         from datetime import date

@@ -18,19 +18,16 @@ async def cmd_register(Client, message):
         reg_at = str(date.today())
         regdata = fetchinfo(user_id)
         results = str(regdata)
-        bot_id = f"JOANNA-{gcgenfunc()}"
         if results == "None":
-            insert_reg_data(user_id, username, antispam_time, reg_at, bot_id)
+            insert_reg_data(user_id, username, antispam_time, reg_at)
             pm = fetchinfo(user_id)
             role = pm[2]
-            botid = pm[10]
             credit = pm[5]
             plan = pm[3]
             aniti = pm[6]
             resp = f"""
 User Registered Successfully ✅
 
-USER BOT ID :- {botid}
 Role :- {role}
 Plan :- {plan}
 Credit:- {credit}
@@ -42,14 +39,12 @@ Type /start To Know My Work Ability."""
         else:
             pm = fetchinfo(user_id)
             role = pm[2]
-            botid = pm[10]
             credit = pm[5]
             plan = pm[3]
             aniti = pm[6]
             resp = f"""
 Already Rigistered ⚠️
 
-USER BOT ID :- {botid}
 Role :- {role}
 Plan :- {plan}
 Credit:- {credit}

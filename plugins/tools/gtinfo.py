@@ -7,6 +7,8 @@ from plugins.func.users_sql import *
 
 session = requests.session()
 
+gateways = []
+
 
 # captcha
 def check_captcha(gtw):
@@ -36,32 +38,35 @@ def check_cloud_in_website(gtw):
 def check_credit_card_payment(gtw):
     response = requests.get(gtw)
     if "stripe" in response.text:
-        gateways.append("Stripe")
-    if "Cybersource" in response.text:
-        gateways.append("Cybersource")
-    if "Barintree" in response.text:
-        gateways.append("Barintree")
-    if "authorize.net" in response.text:
-        gateways.append("Authorize.net")
-    if "Bluepay" in response.text:
-        gateways.append("Bluepay")
-    if "Magento" in response.text:
-        gateways.append("Magento")
-    if "woo" in response.text:
-        gateways.append("Woo")
-    if "Shopify" in response.text:
-        gateways.append("Shopify")
-    if "adyan" in response.text or "Adyen" in response.text:
-        gateways.append("Adyan")
-    if "Paypal" in response.text:
-        gateways.append("Paypal")
-    if "suqare" in response.text:
-        gateways.append("Suqare")
-    if "payflow" in response.text:
-        gateways.append("Payflow")
-    if "payment by" in response.text or "credit card" in response.text:
-        gateways.append("Payment by Credit Card")
-    return gateways
+        return " Stripe"
+    elif "Cybersource" in response.text:
+        return " Cybersource"
+    elif "Barintree" in response.text:
+        return "Barintree"
+    elif "authorize.net" in response.text:
+        return " authorize"
+    elif "Bluepay" in response.text:
+        return "Bluepay"
+    elif "Magento" in response.text:
+        return "Magento"
+    elif "woo" in response.text:
+        return " Woo"
+    elif "Shopify" in response.text:
+        return "Shopify"
+    elif "adyan" in response.text or "Adyen" in response.text:
+        return "adyan"
+    elif "Paypal" in response.text:
+        return "Paypal"
+    elif "suqare" in response.text:
+        return " suqare"
+    elif "payflow" in response.text:
+        return " payflow"
+    elif "payment by" in response.text:
+        return True
+    elif "credit card" in response.text:
+        return True
+    else:
+        return False
 
 
 gate = []
